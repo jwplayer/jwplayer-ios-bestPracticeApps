@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <JWPlayer-SDK/JWPlayerController.h>
+#import <JWPlayer_iOS_SDK/JWPlayerController.h>
 
 @interface JWBasicVideoViewController : UIViewController<JWPlayerDelegate>
 
