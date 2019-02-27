@@ -5,7 +5,7 @@ PODS:
   - google-cast-sdk/Assets (2.10.0):
     - google-cast-sdk/Core
   - google-cast-sdk/Core (2.10.0)
-  - JWPlayer-SDK (3.2.1)
+  - JWPlayer-SDK (3.2.3)
 
 DEPENDENCIES:
   - google-cast-sdk (<= 2.10.0.4070)
@@ -18,7 +18,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   google-cast-sdk: 1911d498a11a8fbb7a91ce0e0f50cf0d4fe6e3b6
-  JWPlayer-SDK: 371efd768f7ed35edb49f73de894887a1d4b72a5
+  JWPlayer-SDK: 0cc78201a3ee6a4d1912cda1fc76eeeb7c576889
 
 PODFILE CHECKSUM: b03a5e4d0d500f6d27013958ec92a5f502d86f28
 

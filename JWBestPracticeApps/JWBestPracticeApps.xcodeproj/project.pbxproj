@@ -118,13 +118,11 @@
 		8AF5F6E91C9A612B00C0D5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5F6E81C9A612B00C0D5E0 /* Assets.xcassets */; };
 		8AF5F6ED1C9A612B00C0D5E0 /* JWRemoteController.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AF5F6CC1C9A612B00C0D5E0 /* JWRemoteController.app */; };
 		AB341B6EC61DFD6B46F068D6 /* libPods-JWBestPracticeApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE25B16DE011FFE47951517 /* libPods-JWBestPracticeApps.a */; };
-		B5308C1F1D836979007D2A1F /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5308C1E1D836979007D2A1F /* SwiftTest.swift */; };
 		B53A73071D92F79C00EB804F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53A73061D92F79C00EB804F /* AppDelegate.swift */; };
 		B53A730C1D92F79C00EB804F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A730A1D92F79C00EB804F /* Main.storyboard */; };
 		B53A730E1D92F79C00EB804F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53A730D1D92F79C00EB804F /* Assets.xcassets */; };
 		B53A73111D92F79C00EB804F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A730F1D92F79C00EB804F /* LaunchScreen.storyboard */; };
 		B53A73181D92F8CE00EB804F /* JWBasicVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A729B5C1C99ABD2000F03A9 /* JWBasicVideoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B53A73191D92F8D300EB804F /* JWBestPracticeApps-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = B5308C1D1D836978007D2A1F /* JWBestPracticeApps-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53A731A1D92F90C00EB804F /* JWRemoteCastPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3734B41D1DC3820008FE59 /* JWRemoteCastPlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53A731B1D92FB5400EB804F /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
 		B53A731C1D92FB6900EB804F /* JWRemoteCastPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734B51D1DC3820008FE59 /* JWRemoteCastPlayerViewController.m */; };
@@ -132,7 +130,6 @@
 		B53A731E1D92FB9700EB804F /* JWCastingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B861C99CD8B000F03A9 /* JWCastingViewController.m */; };
 		B53A731F1D92FBA600EB804F /* JWRemotePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A729B7A1C99B576000F03A9 /* JWRemotePlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53A73201D92FBB200EB804F /* JWRemotePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B7B1C99B576000F03A9 /* JWRemotePlayerViewController.m */; };
-		B54424811D9048D900719197 /* JWBestPracticeApps-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = B5308C1D1D836978007D2A1F /* JWBestPracticeApps-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B54424831D90493100719197 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
 		B54424841D90493400719197 /* JWBasicVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A729B5C1C99ABD2000F03A9 /* JWBasicVideoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B54424B31D9060A700719197 /* JWSiriVideoExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B54424AC1D9060A700719197 /* JWSiriVideoExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -401,8 +398,6 @@
 		AE13619DC752730AA54E1307 /* Pods-JWRemoteCastController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		AFA47BF6BEBC875452177758 /* Pods-JWRemoteCastController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController/Pods-JWRemoteCastController.release.xcconfig"; sourceTree = "<group>"; };
 		AFFC2FBEFC64CED35CE549C5 /* Pods-SiriPlayerController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriPlayerController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SiriPlayerController/Pods-SiriPlayerController.debug.xcconfig"; sourceTree = "<group>"; };
-		B5308C1D1D836978007D2A1F /* JWBestPracticeApps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWBestPracticeApps-Bridging-Header.h"; sourceTree = "<group>"; };
-		B5308C1E1D836979007D2A1F /* SwiftTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
 		B53A0DF21D8355CF00893252 /* JWVoiceControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWVoiceControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53A73041D92F79C00EB804F /* Voicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53A73061D92F79C00EB804F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -724,14 +719,12 @@
 				8A729A7E1C98ACA8000F03A9 /* AppDelegate.m */,
 				8A729B5C1C99ABD2000F03A9 /* JWBasicVideoViewController.h */,
 				8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */,
-				B5308C1E1D836979007D2A1F /* SwiftTest.swift */,
 				8A729A831C98ACA8000F03A9 /* Main.storyboard */,
 				8A729A861C98ACA8000F03A9 /* Assets.xcassets */,
 				8A729A881C98ACA8000F03A9 /* LaunchScreen.storyboard */,
 				8A729A8B1C98ACA8000F03A9 /* Info.plist */,
 				8AB3E0931D99B4BF002A3CA7 /* JWBestPracticeApps-Bridging-Header.h */,
 				8A729A7A1C98ACA8000F03A9 /* Supporting Files */,
-				B5308C1D1D836978007D2A1F /* JWBestPracticeApps-Bridging-Header.h */,
 			);
 			path = JWBestPracticeApps;
 			sourceTree = "<group>";
@@ -983,7 +976,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54424841D90493400719197 /* JWBasicVideoViewController.h in Headers */,
-				B54424811D9048D900719197 /* JWBestPracticeApps-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,7 +985,6 @@
 			files = (
 				B53A731D1D92FB9000EB804F /* JWCastingViewController.h in Headers */,
 				B53A731F1D92FBA600EB804F /* JWRemotePlayerViewController.h in Headers */,
-				B53A73191D92F8D300EB804F /* JWBestPracticeApps-Bridging-Header.h in Headers */,
 				B53A73181D92F8CE00EB804F /* JWBasicVideoViewController.h in Headers */,
 				B53A731A1D92F90C00EB804F /* JWRemoteCastPlayerViewController.h in Headers */,
 			);
@@ -2082,7 +2073,6 @@
 				8A729B5E1C99ABD2000F03A9 /* JWBasicVideoViewController.m in Sources */,
 				8A729A7F1C98ACA8000F03A9 /* AppDelegate.m in Sources */,
 				8A729A7C1C98ACA8000F03A9 /* main.m in Sources */,
-				B5308C1F1D836979007D2A1F /* SwiftTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
