@@ -29,8 +29,13 @@ class FeedTableViewController: UITableViewController {
         
         // Populate the feed array with video players
         for itemInfo in feedInfo {
-            if let config = JWConfig.init(contentUrl: itemInfo["url"]),
-                let player = JWPlayerController.init(config: config) {
+            guard let url = itemInfo["url"] else {
+                continue
+            }
+            
+            let config = JWConfig.init(contentUrl: url)
+            
+            if let player = JWPlayerController.init(config: config) {
                 config.title = itemInfo["title"]
                 feed.append(player)
             }
@@ -80,7 +85,7 @@ class FeedTableViewController: UITableViewController {
         // Iterate non-visible players to pause the video and remove the previous view from cell
         nonVisiblePlayers.forEach { (_, player: JWPlayerController) in
             player.pause()
-            player.view.removeFromSuperview()
+            player.view?.removeFromSuperview()
         }
     }
     
