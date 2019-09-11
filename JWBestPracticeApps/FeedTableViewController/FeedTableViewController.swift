@@ -16,14 +16,14 @@ class FeedTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Register the custom cell view
-        self.tableView.register(UINib.init(nibName: FeedItemCellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: FeedItemCellIdentifier)
+        self.tableView.register(UINib(nibName: FeedItemCellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: FeedItemCellIdentifier)
         
         fetchFeed()
     }
     
     fileprivate func fetchFeed() {
         guard let feedFilePath = Bundle.main.path(forResource: "Feed", ofType: "plist"),
-            let feedInfo = NSArray.init(contentsOfFile: feedFilePath) as? [Dictionary<String, String>] else {
+            let feedInfo = NSArray(contentsOfFile: feedFilePath) as? [Dictionary<String, String>] else {
             return
         }
         
@@ -33,10 +33,8 @@ class FeedTableViewController: UITableViewController {
                 continue
             }
             
-            let config = JWConfig(contentUrl: url)
-            
-            if let player = JWPlayerController(config: config) {
-                config.title = itemInfo["title"]
+            if let player = JWPlayerController(config: JWConfig(contentUrl: url)) {
+                player.config.title = itemInfo["title"]
                 feed.append(player)
             }
         }
