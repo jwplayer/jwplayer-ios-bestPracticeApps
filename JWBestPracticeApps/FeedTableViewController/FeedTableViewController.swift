@@ -33,9 +33,9 @@ class FeedTableViewController: UITableViewController {
                 continue
             }
             
-            let config = JWConfig.init(contentUrl: url)
+            let config = JWConfig(contentUrl: url)
             
-            if let player = JWPlayerController.init(config: config) {
+            if let player = JWPlayerController(config: config) {
                 config.title = itemInfo["title"]
                 feed.append(player)
             }
