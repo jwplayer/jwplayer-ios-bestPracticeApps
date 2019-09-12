@@ -12,7 +12,7 @@ def common_Cast
 end
 
 def common_Google_IMA
-    pod 'GoogleAds-IMA-iOS-SDK', '~> 3.9.0'
+    pod 'GoogleAds-IMA-iOS-SDK', '3.8.1'
 end
 
 target 'JWBestPracticeApps' do
