@@ -33,4 +33,4 @@ DerivedData
 *.xcuserstate
 *.xcscmblueprint
 Pods/
-
+Podfile.lock
