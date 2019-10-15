@@ -7,6 +7,7 @@
 //
 
 #import "JWFriendlyObstructionViewController.h"
+#import <JWPlayer_iOS_SDK/JWFriendlyAdObstructions.h>
 
 #define sampleAdTag @"https://pubads.g.doubleclick.net/gampad/ads?iu=/124319096/external/omid_google_samples&env=vp&gdfp_req=1&output=vast&sz=640x480&description_url=http%3A%2F%2Ftest_site.com%2Fhomepage&tfcd=0&npa=0&vpmute=0&vpa=0&vad_format=linear&url=http%3A%2F%2Ftest_site.com&vpos=preroll&unviewed_position_start=1&correlator="
 
@@ -31,7 +32,8 @@
     self.playIcon = [UIImage imageNamed:playIconName];
     self.pauseIcon = [UIImage imageNamed:pauseIconName];
     [self addCustomControl];
-    [self.player.experimentalAPI registerFriendlyAdObstruction:self.playbackToggle];
+    JWFriendlyAdObstructions *friendlyAdObstructions = [[JWFriendlyAdObstructions alloc] initWithPlayer:self.player];
+    [friendlyAdObstructions registerView:self.playbackToggle];
 }
 
 - (JWConfig *)createConfig
