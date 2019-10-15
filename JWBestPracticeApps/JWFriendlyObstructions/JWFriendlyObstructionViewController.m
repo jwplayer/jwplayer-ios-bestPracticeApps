@@ -19,6 +19,7 @@
 @property (nonatomic) UIButton *playbackToggle;
 @property (nonatomic) UIImage *playIcon;
 @property (nonatomic) UIImage *pauseIcon;
+@property (nonatomic) JWFriendlyAdObstructions *friendlyAdObstructions;
 
 @property (nonatomic) BOOL playingAd;
 
@@ -32,8 +33,8 @@
     self.playIcon = [UIImage imageNamed:playIconName];
     self.pauseIcon = [UIImage imageNamed:pauseIconName];
     [self addCustomControl];
-    JWFriendlyAdObstructions *friendlyAdObstructions = [[JWFriendlyAdObstructions alloc] initWithPlayer:self.player];
-    [friendlyAdObstructions registerView:self.playbackToggle];
+    self.friendlyAdObstructions = [[JWFriendlyAdObstructions alloc] initWithPlayer:self.player];
+    [self.friendlyAdObstructions registerView:self.playbackToggle];
 }
 
 - (JWConfig *)createConfig
