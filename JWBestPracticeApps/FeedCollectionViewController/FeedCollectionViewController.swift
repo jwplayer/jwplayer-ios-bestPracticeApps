@@ -66,44 +66,4 @@ class FeedCollectionViewController: UICollectionViewController, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width - 20, height: collectionView.frame.height)
     }
-    
-//  MARK: UIScrollViewDelegate implementation
-
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let visibleIndexPaths = collectionView.indexPathsForVisibleItems
-
-        // Map rows as indexes
-        let visibleItems = visibleIndexPaths.map({ return $0.row })
-
-        // Check for non-visible players inside the feed
-        let nonVisiblePlayers = feed.enumerated().filter { (offset: Int, player: JWPlayerController) -> Bool in
-            return !visibleItems.contains(offset) && player.state == JWPlayerState.playing
-        }
-
-        // Iterate non-visible players to pause the video and remove the previous view from cell
-        nonVisiblePlayers.forEach { (_, player: JWPlayerController) in
-            player.pause()
-            player.view?.removeFromSuperview()
-        }
-    }
-}
-
-// MARK: Helper method
-
-extension UIView {
-    
-    public func constraintToSuperview() {
-        translatesAutoresizingMaskIntoConstraints = false
-        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[thisView]|",
-                                                                   options: [],
-                                                                   metrics: nil,
-                                                                   views: ["thisView": self])
-        
-        let verticalConstraints   = NSLayoutConstraint.constraints(withVisualFormat: "V:|[thisView]|",
-                                                                   options: [],
-                                                                   metrics: nil,
-                                                                   views: ["thisView": self])
-        
-        NSLayoutConstraint.activate(horizontalConstraints + verticalConstraints)
-    }
 }

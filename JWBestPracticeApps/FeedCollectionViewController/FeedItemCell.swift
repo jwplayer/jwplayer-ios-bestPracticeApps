@@ -24,3 +24,23 @@ class FeedItemCell: UICollectionViewCell {
         }
     }
 }
+
+// MARK: Helper method
+
+extension UIView {
+    
+    public func constraintToSuperview() {
+        translatesAutoresizingMaskIntoConstraints = false
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[thisView]|",
+                                                                   options: [],
+                                                                   metrics: nil,
+                                                                   views: ["thisView": self])
+        
+        let verticalConstraints   = NSLayoutConstraint.constraints(withVisualFormat: "V:|[thisView]|",
+                                                                   options: [],
+                                                                   metrics: nil,
+                                                                   views: ["thisView": self])
+        
+        NSLayoutConstraint.activate(horizontalConstraints + verticalConstraints)
+    }
+}
