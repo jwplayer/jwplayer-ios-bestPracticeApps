@@ -21,6 +21,7 @@
 		3B181AEE23592DD1003D4CDB /* Feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B181AED23592DD1003D4CDB /* Feed.plist */; };
 		3B181AF023592DE5003D4CDB /* FeedCollectionViewController-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B181AEF23592DE5003D4CDB /* FeedCollectionViewController-Bridging-Header.h */; };
 		3B181AF223592DEF003D4CDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B181AF123592DEF003D4CDB /* Main.storyboard */; };
+		3BBF80C2235DEAF100C529DF /* FeedItemCell+JWPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF80C1235DEAF100C529DF /* FeedItemCell+JWPlayerDelegate.swift */; };
 		403AE5E288657240D7201522 /* libPods-JWRemoteController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6960B809E87D90EBF1ADFC17 /* libPods-JWRemoteController.a */; };
 		47595BB3E8D0E95FABB1E764 /* libPods-FeedTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3442318C4BDA2CFB2694337 /* libPods-FeedTableViewController.a */; };
 		561FBDC9C3F85957621D06E5 /* libPods-JWFairPlayDrm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAAD561A6E20B3D7DA378BA /* libPods-JWFairPlayDrm.a */; };
@@ -343,6 +344,7 @@
 		3B181AEF23592DE5003D4CDB /* FeedCollectionViewController-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FeedCollectionViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		3B181AF123592DEF003D4CDB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3B1AD39A2354BEAD002A15D8 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		3BBF80C1235DEAF100C529DF /* FeedItemCell+JWPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedItemCell+JWPlayerDelegate.swift"; sourceTree = "<group>"; };
 		3E6AD99A58F7227B7941CDC4 /* Pods-JWRemoteCastController Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.release.xcconfig"; path = "Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.release.xcconfig"; sourceTree = "<group>"; };
 		3EE58766402AA1E1EE9C57A8 /* Pods-JWRemotePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemotePlayer.release.xcconfig"; path = "Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer.release.xcconfig"; sourceTree = "<group>"; };
 		425248D5C63F33974B439BBD /* libPods-JWRemoteCastController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteCastController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -724,6 +726,7 @@
 				3B181AD523592D5A003D4CDB /* AppDelegate.swift */,
 				3B181AE923592DC0003D4CDB /* FeedCollectionViewController.swift */,
 				3B181AEB23592DC9003D4CDB /* FeedItemCell.swift */,
+				3BBF80C1235DEAF100C529DF /* FeedItemCell+JWPlayerDelegate.swift */,
 				3B181AEF23592DE5003D4CDB /* FeedCollectionViewController-Bridging-Header.h */,
 				3B181AF123592DEF003D4CDB /* Main.storyboard */,
 				3B181AE023592D5B003D4CDB /* LaunchScreen.storyboard */,
@@ -2956,6 +2959,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBF80C2235DEAF100C529DF /* FeedItemCell+JWPlayerDelegate.swift in Sources */,
 				3B181AEC23592DC9003D4CDB /* FeedItemCell.swift in Sources */,
 				3B181AEA23592DC0003D4CDB /* FeedCollectionViewController.swift in Sources */,
 				3B181AD623592D5A003D4CDB /* AppDelegate.swift in Sources */,

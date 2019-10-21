@@ -55,13 +55,9 @@ class FeedCollectionViewController: UICollectionViewController, UICollectionView
         // Get player from the feed array
         let player = feed[indexPath.row]
 
-        // Add player view to the container view of the cell and fill it
-        if let playerView = player.view {
-            // The container view is centered in the cell in the storyboard
-            cell.containerView.addSubview(playerView)
-            playerView.constraintToSuperview()
-        }
-        
+        // Sets the JWPlayerController to the cell's property.
+        cell.player = player
+
         return cell
     }
     
