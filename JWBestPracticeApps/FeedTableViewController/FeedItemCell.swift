@@ -15,6 +15,25 @@ class FeedItemCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
     
+    var player: JWPlayerController? {
+        didSet {
+            guard let playerView = player?.view else {
+                return
+            }
+            
+            containerView.addSubview(playerView)
+            playerView.constraintToSuperview()
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        for view in containerView.subviews {
+            view.removeFromSuperview()
+        }
+    }
+    
     override var reuseIdentifier: String? {
         return FeedItemCellIdentifier
     }
