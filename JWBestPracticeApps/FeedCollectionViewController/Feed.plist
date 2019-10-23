@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>JWPlayer Video</string>
+		<key>url</key>
+		<string>https://content.jwplatform.com/manifests/AiiOvDZJ.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Hiking</string>
+		<key>url</key>
+		<string>https://content.jwplatform.com/manifests/oi7pAMI1.m3u8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Big Buck Bunny</string>
+		<key>url</key>
+		<string>https://content.bitsontherun.com/videos/bkaovAYt-364765.mp4</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Sintel</string>
+		<key>url</key>
+		<string>https://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4</string>
+	</dict>
+    <dict>
+        <key>title</key>
+        <string>Opera Singer</string>
+        <key>url</key>
+        <string>https://playertest.longtailvideo.com/adaptive/440k/playlist.m3u8</string>
+    </dict>
+    <dict>
+        <key>title</key>
+        <string>Bipbop</string>
+        <key>url</key>
+        <string>https://playertest.longtailvideo.com/adaptive/bipbop/bipbopall.m3u8</string>
+    </dict>
+    <dict>
+        <key>title</key>
+        <string>Opera Singer</string>
+        <key>url</key>
+        <string>https://playertest.longtailvideo.com/adaptive/440k/playlist.m3u8</string>
+    </dict>
+    <dict>
+        <key>title</key>
+        <string>Hiking</string>
+        <key>url</key>
+        <string>https://content.jwplatform.com/manifests/oi7pAMI1.m3u8</string>
+    </dict>
+</array>
+</plist>
