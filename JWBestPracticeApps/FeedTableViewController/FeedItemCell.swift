@@ -16,6 +16,10 @@ class FeedItemCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     
     var player: JWPlayerController? {
+        willSet {
+            player?.view?.removeFromSuperview()
+        }
+        
         didSet {
             guard let playerView = player?.view else {
                 return
@@ -23,14 +27,6 @@ class FeedItemCell: UITableViewCell {
             
             containerView.addSubview(playerView)
             playerView.constraintToSuperview()
-        }
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        for view in containerView.subviews {
-            view.removeFromSuperview()
         }
     }
     
