@@ -4,13 +4,16 @@ To enable casting to Google Cast with the JW Player iOS SDK, you must import the
 
 The JWPlayerController API controls the playback of the video being casted, and the JWPlayerDelegate will provide you with the playback callbacks while casting.
 
-Please note that Google Cast support is still in beta. The JW Player SDK supports casting to the Default Media Receiver and to Styled Media Receivers. Custom Receivers are not yet officially supported, but may work if the video playback implements the same interface as the Default Media Receiver. To specify a receiver, set the receiver's app ID to the `chromeCastReceiverAppID` property of the JWCastController.
+Please note that the JW Player SDK supports casting to the Default Media Receiver and to Styled Media Receivers. Custom Receivers are not yet officially supported, but may work if the video playback implements the same interface as the Default Media Receiver. To specify a receiver, set the receiver's app ID to the `chromeCastReceiverAppID` property of the JWCastController.
 
-# Known issues with Google Cast:
+# The following features are not supported during a casting session with an iOS SDK player:
 
-* Google IMA ads are not supported when casting.
-* Multiple AudioTracks or AudioTrack switching is not supported when casting.
-* Only WebVTT captions are supported; support for other caption formats will be added in the future
+* Google IMA ads
+* FreeWheel ads
+* 608 captions
+* DVR and live streaming capabilities
+* Multiple-audio tracks or AudioTrack switching (not supported natively by Chromecast)
+* In-manifest WebVTT captions (not supported natively by Chromecast)
 
 # Discovery Troubleshooting:
 
