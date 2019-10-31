@@ -7,11 +7,10 @@
 //
 
 #import "JWAirPlayViewController.h"
+#import <AVKit/AVKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface JWAirPlayViewController ()
-
-@property (nonatomic) MPVolumeView *airPlayView;
 
 @end
 
@@ -20,18 +19,32 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self setUpAirPlayButton];
 }
 
 - (void)setUpAirPlayButton
 {
-    CGFloat buttonWidth = 44;
-    CGFloat buttonCoordinateX = self.player.view.frame.size.width - buttonWidth - 5;
-    self.airPlayView =[[MPVolumeView alloc] initWithFrame:CGRectMake(buttonCoordinateX, 0, buttonWidth, buttonWidth)];
-    [self.airPlayView setShowsVolumeSlider:NO];
-    self.airPlayView.backgroundColor = [UIColor clearColor];
-    self.airPlayView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-    [self.player.view addSubview:self.airPlayView];
+    UIView *buttonView = [[UIView new] init];
+    CGRect buttonFrame = CGRectMake(0, 0, 50, 50);
+    
+    if (@available(iOS 11, *)) {
+        // Creating an instance of AVRouteDetector causes AVRoutePickerView to correctly apply
+        // the activeTintColor.
+        AVRouteDetector *routeDetector = [[AVRouteDetector new] init];
+        AVRoutePickerView *airplayButton = [[AVRoutePickerView alloc] initWithFrame: buttonFrame];
+        airplayButton.activeTintColor = UIColor.blueColor;
+        airplayButton.tintColor = UIColor.grayColor;
+        buttonView = airplayButton;
+    } else {
+        MPVolumeView *airplayButton = [[MPVolumeView alloc] initWithFrame: buttonFrame];
+        airplayButton.showsVolumeSlider = false;
+        buttonView = airplayButton;
+    }
+    
+    // If there is not AirPlay devices available, the button will not be displayed.
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonView];
+    [self.navigationItem setRightBarButtonItem: barButtonItem animated: true];
 }
 
 @end
