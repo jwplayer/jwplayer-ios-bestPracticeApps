@@ -42,7 +42,7 @@
         buttonView = airplayButton;
     }
     
-    // If there is not AirPlay devices available, the button will not be displayed.
+    // Before iOS 13 if there are no AirPlay devices available, the button will not be displayed.
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonView];
     [self.navigationItem setRightBarButtonItem: barButtonItem animated: true];
 }
