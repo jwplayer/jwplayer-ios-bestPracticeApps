@@ -16,6 +16,9 @@
 
 @implementation JWAirPlayViewController
 
+// Make sure to look at the 'setUpBackgroundAudio' function in the AppDelegate.
+// It's necessary to make sure the AirPlay runs smoothly.
+
 -(void)viewDidLoad
 {
     [super viewDidLoad];

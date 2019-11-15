@@ -11,6 +11,9 @@ import AVKit // AVKit allow us to use AVRoutePickerView
 import MediaPlayer // MediaPlayer allow us to use MPVolumeView
 
 class ViewController: BasicVideoViewController {
+    
+    // Make sure to look at the 'setUpBackgroundAudio' function in the AppDelegate.
+    // It's necessary to make sure the AirPlay runs smoothly.
 
     override func viewDidLoad() {
         super.viewDidLoad()

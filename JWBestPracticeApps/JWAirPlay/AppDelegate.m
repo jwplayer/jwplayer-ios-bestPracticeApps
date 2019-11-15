@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self setUpBackgroundAudio];
+    
     return YES;
+}
+
+// Set up the app for playback. Necessary for AirPlay to run smoothly.
+- (void)setUpBackgroundAudio
+{
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    
+    NSError *setCategoryError = nil;
+    BOOL success = [audioSession setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+    
+    NSError *activationError = nil;
+    success = [audioSession setActive:YES error:&activationError];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
