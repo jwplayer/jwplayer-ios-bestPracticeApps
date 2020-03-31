@@ -8,7 +8,7 @@ def common_JW
 end
 
 def common_Cast
-    pod 'google-cast-sdk', '4.3.5'
+    pod 'google-cast-sdk', '4.4.5'
 end
 
 def common_Google_IMA
