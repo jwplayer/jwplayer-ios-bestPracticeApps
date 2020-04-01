@@ -27,10 +27,9 @@ target 'BasicVideoViewController' do
   
 end
 
-target 'GoogleDAI' do
+target 'AutoplayVideoFeed' do
   
   common_JW
-  common_Google_IMA
   
 end
 

@@ -206,6 +206,7 @@
 		B5BC26B21DAC20E500F32770 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5BC26B11DAC20E500F32770 /* info.plist */; };
 		C13716CBFBD2EF342EA7DC83 /* libPods-JWBestPracticeApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */; };
 		C3FCDF396365267CFDDD66CA /* libPods-BasicVideoViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */; };
+		D12823F5CF4AC080C0AC3B08 /* libPods-AutoplayVideoFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4103B27105FFE328AA0A621 /* libPods-AutoplayVideoFeed.a */; };
 		DD78E95E5958215D5053AEB0 /* libPods-JWRemotePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0C54926510AB9F4F09374 /* libPods-JWRemotePlayer.a */; };
 		E5A7BC5034AE3E5574B0DD19 /* libPods-AirPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD9A51F82F1B6BCB5F5EEAC /* libPods-AirPlay.a */; };
 		EB4B37EC8E40658E71983CDB /* libPods-JWRemoteCastController Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8BED0908290A1C60AFBC5C /* libPods-JWRemoteCastController Extension.a */; };
@@ -405,6 +406,7 @@
 		79E3CC30234F793800EA07CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWBestPracticeApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC65085B78B54CDD7DD2CDA /* Pods-JWRemoteController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		7FD194FE2E1C85B817E2B223 /* Pods-AutoplayVideoFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoplayVideoFeed.release.xcconfig"; path = "Target Support Files/Pods-AutoplayVideoFeed/Pods-AutoplayVideoFeed.release.xcconfig"; sourceTree = "<group>"; };
 		804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A647224341EB7000AE243 /* AutoplayVideoFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoplayVideoFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A647424341EB7000AE243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -555,6 +557,8 @@
 		DB6939FD85E49626B97F3751 /* Pods-Voicer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voicer.debug.xcconfig"; path = "Target Support Files/Pods-Voicer/Pods-Voicer.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFC4C3291FA6600375E85C1 /* Pods-FeedTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.release.xcconfig"; sourceTree = "<group>"; };
 		E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicVideoViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4103B27105FFE328AA0A621 /* libPods-AutoplayVideoFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoplayVideoFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEAA6F3D6F5977A7FBC8E60 /* Pods-AutoplayVideoFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoplayVideoFeed.debug.xcconfig"; path = "Target Support Files/Pods-AutoplayVideoFeed/Pods-AutoplayVideoFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		ED75868A3C309D3E04F2C1C0 /* Pods-JWRemoteCastController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		F262415913389DE545421F1A /* Pods-JWRemoteController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController.release.xcconfig"; path = "Target Support Files/Pods-JWRemoteController/Pods-JWRemoteController.release.xcconfig"; sourceTree = "<group>"; };
 		F4EC778C223FD43F0008B8DB /* JWConviva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWConviva.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -625,6 +629,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12823F5CF4AC080C0AC3B08 /* libPods-AutoplayVideoFeed.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +789,7 @@
 				6B51316CA7D5F2026AA26704 /* libPods-NativeControls.a */,
 				6BD9A51F82F1B6BCB5F5EEAC /* libPods-AirPlay.a */,
 				ADF5F56C189FDF316F706FE9 /* libPods-FeedCollectionViewController.a */,
+				E4103B27105FFE328AA0A621 /* libPods-AutoplayVideoFeed.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1256,6 +1262,8 @@
 				F8CD3AF40EC8C0E12C1460F1 /* Pods-AirPlay.release.xcconfig */,
 				A6E60A8A38B5ACD4D82C9B9F /* Pods-FeedCollectionViewController.debug.xcconfig */,
 				88D162B571D185A57590768E /* Pods-FeedCollectionViewController.release.xcconfig */,
+				EBEAA6F3D6F5977A7FBC8E60 /* Pods-AutoplayVideoFeed.debug.xcconfig */,
+				7FD194FE2E1C85B817E2B223 /* Pods-AutoplayVideoFeed.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1477,9 +1485,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 807A648524341EBF000AE243 /* Build configuration list for PBXNativeTarget "AutoplayVideoFeed" */;
 			buildPhases = (
+				B238120D6F3181E654420662 /* [CP] Check Pods Manifest.lock */,
 				807A646E24341EB7000AE243 /* Sources */,
 				807A646F24341EB7000AE243 /* Frameworks */,
 				807A647024341EB7000AE243 /* Resources */,
+				AB9651462FB2B31A52959D2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2805,6 +2815,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AB9651462FB2B31A52959D2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoplayVideoFeed/Pods-AutoplayVideoFeed-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AutoplayVideoFeed/Pods-AutoplayVideoFeed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AD110ED9097D0D03B7B30476 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2821,6 +2849,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FeedCollectionViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B238120D6F3181E654420662 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoplayVideoFeed-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3839,6 +3889,7 @@
 		};
 		807A648324341EBF000AE243 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBEAA6F3D6F5977A7FBC8E60 /* Pods-AutoplayVideoFeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -3874,6 +3925,7 @@
 		};
 		807A648424341EBF000AE243 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FD194FE2E1C85B817E2B223 /* Pods-AutoplayVideoFeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
