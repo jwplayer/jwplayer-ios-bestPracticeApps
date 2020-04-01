@@ -13,6 +13,7 @@
 		28208CD343CB17680351BF5E /* libPods-JWRemoteCastController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425248D5C63F33974B439BBD /* libPods-JWRemoteCastController.a */; };
 		29984DE6822C398DD72713E3 /* libPods-VoicerExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07937315AF7025E0211FC774 /* libPods-VoicerExtension.a */; };
 		2F1594C1682C62547ED0C4C2 /* libPods-NativeControls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B51316CA7D5F2026AA26704 /* libPods-NativeControls.a */; };
+		36223933F3CDADE14DD2852E /* libPods-GoogleDAI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8EC1026C52301A1B864E01 /* libPods-GoogleDAI.a */; };
 		3B181AD623592D5A003D4CDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B181AD523592D5A003D4CDB /* AppDelegate.swift */; };
 		3B181ADF23592D5B003D4CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B181ADE23592D5B003D4CDB /* Assets.xcassets */; };
 		3B181AE223592D5B003D4CDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B181AE023592D5B003D4CDB /* LaunchScreen.storyboard */; };
@@ -65,6 +66,12 @@
 		807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A647F24341EBF000AE243 /* LaunchScreen.storyboard */; };
 		807A6488243422E2000AE243 /* FeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A6487243422E2000AE243 /* FeedItemCell.swift */; };
 		807A6489243423C6000AE243 /* Feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B181AED23592DD1003D4CDB /* Feed.plist */; };
+		807A645124323041000AE243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645024323041000AE243 /* AppDelegate.swift */; };
+		807A645324323041000AE243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645224323041000AE243 /* SceneDelegate.swift */; };
+		807A645524323041000AE243 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645424323041000AE243 /* ViewController.swift */; };
+		807A645824323041000AE243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A645624323041000AE243 /* Main.storyboard */; };
+		807A645A24323046000AE243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807A645924323046000AE243 /* Assets.xcassets */; };
+		807A645D24323046000AE243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A645B24323046000AE243 /* LaunchScreen.storyboard */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
 		8A37347D1D1DC2A80008FE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A37347B1D1DC2A80008FE59 /* Main.storyboard */; };
@@ -417,6 +424,16 @@
 		807A648024341EBF000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autoplay-Bridging-Header.h"; sourceTree = "<group>"; };
 		807A6487243422E2000AE243 /* FeedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCell.swift; sourceTree = "<group>"; };
+		807A644E24323041000AE243 /* GoogleDAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleDAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		807A645024323041000AE243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		807A645224323041000AE243 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		807A645424323041000AE243 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		807A645724323041000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		807A645924323046000AE243 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		807A645C24323046000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		807A645E24323046000AE243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807A6462243245DE000AE243 /* GoogleDAI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleDAI-Bridging-Header.h"; sourceTree = "<group>"; };
+		83551FA4EC9B0C6AA134CC01 /* Pods-GoogleDAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDAI.release.xcconfig"; path = "Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI.release.xcconfig"; sourceTree = "<group>"; };
 		88D162B571D185A57590768E /* Pods-FeedCollectionViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedCollectionViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedCollectionViewController/Pods-FeedCollectionViewController.release.xcconfig"; sourceTree = "<group>"; };
 		8A3734701D1DC2A80008FE59 /* JWRemoteCastPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWRemoteCastPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3734731D1DC2A80008FE59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -514,6 +531,7 @@
 		8FB0C54926510AB9F4F09374 /* libPods-JWRemotePlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemotePlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BF67F96F003AD8A9DFF8CD /* Pods-JWFriendlyObstructions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWFriendlyObstructions.release.xcconfig"; path = "Target Support Files/Pods-JWFriendlyObstructions/Pods-JWFriendlyObstructions.release.xcconfig"; sourceTree = "<group>"; };
 		98FD78CCEB5A1485D06F9FA5 /* Pods-JWRemoteController Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.release.xcconfig"; path = "Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9BDAA5202DF6B9A446A397BA /* Pods-GoogleDAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDAI.debug.xcconfig"; path = "Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI.debug.xcconfig"; sourceTree = "<group>"; };
 		9DFB6B2526CA4A79606216B9 /* Pods-JWRemoteCastPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastPlayer.release.xcconfig"; path = "Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		A6E60A8A38B5ACD4D82C9B9F /* Pods-FeedCollectionViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedCollectionViewController.debug.xcconfig"; path = "Target Support Files/Pods-FeedCollectionViewController/Pods-FeedCollectionViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		AB22E89ADE68C663CF2EB005 /* Pods-JWConviva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.release.xcconfig"; path = "Target Support Files/Pods-JWConviva/Pods-JWConviva.release.xcconfig"; sourceTree = "<group>"; };
@@ -555,6 +573,7 @@
 		D3442318C4BDA2CFB2694337 /* libPods-FeedTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61FCFCF572B03B4F7F0E2BD /* Pods-VoicerExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoicerExtension.debug.xcconfig"; path = "Target Support Files/Pods-VoicerExtension/Pods-VoicerExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		DB6939FD85E49626B97F3751 /* Pods-Voicer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voicer.debug.xcconfig"; path = "Target Support Files/Pods-Voicer/Pods-Voicer.debug.xcconfig"; sourceTree = "<group>"; };
+		DB8EC1026C52301A1B864E01 /* libPods-GoogleDAI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleDAI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFC4C3291FA6600375E85C1 /* Pods-FeedTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.release.xcconfig"; sourceTree = "<group>"; };
 		E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicVideoViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4103B27105FFE328AA0A621 /* libPods-AutoplayVideoFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoplayVideoFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -630,6 +649,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D12823F5CF4AC080C0AC3B08 /* libPods-AutoplayVideoFeed.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807A644B24323041000AE243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36223933F3CDADE14DD2852E /* libPods-GoogleDAI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +817,7 @@
 				6BD9A51F82F1B6BCB5F5EEAC /* libPods-AirPlay.a */,
 				ADF5F56C189FDF316F706FE9 /* libPods-FeedCollectionViewController.a */,
 				E4103B27105FFE328AA0A621 /* libPods-AutoplayVideoFeed.a */,
+				DB8EC1026C52301A1B864E01 /* libPods-GoogleDAI.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -875,6 +903,21 @@
 				807A647A24341EB7000AE243 /* Main.storyboard */,
 			);
 			path = AutoplayVideoFeed;
+			sourceTree = "<group>";
+		};
+		807A644F24323041000AE243 /* GoogleDAI */ = {
+			isa = PBXGroup;
+			children = (
+				807A645024323041000AE243 /* AppDelegate.swift */,
+				807A645224323041000AE243 /* SceneDelegate.swift */,
+				807A645424323041000AE243 /* ViewController.swift */,
+				807A645624323041000AE243 /* Main.storyboard */,
+				807A645924323046000AE243 /* Assets.xcassets */,
+				807A645B24323046000AE243 /* LaunchScreen.storyboard */,
+				807A645E24323046000AE243 /* Info.plist */,
+				807A6462243245DE000AE243 /* GoogleDAI-Bridging-Header.h */,
+			);
+			path = GoogleDAI;
 			sourceTree = "<group>";
 		};
 		8A3734711D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -969,6 +1012,7 @@
 				79E3CC1E234E6FAB00EA07CA /* AirPlay */,
 				3B181AD423592D5A003D4CDB /* FeedCollectionViewController */,
 				807A647324341EB7000AE243 /* AutoplayVideoFeed */,
+				807A644F24323041000AE243 /* GoogleDAI */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
 				D64388B1D46A92A630820C66 /* Pods */,
@@ -999,6 +1043,7 @@
 				79E3CC1D234E6FAB00EA07CA /* AirPlay.app */,
 				3B181AD323592D5A003D4CDB /* FeedCollectionViewController.app */,
 				807A647224341EB7000AE243 /* AutoplayVideoFeed.app */,
+				807A644E24323041000AE243 /* GoogleDAI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1263,6 +1308,8 @@
 				88D162B571D185A57590768E /* Pods-FeedCollectionViewController.release.xcconfig */,
 				EBEAA6F3D6F5977A7FBC8E60 /* Pods-AutoplayVideoFeed.debug.xcconfig */,
 				7FD194FE2E1C85B817E2B223 /* Pods-AutoplayVideoFeed.release.xcconfig */,
+				9BDAA5202DF6B9A446A397BA /* Pods-GoogleDAI.debug.xcconfig */,
+				83551FA4EC9B0C6AA134CC01 /* Pods-GoogleDAI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1497,6 +1544,25 @@
 			name = AutoplayVideoFeed;
 			productName = AutoplayVideoFeed;
 			productReference = 807A647224341EB7000AE243 /* AutoplayVideoFeed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		807A644D24323041000AE243 /* GoogleDAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807A646124323046000AE243 /* Build configuration list for PBXNativeTarget "GoogleDAI" */;
+			buildPhases = (
+				9C1BA570E832C1C33A519816 /* [CP] Check Pods Manifest.lock */,
+				807A644A24323041000AE243 /* Sources */,
+				807A644B24323041000AE243 /* Frameworks */,
+				807A644C24323041000AE243 /* Resources */,
+				AD3B56A0B4E9342C9602AAE3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleDAI;
+			productName = GoogleDAI;
+			productReference = 807A644E24323041000AE243 /* GoogleDAI.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -1840,6 +1906,11 @@
 						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 					};
+					807A644D24323041000AE243 = {
+						CreatedOnToolsVersion = 11.3.1;
+						DevelopmentTeam = WX87M56X5N;
+						ProvisioningStyle = Automatic;
+					};
 					8A37346F1D1DC2A80008FE59 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = WX87M56X5N;
@@ -1961,6 +2032,7 @@
 				79E3CC1C234E6FAB00EA07CA /* AirPlay */,
 				3B181AD223592D5A003D4CDB /* FeedCollectionViewController */,
 				807A647124341EB7000AE243 /* AutoplayVideoFeed */,
+				807A644D24323041000AE243 /* GoogleDAI */,
 			);
 		};
 /* End PBXProject section */
@@ -2032,6 +2104,16 @@
 				807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */,
 				807A647E24341EBF000AE243 /* Assets.xcassets in Resources */,
 				807A647C24341EB7000AE243 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807A644C24323041000AE243 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807A645D24323046000AE243 /* LaunchScreen.storyboard in Resources */,
+				807A645A24323046000AE243 /* Assets.xcassets in Resources */,
+				807A645824323041000AE243 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2731,6 +2813,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Voicer/Pods-Voicer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9C1BA570E832C1C33A519816 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleDAI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9C93103B1D9B1DD84E8F7A7D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2875,6 +2979,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD3B56A0B4E9342C9602AAE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1F5DFBDC63DAEBD7E99AF91 /* [CP] Embed Pods Frameworks */ = {
@@ -3140,6 +3264,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		807A644A24323041000AE243 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807A645524323041000AE243 /* ViewController.swift in Sources */,
+				807A645124323041000AE243 /* AppDelegate.swift in Sources */,
+				807A645324323041000AE243 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A37346C1D1DC2A80008FE59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3399,10 +3533,26 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		807A645624323041000AE243 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807A645724323041000AE243 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		807A647F24341EBF000AE243 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				807A648024341EBF000AE243 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		807A645B24323046000AE243 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807A645C24323046000AE243 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -3923,6 +4073,43 @@
 			};
 			name = Debug;
 		};
+		807A645F24323046000AE243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BDAA5202DF6B9A446A397BA /* Pods-GoogleDAI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GoogleDAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.GoogleDAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleDAI/GoogleDAI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		807A648424341EBF000AE243 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FD194FE2E1C85B817E2B223 /* Pods-AutoplayVideoFeed.release.xcconfig */;
@@ -3951,6 +4138,40 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.AutoplayVideoFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		807A646024323046000AE243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83551FA4EC9B0C6AA134CC01 /* Pods-GoogleDAI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GoogleDAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.GoogleDAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleDAI/GoogleDAI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -4708,6 +4929,15 @@
 			buildConfigurations = (
 				807A648324341EBF000AE243 /* Debug */,
 				807A648424341EBF000AE243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807A646124323046000AE243 /* Build configuration list for PBXNativeTarget "GoogleDAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807A645F24323046000AE243 /* Debug */,
+				807A646024323046000AE243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
