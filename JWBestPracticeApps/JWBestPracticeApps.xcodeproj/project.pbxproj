@@ -59,11 +59,12 @@
 		79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */; };
 		79CAAD3F2321D132002FFA23 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
 		807A647524341EB7000AE243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647424341EB7000AE243 /* AppDelegate.swift */; };
-		807A647724341EB7000AE243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647624341EB7000AE243 /* SceneDelegate.swift */; };
-		807A647924341EB7000AE243 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647824341EB7000AE243 /* ViewController.swift */; };
+		807A647924341EB7000AE243 /* AutoplayVideoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647824341EB7000AE243 /* AutoplayVideoFeedViewController.swift */; };
 		807A647C24341EB7000AE243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A647A24341EB7000AE243 /* Main.storyboard */; };
 		807A647E24341EBF000AE243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807A647D24341EBF000AE243 /* Assets.xcassets */; };
 		807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A647F24341EBF000AE243 /* LaunchScreen.storyboard */; };
+		807A6488243422E2000AE243 /* FeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A6487243422E2000AE243 /* FeedItemCell.swift */; };
+		807A6489243423C6000AE243 /* Feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B181AED23592DD1003D4CDB /* Feed.plist */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
 		8A37347D1D1DC2A80008FE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A37347B1D1DC2A80008FE59 /* Main.storyboard */; };
@@ -410,13 +411,12 @@
 		804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A647224341EB7000AE243 /* AutoplayVideoFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoplayVideoFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A647424341EB7000AE243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		807A647624341EB7000AE243 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		807A647824341EB7000AE243 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		807A647824341EB7000AE243 /* AutoplayVideoFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoplayVideoFeedViewController.swift; sourceTree = "<group>"; };
 		807A647B24341EB7000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		807A647D24341EBF000AE243 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		807A648024341EBF000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		807A648224341EBF000AE243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autoplay-Bridging-Header.h"; sourceTree = "<group>"; };
+		807A6487243422E2000AE243 /* FeedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCell.swift; sourceTree = "<group>"; };
 		88D162B571D185A57590768E /* Pods-FeedCollectionViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedCollectionViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedCollectionViewController/Pods-FeedCollectionViewController.release.xcconfig"; sourceTree = "<group>"; };
 		8A3734701D1DC2A80008FE59 /* JWRemoteCastPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWRemoteCastPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3734731D1DC2A80008FE59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -867,13 +867,12 @@
 			isa = PBXGroup;
 			children = (
 				807A647424341EB7000AE243 /* AppDelegate.swift */,
-				807A647624341EB7000AE243 /* SceneDelegate.swift */,
-				807A647824341EB7000AE243 /* ViewController.swift */,
-				807A647A24341EB7000AE243 /* Main.storyboard */,
 				807A647D24341EBF000AE243 /* Assets.xcassets */,
-				807A647F24341EBF000AE243 /* LaunchScreen.storyboard */,
-				807A648224341EBF000AE243 /* Info.plist */,
 				807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */,
+				807A647824341EB7000AE243 /* AutoplayVideoFeedViewController.swift */,
+				807A6487243422E2000AE243 /* FeedItemCell.swift */,
+				807A647F24341EBF000AE243 /* LaunchScreen.storyboard */,
+				807A647A24341EB7000AE243 /* Main.storyboard */,
 			);
 			path = AutoplayVideoFeed;
 			sourceTree = "<group>";
@@ -2029,6 +2028,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807A6489243423C6000AE243 /* Feed.plist in Resources */,
 				807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */,
 				807A647E24341EBF000AE243 /* Assets.xcassets in Resources */,
 				807A647C24341EB7000AE243 /* Main.storyboard in Resources */,
@@ -3134,9 +3134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				807A647924341EB7000AE243 /* ViewController.swift in Sources */,
+				807A6488243422E2000AE243 /* FeedItemCell.swift in Sources */,
+				807A647924341EB7000AE243 /* AutoplayVideoFeedViewController.swift in Sources */,
 				807A647524341EB7000AE243 /* AppDelegate.swift in Sources */,
-				807A647724341EB7000AE243 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3909,8 +3909,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = AutoplayVideoFeed/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -3945,8 +3945,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = AutoplayVideoFeed/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.AutoplayVideoFeed;
