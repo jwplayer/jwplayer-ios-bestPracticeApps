@@ -58,6 +58,12 @@
 		79CAAD372321D0FD002FFA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD362321D0FD002FFA23 /* Assets.xcassets */; };
 		79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */; };
 		79CAAD3F2321D132002FFA23 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
+		807A647524341EB7000AE243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647424341EB7000AE243 /* AppDelegate.swift */; };
+		807A647724341EB7000AE243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647624341EB7000AE243 /* SceneDelegate.swift */; };
+		807A647924341EB7000AE243 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647824341EB7000AE243 /* ViewController.swift */; };
+		807A647C24341EB7000AE243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A647A24341EB7000AE243 /* Main.storyboard */; };
+		807A647E24341EBF000AE243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807A647D24341EBF000AE243 /* Assets.xcassets */; };
+		807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A647F24341EBF000AE243 /* LaunchScreen.storyboard */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
 		8A37347D1D1DC2A80008FE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A37347B1D1DC2A80008FE59 /* Main.storyboard */; };
@@ -400,6 +406,15 @@
 		7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWBestPracticeApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC65085B78B54CDD7DD2CDA /* Pods-JWRemoteController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		807A647224341EB7000AE243 /* AutoplayVideoFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoplayVideoFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		807A647424341EB7000AE243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		807A647624341EB7000AE243 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		807A647824341EB7000AE243 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		807A647B24341EB7000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		807A647D24341EBF000AE243 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		807A648024341EBF000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		807A648224341EBF000AE243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autoplay-Bridging-Header.h"; sourceTree = "<group>"; };
 		88D162B571D185A57590768E /* Pods-FeedCollectionViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedCollectionViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedCollectionViewController/Pods-FeedCollectionViewController.release.xcconfig"; sourceTree = "<group>"; };
 		8A3734701D1DC2A80008FE59 /* JWRemoteCastPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWRemoteCastPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3734731D1DC2A80008FE59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -603,6 +618,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F1594C1682C62547ED0C4C2 /* libPods-NativeControls.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807A646F24341EB7000AE243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,6 +857,21 @@
 			path = AirPlay;
 			sourceTree = "<group>";
 		};
+		807A647324341EB7000AE243 /* AutoplayVideoFeed */ = {
+			isa = PBXGroup;
+			children = (
+				807A647424341EB7000AE243 /* AppDelegate.swift */,
+				807A647624341EB7000AE243 /* SceneDelegate.swift */,
+				807A647824341EB7000AE243 /* ViewController.swift */,
+				807A647A24341EB7000AE243 /* Main.storyboard */,
+				807A647D24341EBF000AE243 /* Assets.xcassets */,
+				807A647F24341EBF000AE243 /* LaunchScreen.storyboard */,
+				807A648224341EBF000AE243 /* Info.plist */,
+				807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */,
+			);
+			path = AutoplayVideoFeed;
+			sourceTree = "<group>";
+		};
 		8A3734711D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,6 +963,7 @@
 				793AA640231ED916006CA8FF /* Casting */,
 				79E3CC1E234E6FAB00EA07CA /* AirPlay */,
 				3B181AD423592D5A003D4CDB /* FeedCollectionViewController */,
+				807A647324341EB7000AE243 /* AutoplayVideoFeed */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
 				D64388B1D46A92A630820C66 /* Pods */,
@@ -955,6 +993,7 @@
 				793AA63F231ED916006CA8FF /* Casting.app */,
 				79E3CC1D234E6FAB00EA07CA /* AirPlay.app */,
 				3B181AD323592D5A003D4CDB /* FeedCollectionViewController.app */,
+				807A647224341EB7000AE243 /* AutoplayVideoFeed.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1434,6 +1473,23 @@
 			productReference = 79E3CC1D234E6FAB00EA07CA /* AirPlay.app */;
 			productType = "com.apple.product-type.application";
 		};
+		807A647124341EB7000AE243 /* AutoplayVideoFeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807A648524341EBF000AE243 /* Build configuration list for PBXNativeTarget "AutoplayVideoFeed" */;
+			buildPhases = (
+				807A646E24341EB7000AE243 /* Sources */,
+				807A646F24341EB7000AE243 /* Frameworks */,
+				807A647024341EB7000AE243 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoplayVideoFeed;
+			productName = AutoplayVideoFeed;
+			productReference = 807A647224341EB7000AE243 /* AutoplayVideoFeed.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3734861D1DC2A80008FE59 /* Build configuration list for PBXNativeTarget "JWRemoteCastPlayer" */;
@@ -1723,7 +1779,7 @@
 		8A729A6F1C98ACA8000F03A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Karim Mourra";
 				TargetAttributes = {
@@ -1767,6 +1823,11 @@
 					};
 					79E3CC1C234E6FAB00EA07CA = {
 						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = WX87M56X5N;
+						ProvisioningStyle = Automatic;
+					};
+					807A647124341EB7000AE243 = {
+						CreatedOnToolsVersion = 11.3.1;
 						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 					};
@@ -1890,6 +1951,7 @@
 				793AA63E231ED916006CA8FF /* Casting */,
 				79E3CC1C234E6FAB00EA07CA /* AirPlay */,
 				3B181AD223592D5A003D4CDB /* FeedCollectionViewController */,
+				807A647124341EB7000AE243 /* AutoplayVideoFeed */,
 			);
 		};
 /* End PBXProject section */
@@ -1950,6 +2012,16 @@
 				79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */,
 				79CAAD372321D0FD002FFA23 /* Assets.xcassets in Resources */,
 				79CAAD352321D0FC002FFA23 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807A647024341EB7000AE243 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */,
+				807A647E24341EBF000AE243 /* Assets.xcassets in Resources */,
+				807A647C24341EB7000AE243 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3008,6 +3080,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		807A646E24341EB7000AE243 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807A647924341EB7000AE243 /* ViewController.swift in Sources */,
+				807A647524341EB7000AE243 /* AppDelegate.swift in Sources */,
+				807A647724341EB7000AE243 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A37346C1D1DC2A80008FE59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3255,6 +3337,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				79E3CC29234E6FAD00EA07CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		807A647A24341EB7000AE243 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807A647B24341EB7000AE243 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		807A647F24341EBF000AE243 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807A648024341EBF000AE243 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -3736,6 +3834,73 @@
 				PRODUCT_NAME = Casting;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		807A648324341EBF000AE243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AutoplayVideoFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.AutoplayVideoFeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		807A648424341EBF000AE243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AutoplayVideoFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.AutoplayVideoFeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -4482,6 +4647,15 @@
 			buildConfigurations = (
 				3B181AE423592D5B003D4CDB /* Debug */,
 				3B181AE523592D5B003D4CDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807A648524341EBF000AE243 /* Build configuration list for PBXNativeTarget "AutoplayVideoFeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807A648324341EBF000AE243 /* Debug */,
+				807A648424341EBF000AE243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

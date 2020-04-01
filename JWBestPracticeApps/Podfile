@@ -4,7 +4,7 @@
 # use_frameworks!
 
 def common_JW
-    pod 'JWPlayer-SDK', '~> 3.7.0'
+    pod 'JWPlayer-SDK', '~> 3.12.0'
 end
 
 def common_Cast
@@ -24,6 +24,13 @@ end
 target 'BasicVideoViewController' do
   
   common_JW
+  
+end
+
+target 'GoogleDAI' do
+  
+  common_JW
+  common_Google_IMA
   
 end
 
