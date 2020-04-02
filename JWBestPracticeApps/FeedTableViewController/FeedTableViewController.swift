@@ -29,15 +29,22 @@ class FeedTableViewController: UITableViewController {
         
         // Populate the feed array with video players
         for itemInfo in feedInfo {
-            guard let url = itemInfo["url"] else {
+            guard let url = itemInfo["url"], let title = itemInfo["title"] else {
                 continue
             }
-            
-            if let player = JWPlayerController(config: JWConfig(contentUrl: url)) {
-                player.config.title = itemInfo["title"]
+
+            if let player = buildPlayer(title: title, url: url) {
                 feed.append(player)
             }
         }
+    }
+
+    open func buildPlayer(title: String, url: String) -> JWPlayerController? {
+        if let player = JWPlayerController(config: JWConfig(contentUrl: url)) {
+            player.config.title = title
+            return player
+        }
+        return nil
     }
     
 // MARK: UITableViewDataSource implementation

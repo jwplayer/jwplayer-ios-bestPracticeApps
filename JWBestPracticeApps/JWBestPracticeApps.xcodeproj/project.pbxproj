@@ -59,6 +59,12 @@
 		79CAAD372321D0FD002FFA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD362321D0FD002FFA23 /* Assets.xcassets */; };
 		79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */; };
 		79CAAD3F2321D132002FFA23 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
+		807A645124323041000AE243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645024323041000AE243 /* AppDelegate.swift */; };
+		807A645324323041000AE243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645224323041000AE243 /* SceneDelegate.swift */; };
+		807A645524323041000AE243 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645424323041000AE243 /* ViewController.swift */; };
+		807A645824323041000AE243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A645624323041000AE243 /* Main.storyboard */; };
+		807A645A24323046000AE243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807A645924323046000AE243 /* Assets.xcassets */; };
+		807A645D24323046000AE243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A645B24323046000AE243 /* LaunchScreen.storyboard */; };
 		807A647524341EB7000AE243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647424341EB7000AE243 /* AppDelegate.swift */; };
 		807A647924341EB7000AE243 /* AutoplayVideoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A647824341EB7000AE243 /* AutoplayVideoFeedViewController.swift */; };
 		807A647C24341EB7000AE243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A647A24341EB7000AE243 /* Main.storyboard */; };
@@ -66,12 +72,8 @@
 		807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A647F24341EBF000AE243 /* LaunchScreen.storyboard */; };
 		807A6488243422E2000AE243 /* FeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A6487243422E2000AE243 /* FeedItemCell.swift */; };
 		807A6489243423C6000AE243 /* Feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B181AED23592DD1003D4CDB /* Feed.plist */; };
-		807A645124323041000AE243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645024323041000AE243 /* AppDelegate.swift */; };
-		807A645324323041000AE243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645224323041000AE243 /* SceneDelegate.swift */; };
-		807A645524323041000AE243 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A645424323041000AE243 /* ViewController.swift */; };
-		807A645824323041000AE243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A645624323041000AE243 /* Main.storyboard */; };
-		807A645A24323046000AE243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807A645924323046000AE243 /* Assets.xcassets */; };
-		807A645D24323046000AE243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A645B24323046000AE243 /* LaunchScreen.storyboard */; };
+		807A6494243636D3000AE243 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D964230482B70043CE80 /* FeedTableViewController.swift */; };
+		807A649524363A22000AE243 /* FeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7988D961230472800043CE80 /* FeedItemCell.xib */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
 		8A37347D1D1DC2A80008FE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A37347B1D1DC2A80008FE59 /* Main.storyboard */; };
@@ -416,14 +418,6 @@
 		7EC65085B78B54CDD7DD2CDA /* Pods-JWRemoteController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		7FD194FE2E1C85B817E2B223 /* Pods-AutoplayVideoFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoplayVideoFeed.release.xcconfig"; path = "Target Support Files/Pods-AutoplayVideoFeed/Pods-AutoplayVideoFeed.release.xcconfig"; sourceTree = "<group>"; };
 		804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		807A647224341EB7000AE243 /* AutoplayVideoFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoplayVideoFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		807A647424341EB7000AE243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		807A647824341EB7000AE243 /* AutoplayVideoFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoplayVideoFeedViewController.swift; sourceTree = "<group>"; };
-		807A647B24341EB7000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		807A647D24341EBF000AE243 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		807A648024341EBF000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autoplay-Bridging-Header.h"; sourceTree = "<group>"; };
-		807A6487243422E2000AE243 /* FeedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCell.swift; sourceTree = "<group>"; };
 		807A644E24323041000AE243 /* GoogleDAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleDAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A645024323041000AE243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807A645224323041000AE243 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -433,6 +427,14 @@
 		807A645C24323046000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		807A645E24323046000AE243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		807A6462243245DE000AE243 /* GoogleDAI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleDAI-Bridging-Header.h"; sourceTree = "<group>"; };
+		807A647224341EB7000AE243 /* AutoplayVideoFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoplayVideoFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		807A647424341EB7000AE243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		807A647824341EB7000AE243 /* AutoplayVideoFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoplayVideoFeedViewController.swift; sourceTree = "<group>"; };
+		807A647B24341EB7000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		807A647D24341EBF000AE243 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		807A648024341EBF000AE243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autoplay-Bridging-Header.h"; sourceTree = "<group>"; };
+		807A6487243422E2000AE243 /* FeedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCell.swift; sourceTree = "<group>"; };
 		83551FA4EC9B0C6AA134CC01 /* Pods-GoogleDAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDAI.release.xcconfig"; path = "Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI.release.xcconfig"; sourceTree = "<group>"; };
 		88D162B571D185A57590768E /* Pods-FeedCollectionViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedCollectionViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedCollectionViewController/Pods-FeedCollectionViewController.release.xcconfig"; sourceTree = "<group>"; };
 		8A3734701D1DC2A80008FE59 /* JWRemoteCastPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWRemoteCastPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -644,19 +646,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		807A646F24341EB7000AE243 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D12823F5CF4AC080C0AC3B08 /* libPods-AutoplayVideoFeed.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		807A644B24323041000AE243 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				36223933F3CDADE14DD2852E /* libPods-GoogleDAI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807A646F24341EB7000AE243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12823F5CF4AC080C0AC3B08 /* libPods-AutoplayVideoFeed.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,20 +893,6 @@
 			path = AirPlay;
 			sourceTree = "<group>";
 		};
-		807A647324341EB7000AE243 /* AutoplayVideoFeed */ = {
-			isa = PBXGroup;
-			children = (
-				807A647424341EB7000AE243 /* AppDelegate.swift */,
-				807A647D24341EBF000AE243 /* Assets.xcassets */,
-				807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */,
-				807A647824341EB7000AE243 /* AutoplayVideoFeedViewController.swift */,
-				807A6487243422E2000AE243 /* FeedItemCell.swift */,
-				807A647F24341EBF000AE243 /* LaunchScreen.storyboard */,
-				807A647A24341EB7000AE243 /* Main.storyboard */,
-			);
-			path = AutoplayVideoFeed;
-			sourceTree = "<group>";
-		};
 		807A644F24323041000AE243 /* GoogleDAI */ = {
 			isa = PBXGroup;
 			children = (
@@ -918,6 +906,20 @@
 				807A6462243245DE000AE243 /* GoogleDAI-Bridging-Header.h */,
 			);
 			path = GoogleDAI;
+			sourceTree = "<group>";
+		};
+		807A647324341EB7000AE243 /* AutoplayVideoFeed */ = {
+			isa = PBXGroup;
+			children = (
+				807A647424341EB7000AE243 /* AppDelegate.swift */,
+				807A647D24341EBF000AE243 /* Assets.xcassets */,
+				807A648624341F0E000AE243 /* Autoplay-Bridging-Header.h */,
+				807A647824341EB7000AE243 /* AutoplayVideoFeedViewController.swift */,
+				807A6487243422E2000AE243 /* FeedItemCell.swift */,
+				807A647F24341EBF000AE243 /* LaunchScreen.storyboard */,
+				807A647A24341EB7000AE243 /* Main.storyboard */,
+			);
+			path = AutoplayVideoFeed;
 			sourceTree = "<group>";
 		};
 		8A3734711D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -1527,25 +1529,6 @@
 			productReference = 79E3CC1D234E6FAB00EA07CA /* AirPlay.app */;
 			productType = "com.apple.product-type.application";
 		};
-		807A647124341EB7000AE243 /* AutoplayVideoFeed */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 807A648524341EBF000AE243 /* Build configuration list for PBXNativeTarget "AutoplayVideoFeed" */;
-			buildPhases = (
-				B238120D6F3181E654420662 /* [CP] Check Pods Manifest.lock */,
-				807A646E24341EB7000AE243 /* Sources */,
-				807A646F24341EB7000AE243 /* Frameworks */,
-				807A647024341EB7000AE243 /* Resources */,
-				AB9651462FB2B31A52959D2D /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AutoplayVideoFeed;
-			productName = AutoplayVideoFeed;
-			productReference = 807A647224341EB7000AE243 /* AutoplayVideoFeed.app */;
-			productType = "com.apple.product-type.application";
-		};
 		807A644D24323041000AE243 /* GoogleDAI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 807A646124323046000AE243 /* Build configuration list for PBXNativeTarget "GoogleDAI" */;
@@ -1563,6 +1546,25 @@
 			name = GoogleDAI;
 			productName = GoogleDAI;
 			productReference = 807A644E24323041000AE243 /* GoogleDAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		807A647124341EB7000AE243 /* AutoplayVideoFeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807A648524341EBF000AE243 /* Build configuration list for PBXNativeTarget "AutoplayVideoFeed" */;
+			buildPhases = (
+				B238120D6F3181E654420662 /* [CP] Check Pods Manifest.lock */,
+				807A646E24341EB7000AE243 /* Sources */,
+				807A646F24341EB7000AE243 /* Frameworks */,
+				807A647024341EB7000AE243 /* Resources */,
+				AB9651462FB2B31A52959D2D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoplayVideoFeed;
+			productName = AutoplayVideoFeed;
+			productReference = 807A647224341EB7000AE243 /* AutoplayVideoFeed.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -1901,12 +1903,12 @@
 						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 					};
-					807A647124341EB7000AE243 = {
+					807A644D24323041000AE243 = {
 						CreatedOnToolsVersion = 11.3.1;
 						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 					};
-					807A644D24323041000AE243 = {
+					807A647124341EB7000AE243 = {
 						CreatedOnToolsVersion = 11.3.1;
 						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
@@ -2096,17 +2098,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		807A647024341EB7000AE243 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				807A6489243423C6000AE243 /* Feed.plist in Resources */,
-				807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */,
-				807A647E24341EBF000AE243 /* Assets.xcassets in Resources */,
-				807A647C24341EB7000AE243 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		807A644C24323041000AE243 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2114,6 +2105,18 @@
 				807A645D24323046000AE243 /* LaunchScreen.storyboard in Resources */,
 				807A645A24323046000AE243 /* Assets.xcassets in Resources */,
 				807A645824323041000AE243 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807A647024341EB7000AE243 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807A649524363A22000AE243 /* FeedItemCell.xib in Resources */,
+				807A6489243423C6000AE243 /* Feed.plist in Resources */,
+				807A648124341EBF000AE243 /* LaunchScreen.storyboard in Resources */,
+				807A647E24341EBF000AE243 /* Assets.xcassets in Resources */,
+				807A647C24341EB7000AE243 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2959,6 +2962,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD3B56A0B4E9342C9602AAE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B238120D6F3181E654420662 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2979,26 +3002,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD3B56A0B4E9342C9602AAE3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI-frameworks.sh",
-				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
-				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleDAI/Pods-GoogleDAI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1F5DFBDC63DAEBD7E99AF91 /* [CP] Embed Pods Frameworks */ = {
@@ -3254,16 +3257,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		807A646E24341EB7000AE243 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				807A6488243422E2000AE243 /* FeedItemCell.swift in Sources */,
-				807A647924341EB7000AE243 /* AutoplayVideoFeedViewController.swift in Sources */,
-				807A647524341EB7000AE243 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		807A644A24323041000AE243 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3271,6 +3264,17 @@
 				807A645524323041000AE243 /* ViewController.swift in Sources */,
 				807A645124323041000AE243 /* AppDelegate.swift in Sources */,
 				807A645324323041000AE243 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807A646E24341EB7000AE243 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807A6488243422E2000AE243 /* FeedItemCell.swift in Sources */,
+				807A647924341EB7000AE243 /* AutoplayVideoFeedViewController.swift in Sources */,
+				807A647524341EB7000AE243 /* AppDelegate.swift in Sources */,
+				807A6494243636D3000AE243 /* FeedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3525,14 +3529,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		807A647A24341EB7000AE243 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				807A647B24341EB7000AE243 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		807A645624323041000AE243 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3541,18 +3537,26 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		807A647F24341EBF000AE243 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				807A648024341EBF000AE243 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		807A645B24323046000AE243 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				807A645C24323046000AE243 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		807A647A24341EB7000AE243 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807A647B24341EB7000AE243 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		807A647F24341EBF000AE243 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807A648024341EBF000AE243 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -4037,42 +4041,6 @@
 			};
 			name = Release;
 		};
-		807A648324341EBF000AE243 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBEAA6F3D6F5977A7FBC8E60 /* Pods-AutoplayVideoFeed.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WX87M56X5N;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.AutoplayVideoFeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		807A645F24323046000AE243 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BDAA5202DF6B9A446A397BA /* Pods-GoogleDAI.debug.xcconfig */;
@@ -4110,39 +4078,6 @@
 			};
 			name = Debug;
 		};
-		807A648424341EBF000AE243 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FD194FE2E1C85B817E2B223 /* Pods-AutoplayVideoFeed.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WX87M56X5N;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.AutoplayVideoFeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		807A646024323046000AE243 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 83551FA4EC9B0C6AA134CC01 /* Pods-GoogleDAI.release.xcconfig */;
@@ -4172,6 +4107,75 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.GoogleDAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoogleDAI/GoogleDAI-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		807A648324341EBF000AE243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBEAA6F3D6F5977A7FBC8E60 /* Pods-AutoplayVideoFeed.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.AutoplayVideoFeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		807A648424341EBF000AE243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FD194FE2E1C85B817E2B223 /* Pods-AutoplayVideoFeed.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.AutoplayVideoFeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -4924,20 +4928,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		807A648524341EBF000AE243 /* Build configuration list for PBXNativeTarget "AutoplayVideoFeed" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				807A648324341EBF000AE243 /* Debug */,
-				807A648424341EBF000AE243 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		807A646124323046000AE243 /* Build configuration list for PBXNativeTarget "GoogleDAI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				807A645F24323046000AE243 /* Debug */,
 				807A646024323046000AE243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807A648524341EBF000AE243 /* Build configuration list for PBXNativeTarget "AutoplayVideoFeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807A648324341EBF000AE243 /* Debug */,
+				807A648424341EBF000AE243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
