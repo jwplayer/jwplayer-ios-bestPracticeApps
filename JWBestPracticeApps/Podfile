@@ -3,6 +3,8 @@
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
+inhibit_all_warnings!
+
 def common_JW
     pod 'JWPlayer-SDK', '~> 3.12.0'
 end
