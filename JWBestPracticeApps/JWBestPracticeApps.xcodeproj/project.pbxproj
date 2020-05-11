@@ -1995,6 +1995,7 @@
 					};
 					F4EC778B223FD43F0008B8DB = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WX87M56X5N;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -4824,6 +4825,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -4861,6 +4863,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
