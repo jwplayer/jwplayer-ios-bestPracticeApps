@@ -18,134 +18,117 @@ def common_Google_IMA
 end
 
 target 'JWBestPracticeApps' do
-
+	platform :ios, '9.2'
     common_JW
-
 end
 
 target 'BasicVideoViewController' do
-  
+  platform :ios, '9.2'
   common_JW
-  
 end
 
 target 'AutoplayVideoFeed' do
-  
+  platform :ios, '9.2'
   common_JW
-  
 end 
 
 target 'GoogleDAI' do
-  
+  platform :ios, '13.2'
   common_JW
   common_Google_IMA
-  
 end
 
 target 'JWCasting' do
-
+	platform :ios, '9.2'
     common_JW
     common_Cast
-
 end
 
 target 'Casting' do
-  
+  platform :ios, '9.2'
   common_JW
   common_Cast
-  
 end
 
 target 'JWAirPlay' do
-
+	platform :ios, '9.2'
     common_JW
-
 end
 
 target 'JWRemotePlayer' do
-
+	platform :ios, '9.2'
     common_JW
     common_Cast
-
 end
 
 target 'JWRemoteController' do
-
+	platform :ios, '2.1'
 end
 
 target 'JWRemoteController Extension' do
-
+	platform :ios, '2.1'
 end
 
 target 'JWRemoteCastPlayer' do
-
+	platform :ios, '9.2'
     common_JW
     common_Cast
-
 end
 
 target 'JWRemoteCastController' do
-
+	platform :ios, '2.2'
 end
 
 target 'JWRemoteCastController Extension' do
-
+	platform :ios, '2.2'
 end
 
 target 'Voicer' do
-
+	platform :ios, '10.0'
     common_JW
     common_Cast
-
 end
 
 target 'VoicerExtension' do
-
+	platform :ios, '10.0'
 end 
 
 target 'JWFairPlayDrm' do
-
+	platform :ios, '9.3'
     common_JW
     common_Cast
-
 end
 
 target 'JWConviva' do
-
+	platform :ios, '12.1'
     pod 'ConvivaSDK'
     common_JW
-
 end
 
 target 'JWFriendlyObstructions' do
-
+	platform :ios, '12.2'
     common_JW
     common_Google_IMA
-
 end
 
 target 'FeedCollectionViewController' do
-  
-  common_JW
-  
+  	platform :ios, '13.1'
+  	common_JW
 end
 
 target 'FeedTableViewController' do
-  
-  common_JW
-  
+	platform :ios, '9.2'
+  	common_JW 
 end
 
 target 'NativeControls' do
-  
-  common_JW
-  
+	platform :ios, '9.2'
+  	common_JW  
 end
 
 target 'AirPlay' do
-  
-  common_JW
-  
+	platform :ios, '9.2'
+  	common_JW
 end
 
 workspace 'JWBestPracticeApps'
