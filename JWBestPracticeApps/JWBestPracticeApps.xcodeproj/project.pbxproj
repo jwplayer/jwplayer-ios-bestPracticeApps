@@ -1869,7 +1869,7 @@
 					793AA63E231ED916006CA8FF = {
 						CreatedOnToolsVersion = 10.3;
 						DevelopmentTeam = WX87M56X5N;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.AccessWiFi = {
 								enabled = 1;
@@ -4011,8 +4011,8 @@
 			baseConfigurationReference = 3272130D4CF9AC7D6A79B901 /* Pods-Casting.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Casting/Casting.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4020,7 +4020,7 @@
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.Casting;
 				PRODUCT_NAME = Casting;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "JWP iOS Ad-hoc (Jenkins) BP Casting";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -4031,15 +4031,15 @@
 			baseConfigurationReference = 767285E78C6DDF7DF2B687DB /* Pods-Casting.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Casting/Casting.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.Casting;
 				PRODUCT_NAME = Casting;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "JWP iOS Ad-hoc (Jenkins) BP Casting";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
