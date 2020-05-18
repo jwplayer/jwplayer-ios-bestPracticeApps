@@ -23,8 +23,8 @@
 		3B181AF023592DE5003D4CDB /* FeedCollectionViewController-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B181AEF23592DE5003D4CDB /* FeedCollectionViewController-Bridging-Header.h */; };
 		3B181AF223592DEF003D4CDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B181AF123592DEF003D4CDB /* Main.storyboard */; };
 		3BBF80C2235DEAF100C529DF /* FeedItemCell+JWPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF80C1235DEAF100C529DF /* FeedItemCell+JWPlayerDelegate.swift */; };
-		403AE5E288657240D7201522 /* libPods-JWRemoteController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6960B809E87D90EBF1ADFC17 /* libPods-JWRemoteController.a */; };
 		47595BB3E8D0E95FABB1E764 /* libPods-FeedTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3442318C4BDA2CFB2694337 /* libPods-FeedTableViewController.a */; };
+		4CA90536246F28D600D44339 /* libPods-JWRemoteController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA90535246F28D600D44339 /* libPods-JWRemoteController.a */; };
 		561FBDC9C3F85957621D06E5 /* libPods-JWFairPlayDrm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAAD561A6E20B3D7DA378BA /* libPods-JWFairPlayDrm.a */; };
 		5D0EA20F3C710D39FFB42B46 /* libPods-JWFriendlyObstructions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD1EFB4D03D4722EA6EAD7 /* libPods-JWFriendlyObstructions.a */; };
 		75A61086E881BEA59DCFCF51 /* libPods-JWRemoteCastPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 456C13E5F37B81C27CDF6B32 /* libPods-JWRemoteCastPlayer.a */; };
@@ -369,6 +369,8 @@
 		456C13E5F37B81C27CDF6B32 /* libPods-JWRemoteCastPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteCastPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4B45DA9AE03224633B70CA /* Pods-JWConviva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.debug.xcconfig"; path = "Target Support Files/Pods-JWConviva/Pods-JWConviva.debug.xcconfig"; sourceTree = "<group>"; };
 		4C95C3797160E37CE592DC28 /* Pods-JWBestPracticeApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWBestPracticeApps.release.xcconfig"; path = "Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps.release.xcconfig"; sourceTree = "<group>"; };
+		4CA90533246F28C500D44339 /* libPods-JWRemoteController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-JWRemoteController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CA90535246F28D600D44339 /* libPods-JWRemoteController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-JWRemoteController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6960B809E87D90EBF1ADFC17 /* libPods-JWRemoteController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B51316CA7D5F2026AA26704 /* libPods-NativeControls.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeControls.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD9A51F82F1B6BCB5F5EEAC /* libPods-AirPlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirPlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -763,7 +765,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				403AE5E288657240D7201522 /* libPods-JWRemoteController.a in Frameworks */,
+				4CA90536246F28D600D44339 /* libPods-JWRemoteController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,6 +799,8 @@
 		52AC3655A45B0438BEB4426C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CA90535246F28D600D44339 /* libPods-JWRemoteController.a */,
+				4CA90533246F28C500D44339 /* libPods-JWRemoteController.a */,
 				3B1AD39A2354BEAD002A15D8 /* WatchConnectivity.framework */,
 				B556E7151D84F3F500C65662 /* IntentsUI.framework */,
 				D3442318C4BDA2CFB2694337 /* libPods-FeedTableViewController.a */,
@@ -1970,7 +1974,7 @@
 					B53A73031D92F79C00EB804F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WX87M56X5N;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -3742,7 +3746,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.AirPlay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.AirPlay;
 				PRODUCT_NAME = AirPlay;
 			};
 			name = Debug;
@@ -3753,7 +3757,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.AirPlay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.AirPlay;
 				PRODUCT_NAME = AirPlay;
 			};
 			name = Release;
@@ -4476,7 +4480,7 @@
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWAirPlay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.JWAirPlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -4494,7 +4498,7 @@
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWAirPlay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.JWAirPlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -4733,12 +4737,15 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_ENTITLEMENTS = Voicer/Voicer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Voicer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.voicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "JWP iOS Ad-hoc (Jenkins) BP Voicer";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -4754,12 +4761,15 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_ENTITLEMENTS = Voicer/Voicer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Voicer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.voicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "JWP iOS Ad-hoc (Jenkins) BP Voicer";
 			};
 			name = Release;
 		};
