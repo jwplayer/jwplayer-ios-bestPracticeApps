@@ -4,7 +4,7 @@
 # use_frameworks!
 
 def common_JW
-    pod 'JWPlayer-SDK', '~> 3.12.0'
+    pod 'JWPlayer-SDK', '~> 3.14.2'
 end
 
 def common_Cast
@@ -52,6 +52,18 @@ target 'Casting' do
   common_JW
   common_Cast
   
+end
+
+target 'LockScreenControls' do
+
+  common_JW
+
+end
+
+target 'JWLockScreenControls' do
+
+  common_JW
+
 end
 
 target 'JWAirPlay' do
