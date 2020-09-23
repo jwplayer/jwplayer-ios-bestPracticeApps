@@ -59,5 +59,11 @@ For targets that require casting to Google ChromeCast, you must import a Google 
 
 **Note**: The demo apps in this repository are intended to be used with **version 3.8.x** of the JW Player iOS SDK.
 
-## **Feedback**:
-Was this repository helpful? How can we improve it? Please send your feedback to support+sdk@jwplayer.com.
+Getting support and submitting feedback
+=======================================
+
+To send us your feedback or bug reports, please visit our  [Support Portal](https://support.jwplayer.com/submit-support-case). Select “I have a question for the technical support team” or “I want to report a bug” and then follow the steps to report your issue. Our support team will follow up in a timely manner.
+
+Before contacting us, please read our [FAQ](http://support.jwplayer.com/customer/portal/articles/2022900-ios-sdk-faq).
+
+To ask technical questions please open an [issue](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/issues).

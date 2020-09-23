@@ -7,48 +7,80 @@
 		<string>JWPlayer Video</string>
 		<key>url</key>
 		<string>https://content.jwplatform.com/manifests/AiiOvDZJ.m3u8</string>
+		<key>thumbnail</key>
+		<string>https://assets-jpcust.jwpsrv.com/thumbnails/uw9yfodn-640.jpg</string>
+		<key>localThumbnail</key>
+		<string>jwplayer</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Hiking</string>
 		<key>url</key>
 		<string>https://content.jwplatform.com/manifests/oi7pAMI1.m3u8</string>
+		<key>thumbnail</key>
+		<string>https://assets-jpcust.jwpsrv.com/thumbs/oi7pAMI1-720.jpg</string>
+		<key>localThumbnail</key>
+		<string>hiking</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Big Buck Bunny</string>
 		<key>url</key>
 		<string>https://content.bitsontherun.com/videos/bkaovAYt-364765.mp4</string>
+		<key>thumbnail</key>
+		<string>http://d3el35u4qe4frz.cloudfront.net/bkaovAYt-480.jpg</string>
+		<key>localThumbnail</key>
+		<string>bigBuckBunny</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Sintel</string>
 		<key>url</key>
 		<string>https://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4</string>
+		<key>thumbnail</key>
+		<string>http://d3el35u4qe4frz.cloudfront.net/3XnJSIm4-480.jpg</string>
+		<key>localThumbnail</key>
+		<string>sintel</string>
 	</dict>
-    <dict>
-        <key>title</key>
-        <string>Opera Singer</string>
-        <key>url</key>
-        <string>https://playertest.longtailvideo.com/adaptive/440k/playlist.m3u8</string>
-    </dict>
-    <dict>
-        <key>title</key>
-        <string>Bipbop</string>
-        <key>url</key>
-        <string>https://playertest.longtailvideo.com/adaptive/bipbop/bipbopall.m3u8</string>
-    </dict>
-    <dict>
-        <key>title</key>
-        <string>Opera Singer</string>
-        <key>url</key>
-        <string>https://playertest.longtailvideo.com/adaptive/440k/playlist.m3u8</string>
-    </dict>
-    <dict>
-        <key>title</key>
-        <string>Hiking</string>
-        <key>url</key>
-        <string>https://content.jwplatform.com/manifests/oi7pAMI1.m3u8</string>
-    </dict>
+	<dict>
+		<key>title</key>
+		<string>Opera Singer</string>
+		<key>url</key>
+		<string>https://playertest.longtailvideo.com/adaptive/440k/playlist.m3u8</string>
+		<key>thumbnail</key>
+		<string>https://assets-jpcust.jwpsrv.com/thumbs/AiiOvDZJ-720.jpg</string>
+		<key>localThumbnail</key>
+		<string>opera</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Bipbop</string>
+		<key>url</key>
+		<string>https://playertest.longtailvideo.com/adaptive/bipbop/bipbopall.m3u8</string>
+		<key>thumbnail</key>
+		<string>http://assets-jp.jwpsrv.com/thumbs/nfSyO85Q-480.jpg</string>
+		<key>localThumbnail</key>
+		<string>bipbop</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Opera Singer</string>
+		<key>url</key>
+		<string>https://playertest.longtailvideo.com/adaptive/440k/playlist.m3u8</string>
+		<key>thumbnail</key>
+		<string>https://assets-jpcust.jwpsrv.com/thumbs/AiiOvDZJ-720.jpg</string>
+		<key>localThumbnail</key>
+		<string>opera</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Hiking</string>
+		<key>url</key>
+		<string>https://content.jwplatform.com/manifests/oi7pAMI1.m3u8</string>
+		<key>thumbnail</key>
+		<string>https://assets-jpcust.jwpsrv.com/thumbs/oi7pAMI1-720.jpg</string>
+		<key>localThumbnail</key>
+		<string>hiking</string>
+	</dict>
 </array>
 </plist>

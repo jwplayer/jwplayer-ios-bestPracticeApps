@@ -21,7 +21,7 @@ class FeedTableViewController: UITableViewController {
         fetchFeed()
     }
     
-    fileprivate func fetchFeed() {
+    internal func fetchFeed() {
         guard let feedFilePath = Bundle.main.path(forResource: "Feed", ofType: "plist"),
             let feedInfo = NSArray(contentsOfFile: feedFilePath) as? [Dictionary<String, String>] else {
             return
@@ -46,6 +46,7 @@ class FeedTableViewController: UITableViewController {
         }
         return nil
     }
+    
     
 // MARK: UITableViewDataSource implementation
     
