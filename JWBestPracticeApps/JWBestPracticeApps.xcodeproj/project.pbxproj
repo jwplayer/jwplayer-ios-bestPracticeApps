@@ -189,6 +189,7 @@
 		8AF5F6E71C9A612B00C0D5E0 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5F6E61C9A612B00C0D5E0 /* NotificationController.m */; };
 		8AF5F6E91C9A612B00C0D5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5F6E81C9A612B00C0D5E0 /* Assets.xcassets */; };
 		8AF5F6ED1C9A612B00C0D5E0 /* JWRemoteController.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AF5F6CC1C9A612B00C0D5E0 /* JWRemoteController.app */; };
+		8AFE27FB251CEAED001BAE0C /* FeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B181AEB23592DC9003D4CDB /* FeedItemCell.swift */; };
 		8BCAE683F8EEB8A3BC3CBF60 /* libPods-JWCasting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DF653D17CE72FBBE256FD8 /* libPods-JWCasting.a */; };
 		9643BB2EDB37F37CD2D7B687 /* libPods-Voicer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */; };
 		B50DDEE9228A19CF000F62B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B50DDEE8228A19CF000F62B0 /* AppDelegate.m */; };
@@ -2131,6 +2132,7 @@
 					};
 					F4EC778B223FD43F0008B8DB = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = WX87M56X5N;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -3450,6 +3452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFE27FB251CEAED001BAE0C /* FeedItemCell.swift in Sources */,
 				3BBF80C2235DEAF100C529DF /* FeedItemCell+JWPlayerDelegate.swift in Sources */,
 				3B181AEA23592DC0003D4CDB /* FeedCollectionViewController.swift in Sources */,
 				3B181AD623592D5A003D4CDB /* AppDelegate.swift in Sources */,
@@ -4432,7 +4435,7 @@
 			baseConfigurationReference = 3272130D4CF9AC7D6A79B901 /* Pods-Casting.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Casting/Casting.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = WX87M56X5N;
@@ -4452,7 +4455,7 @@
 			baseConfigurationReference = 767285E78C6DDF7DF2B687DB /* Pods-Casting.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Casting/Casting.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -5009,7 +5012,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = WX87M56X5N;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "JWRemoteController Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWRemotePlayer.watchkitapp.watchkitextension;
@@ -5027,7 +5030,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = WX87M56X5N;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "JWRemoteController Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWRemotePlayer.watchkitapp.watchkitextension;
@@ -5046,7 +5049,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = WX87M56X5N;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				IBSC_MODULE = JWRemoteController_Extension;
 				INFOPLIST_FILE = JWRemoteController/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWRemotePlayer.watchkitapp;
@@ -5065,7 +5068,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = WX87M56X5N;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				IBSC_MODULE = JWRemoteController_Extension;
 				INFOPLIST_FILE = JWRemoteController/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWRemotePlayer.watchkitapp;
@@ -5158,7 +5161,7 @@
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Voicer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.Voicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -5179,7 +5182,7 @@
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Voicer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.Voicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -5196,7 +5199,7 @@
 				INFOPLIST_FILE = VoicerExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Voicer.VoicerExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.Voicer.VoicerExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -5217,7 +5220,7 @@
 				INFOPLIST_FILE = VoicerExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Voicer.VoicerExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.Voicer.VoicerExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -5246,6 +5249,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -5283,6 +5287,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
