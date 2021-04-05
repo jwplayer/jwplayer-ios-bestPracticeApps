@@ -47,4 +47,17 @@
     return config;
 }
 
+- (void)onReady:(JWEvent<JWReadyEvent> *)event
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Onready"
+                                                            message: @"onReady Alert"
+                                                           delegate:self
+                                                            cancelButtonTitle:@"Onready"
+                                                            otherButtonTitles:nil];
+    
+    
+    [alert show];
+
+}
+
 @end
