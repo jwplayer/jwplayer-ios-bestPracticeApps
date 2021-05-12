@@ -8,7 +8,8 @@
 
 #import "JWBasicVideoViewController.h"
 
-#define videoFile @"http://playertest.longtailvideo.com/adaptive/oceans/oceans.m3u8"
+#define videoFile @"https://cdn.jwplayer.com/manifests/d0K0B1g6.m3u8"
+//#define videoFile @"http://playertest.longtailvideo.com/adaptive/oceans/oceans.m3u8"
 #define posterImage @"http://d3el35u4qe4frz.cloudfront.net/bkaovAYt-480.jpg"
 
 @interface JWBasicVideoViewController ()

@@ -8,7 +8,7 @@ def common_JW
 end
 
 def common_Cast
-    pod 'google-cast-sdk', '4.4.5'
+    pod 'google-cast-sdk', '4.5.3'
 end
 
 def common_Google_IMA
@@ -47,11 +47,25 @@ target 'JWCasting' do
 
 end
 
+target 'JWCasting-GCKUICastButton' do
+
+    common_JW
+    common_Cast
+
+end
+
 target 'Casting' do
   
   common_JW
   common_Cast
   
+end
+
+target 'Casting-GCKUICastButton' do
+
+    common_JW
+    common_Cast
+
 end
 
 target 'LockScreenControls' do
