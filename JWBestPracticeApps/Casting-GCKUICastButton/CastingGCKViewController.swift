@@ -13,7 +13,6 @@ class CastingGCKViewController: BasicVideoViewController, JWCastingDelegate {
 
     var castController: JWCastController? = nil
     var castingButton: UIButton? = nil
-    var barButtonItem: UIBarButtonItem? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
