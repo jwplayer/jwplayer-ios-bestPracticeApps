@@ -3,14 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D317557C256C8136004E49CE /* BasicPlayerAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317557B256C8136004E49CE /* BasicPlayerAppDelegate.swift */; };
-		D3175580256C8136004E49CE /* BasicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317557F256C8136004E49CE /* BasicPlayerViewController.swift */; };
-		D3175585256C8137004E49CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3175584256C8137004E49CE /* Assets.xcassets */; };
-		D3175588256C8137004E49CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3175586256C8137004E49CE /* LaunchScreen.storyboard */; };
+		382E276E582169F0D58F28E7 /* Pods_VastBestPracticeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7127BB8DC7A8EABD9427C223 /* Pods_VastBestPracticeApp.framework */; };
 		D362791A2580323300E06E6E /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D36279152580323300E06E6E /* Base.lproj */; };
 		D362791B2580323300E06E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36279162580323300E06E6E /* Assets.xcassets */; };
 		D362791D2580323300E06E6E /* VastAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36279182580323300E06E6E /* VastAppViewController.swift */; };
@@ -18,16 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D31755A2256C8234004E49CE /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D36279282580327400E06E6E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,12 +28,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D3175579256C8136004E49CE /* BasicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D317557B256C8136004E49CE /* BasicPlayerAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPlayerAppDelegate.swift; sourceTree = "<group>"; };
-		D317557F256C8136004E49CE /* BasicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPlayerViewController.swift; sourceTree = "<group>"; };
-		D3175584256C8137004E49CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D3175587256C8137004E49CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D3175589256C8137004E49CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D0B935EBDA6AC6E6788F401 /* Pods-BasicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer.debug.xcconfig"; path = "Target Support Files/Pods-BasicPlayer/Pods-BasicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		7127BB8DC7A8EABD9427C223 /* Pods_VastBestPracticeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VastBestPracticeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92ED8F38F48C5C22CDA0251A /* Pods-VastBestPracticeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VastBestPracticeApp.debug.xcconfig"; path = "Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BF619F9A4914F0813B012359 /* Pods-VastBestPracticeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VastBestPracticeApp.release.xcconfig"; path = "Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp.release.xcconfig"; sourceTree = "<group>"; };
+		C0785C1EAF107A049BECCF79 /* Pods_BasicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3175593256C8192004E49CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3627900258031FD00E06E6E /* VastBestPracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VastBestPracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36279152580323300E06E6E /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -55,20 +41,15 @@
 		D36279182580323300E06E6E /* VastAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VastAppViewController.swift; sourceTree = "<group>"; };
 		D36279192580323300E06E6E /* VastAppAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VastAppAppDelegate.swift; sourceTree = "<group>"; };
 		D365183A2577ED5600C1BD9C /* JWPlayerKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JWPlayerKit.xcframework; sourceTree = "<group>"; };
+		ED9CC95CAFDFD673A7C8A8B1 /* Pods-BasicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer.release.xcconfig"; path = "Target Support Files/Pods-BasicPlayer/Pods-BasicPlayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D3175576256C8136004E49CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D36278FD258031FD00E06E6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382E276E582169F0D58F28E7 /* Pods_VastBestPracticeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +59,10 @@
 		57F0D4AAF7D4EB72F6F3DB93 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				0D0B935EBDA6AC6E6788F401 /* Pods-BasicPlayer.debug.xcconfig */,
+				ED9CC95CAFDFD673A7C8A8B1 /* Pods-BasicPlayer.release.xcconfig */,
+				92ED8F38F48C5C22CDA0251A /* Pods-VastBestPracticeApp.debug.xcconfig */,
+				BF619F9A4914F0813B012359 /* Pods-VastBestPracticeApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -86,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				D3175593256C8192004E49CE /* README.md */,
-				D317557A256C8136004E49CE /* BasicPlayer */,
 				D3627901258031FD00E06E6E /* VastBestPracticeApp */,
 				D317555D256C8113004E49CE /* Products */,
 				D317559E256C8233004E49CE /* Frameworks */,
@@ -97,28 +81,17 @@
 		D317555D256C8113004E49CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3175579256C8136004E49CE /* BasicPlayer.app */,
 				D3627900258031FD00E06E6E /* VastBestPracticeApp.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D317557A256C8136004E49CE /* BasicPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				D317557B256C8136004E49CE /* BasicPlayerAppDelegate.swift */,
-				D317557F256C8136004E49CE /* BasicPlayerViewController.swift */,
-				D3175584256C8137004E49CE /* Assets.xcassets */,
-				D3175586256C8137004E49CE /* LaunchScreen.storyboard */,
-				D3175589256C8137004E49CE /* Info.plist */,
-			);
-			path = BasicPlayer;
 			sourceTree = "<group>";
 		};
 		D317559E256C8233004E49CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D365183A2577ED5600C1BD9C /* JWPlayerKit.xcframework */,
+				C0785C1EAF107A049BECCF79 /* Pods_BasicPlayer.framework */,
+				7127BB8DC7A8EABD9427C223 /* Pods_VastBestPracticeApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,32 +111,17 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D3175578256C8136004E49CE /* BasicPlayer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D317558A256C8137004E49CE /* Build configuration list for PBXNativeTarget "BasicPlayer" */;
-			buildPhases = (
-				D3175575256C8136004E49CE /* Sources */,
-				D3175576256C8136004E49CE /* Frameworks */,
-				D3175577256C8136004E49CE /* Resources */,
-				D31755A2256C8234004E49CE /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BasicPlayer;
-			productName = BasicPlayer;
-			productReference = D3175579256C8136004E49CE /* BasicPlayer.app */;
-			productType = "com.apple.product-type.application";
-		};
 		D36278FF258031FD00E06E6E /* VastBestPracticeApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3627911258031FD00E06E6E /* Build configuration list for PBXNativeTarget "VastBestPracticeApp" */;
 			buildPhases = (
+				E65AB85D4D430C3329D638BD /* [CP] Check Pods Manifest.lock */,
 				D36278FC258031FD00E06E6E /* Sources */,
 				D36278FD258031FD00E06E6E /* Frameworks */,
 				D36278FE258031FD00E06E6E /* Resources */,
 				D36279282580327400E06E6E /* Embed Frameworks */,
+				83033628A062424C39F06B05 /* [CP] Embed Pods Frameworks */,
+				C0E3D63C1F0512B2F5D8C775 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,9 +141,6 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					D3175578256C8136004E49CE = {
-						CreatedOnToolsVersion = 12.0.1;
-					};
 					D36278FF258031FD00E06E6E = {
 						CreatedOnToolsVersion = 12.0.1;
 						LastSwiftMigration = 1200;
@@ -205,22 +160,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D3175578256C8136004E49CE /* BasicPlayer */,
 				D36278FF258031FD00E06E6E /* VastBestPracticeApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D3175577256C8136004E49CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3175588256C8137004E49CE /* LaunchScreen.storyboard in Resources */,
-				D3175585256C8137004E49CE /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D36278FE258031FD00E06E6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,16 +177,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXSourcesBuildPhase section */
-		D3175575256C8136004E49CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		83033628A062424C39F06B05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3175580256C8136004E49CE /* BasicPlayerViewController.swift in Sources */,
-				D317557C256C8136004E49CE /* BasicPlayerAppDelegate.swift in Sources */,
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
+		C0E3D63C1F0512B2F5D8C775 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E65AB85D4D430C3329D638BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VastBestPracticeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		D36278FC258031FD00E06E6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,17 +247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D3175586256C8137004E49CE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3175587256C8137004E49CE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D317556E256C8115004E49CE /* Debug */ = {
@@ -381,44 +365,9 @@
 			};
 			name = Release;
 		};
-		D317558B256C8137004E49CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BasicPlayer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.BasicPlayer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D317558C256C8137004E49CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BasicPlayer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jwplayer.BasicPlayer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		D3627912258031FD00E06E6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92ED8F38F48C5C22CDA0251A /* Pods-VastBestPracticeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,6 +388,7 @@
 		};
 		D3627913258031FD00E06E6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF619F9A4914F0813B012359 /* Pods-VastBestPracticeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,15 +414,6 @@
 			buildConfigurations = (
 				D317556E256C8115004E49CE /* Debug */,
 				D317556F256C8115004E49CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D317558A256C8137004E49CE /* Build configuration list for PBXNativeTarget "BasicPlayer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D317558B256C8137004E49CE /* Debug */,
-				D317558C256C8137004E49CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

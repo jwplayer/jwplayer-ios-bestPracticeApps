@@ -5,6 +5,9 @@
       location = "group:JWBestPracticeApps-4x.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:BasicPlayer/BasicPlayer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
