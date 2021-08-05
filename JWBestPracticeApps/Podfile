@@ -1,27 +1,41 @@
 platform :ios, '10.0'
+workspace 'JWBestPracticeApps-4x'
+use_frameworks!
+
+project 'JWBestPracticeApps-4x'
+project 'BasicPlayer/BasicPlayer'
 
 def common_Cast
     pod 'google-cast-sdk'
 end
 
 def common_Google_IMA
-    pod 'GoogleAds-IMA-iOS-SDK', '~> 3.12.1'
+    pod 'GoogleAds-IMA-iOS-SDK', '~> 3.14.3'
 end
 
 def common_JWPlayer
     pod 'JWPlayerKit', '~> 4.0.0'
 end
 
-target 'BasicPlayer' do
-  use_frameworks!
+target 'VastBestPracticeApp' do
+    project 'JWBestPracticeApps-4x'
+    common_Cast
+    common_Google_IMA
+    common_JWPlayer
+end
+
+target 'BasicPlayer-ObjC' do
+  project 'BasicPlayer/BasicPlayer'
   common_Cast
   common_Google_IMA
   common_JWPlayer
 end
 
-target 'VastBestPracticeApp' do
-  use_frameworks!
+target 'BasicPlayer-Swift' do
+  project 'BasicPlayer/BasicPlayer'
   common_Cast
   common_Google_IMA
   common_JWPlayer
 end
+
+

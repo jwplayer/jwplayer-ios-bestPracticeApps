@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		382E276E582169F0D58F28E7 /* Pods_VastBestPracticeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7127BB8DC7A8EABD9427C223 /* Pods_VastBestPracticeApp.framework */; };
+		BA7C9EEB0ABE11620FE5C2D5 /* Pods_VastBestPracticeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE6354F79E56AA660616B71 /* Pods_VastBestPracticeApp.framework */; };
 		D362791A2580323300E06E6E /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D36279152580323300E06E6E /* Base.lproj */; };
 		D362791B2580323300E06E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36279162580323300E06E6E /* Assets.xcassets */; };
 		D362791D2580323300E06E6E /* VastAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36279182580323300E06E6E /* VastAppViewController.swift */; };
@@ -28,11 +28,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D0B935EBDA6AC6E6788F401 /* Pods-BasicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer.debug.xcconfig"; path = "Target Support Files/Pods-BasicPlayer/Pods-BasicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
-		7127BB8DC7A8EABD9427C223 /* Pods_VastBestPracticeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VastBestPracticeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92ED8F38F48C5C22CDA0251A /* Pods-VastBestPracticeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VastBestPracticeApp.debug.xcconfig"; path = "Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp.debug.xcconfig"; sourceTree = "<group>"; };
-		BF619F9A4914F0813B012359 /* Pods-VastBestPracticeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VastBestPracticeApp.release.xcconfig"; path = "Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp.release.xcconfig"; sourceTree = "<group>"; };
-		C0785C1EAF107A049BECCF79 /* Pods_BasicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		086B95D55BEB55284DF39F89 /* Pods-VastBestPracticeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VastBestPracticeApp.release.xcconfig"; path = "Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp.release.xcconfig"; sourceTree = "<group>"; };
+		0DE6354F79E56AA660616B71 /* Pods_VastBestPracticeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VastBestPracticeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		113A0240B76EDCC8ADEE7F96 /* Pods-VastBestPracticeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VastBestPracticeApp.debug.xcconfig"; path = "Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D3175593256C8192004E49CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3627900258031FD00E06E6E /* VastBestPracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VastBestPracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36279152580323300E06E6E /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -41,7 +39,6 @@
 		D36279182580323300E06E6E /* VastAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VastAppViewController.swift; sourceTree = "<group>"; };
 		D36279192580323300E06E6E /* VastAppAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VastAppAppDelegate.swift; sourceTree = "<group>"; };
 		D365183A2577ED5600C1BD9C /* JWPlayerKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JWPlayerKit.xcframework; sourceTree = "<group>"; };
-		ED9CC95CAFDFD673A7C8A8B1 /* Pods-BasicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer.release.xcconfig"; path = "Target Support Files/Pods-BasicPlayer/Pods-BasicPlayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				382E276E582169F0D58F28E7 /* Pods_VastBestPracticeApp.framework in Frameworks */,
+				BA7C9EEB0ABE11620FE5C2D5 /* Pods_VastBestPracticeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +56,8 @@
 		57F0D4AAF7D4EB72F6F3DB93 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0D0B935EBDA6AC6E6788F401 /* Pods-BasicPlayer.debug.xcconfig */,
-				ED9CC95CAFDFD673A7C8A8B1 /* Pods-BasicPlayer.release.xcconfig */,
-				92ED8F38F48C5C22CDA0251A /* Pods-VastBestPracticeApp.debug.xcconfig */,
-				BF619F9A4914F0813B012359 /* Pods-VastBestPracticeApp.release.xcconfig */,
+				113A0240B76EDCC8ADEE7F96 /* Pods-VastBestPracticeApp.debug.xcconfig */,
+				086B95D55BEB55284DF39F89 /* Pods-VastBestPracticeApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -90,8 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D365183A2577ED5600C1BD9C /* JWPlayerKit.xcframework */,
-				C0785C1EAF107A049BECCF79 /* Pods_BasicPlayer.framework */,
-				7127BB8DC7A8EABD9427C223 /* Pods_VastBestPracticeApp.framework */,
+				0DE6354F79E56AA660616B71 /* Pods_VastBestPracticeApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,13 +109,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3627911258031FD00E06E6E /* Build configuration list for PBXNativeTarget "VastBestPracticeApp" */;
 			buildPhases = (
-				E65AB85D4D430C3329D638BD /* [CP] Check Pods Manifest.lock */,
+				F590374E72B5FA18C8B431CC /* [CP] Check Pods Manifest.lock */,
 				D36278FC258031FD00E06E6E /* Sources */,
 				D36278FD258031FD00E06E6E /* Frameworks */,
 				D36278FE258031FD00E06E6E /* Resources */,
 				D36279282580327400E06E6E /* Embed Frameworks */,
-				83033628A062424C39F06B05 /* [CP] Embed Pods Frameworks */,
-				C0E3D63C1F0512B2F5D8C775 /* [CP] Copy Pods Resources */,
+				BE0BBA1CE0BFA7FCC89F65C6 /* [CP] Embed Pods Frameworks */,
+				558127963ADB6D0EC9EF7B20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,24 +172,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		83033628A062424C39F06B05 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0E3D63C1F0512B2F5D8C775 /* [CP] Copy Pods Resources */ = {
+		558127963ADB6D0EC9EF7B20 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,7 +189,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E65AB85D4D430C3329D638BD /* [CP] Check Pods Manifest.lock */ = {
+		BE0BBA1CE0BFA7FCC89F65C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F590374E72B5FA18C8B431CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,7 +361,7 @@
 		};
 		D3627912258031FD00E06E6E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92ED8F38F48C5C22CDA0251A /* Pods-VastBestPracticeApp.debug.xcconfig */;
+			baseConfigurationReference = 113A0240B76EDCC8ADEE7F96 /* Pods-VastBestPracticeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -388,7 +382,7 @@
 		};
 		D3627913258031FD00E06E6E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF619F9A4914F0813B012359 /* Pods-VastBestPracticeApp.release.xcconfig */;
+			baseConfigurationReference = 086B95D55BEB55284DF39F89 /* Pods-VastBestPracticeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
