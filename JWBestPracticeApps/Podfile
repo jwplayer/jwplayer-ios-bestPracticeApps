@@ -45,3 +45,8 @@ target 'Google IMA Ads' do
   common_Google_IMA
   common_Cast
 end
+
+target 'Recommendations' do
+  project 'Recommendations/Recommendations'
+  common_JWPlayer
+end

@@ -12,6 +12,7 @@ Showcasing functionality for the JWPlayerKit 4.0.0 SDK in each project.
 |BasicPlayer | Simple implementation of JWPlayerKit SDK with a single player item. |
 |[DRM Fairplay](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/DRM%20Fairplay#drm-fairplay---best-practices-app)  | Simple implementation of JWPlayerKit SDK that plays protected video content through FairPlay (DRM). |
 |[JWPlayer Ads](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/JWPlayer%20Ads#jwplayer-ads---best-practices-app) | Simple implementation of JWPlayerKit SDK with advertising. |
+|Recommendations | Simple implementation including recommended related content. |
 
 ## Setup
 
