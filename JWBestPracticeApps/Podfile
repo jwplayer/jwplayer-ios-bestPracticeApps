@@ -28,6 +28,12 @@ target 'BasicPlayer-Swift' do
   common_JWPlayer
 end
 
+target 'ChromeCast' do
+  project 'ChromeCast/ChromeCast'
+  common_Cast
+  common_JWPlayer
+end
+
 target 'DRM Fairplay' do
   project 'DRM Fairplay/DRM Fairplay'
   common_JWPlayer
