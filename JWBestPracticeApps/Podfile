@@ -3,8 +3,10 @@
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
+workspace 'JWBestPracticeApps'
+
 def common_JW
-    pod 'JWPlayer-SDK', '~> 3.20.0'
+    pod 'JWPlayer-SDK', '~> 3.21.0'
 end
 
 def common_Cast
@@ -12,7 +14,7 @@ def common_Cast
 end
 
 def common_Google_IMA
-    pod 'GoogleAds-IMA-iOS-SDK', '3.11.3'
+    pod 'GoogleAds-IMA-iOS-SDK', '3.14.3'
 end
 
 target 'JWBestPracticeApps' do
