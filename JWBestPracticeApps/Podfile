@@ -1,6 +1,10 @@
 platform :ios, '10.0'
 workspace 'JWBestPracticeApps-4x'
 use_frameworks!
+$PRIVATE_SOURCE = 'https://bitbucket.org/vualtomobile/vudrmfairplay-pods.git'
+def common_VUDRMFairplay
+    pod 'vudrmFairPlaySDK', :source => $PRIVATE_SOURCE
+end
 
 def common_Cast
     pod 'google-cast-sdk'
@@ -43,6 +47,7 @@ end
 target 'DRM Fairplay' do
   project 'DRM Fairplay/DRM Fairplay'
   common_JWPlayer
+  common_VUDRMFairplay
 end
 
 target 'JWPlayer Ads' do

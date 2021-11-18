@@ -7,16 +7,21 @@
 
 import UIKit
 import JWPlayerKit
+import vudrmFairPlaySDK
 
-private let EZDRMLicenseAPIEndpoint = "https://fps.ezdrm.com/api/licenses"
-private let EZDRMCertificateEndpoint = "https://fps.ezdrm.com/demo/video/eleisure.cer"
-private let EZDRMVideoEndpoint = "https://fps.ezdrm.com/demo/video/ezdrm.m3u8"
+private let VUDRMCertificateEndpoint = "INSERT_CERTIFICATE_URL"
+private let VUDRMVideoEndpoint = "INSERT_CONTENT_URL"
+private let VUDRMToken = "INSERT_TOKEN"
+
 
 class ViewController: JWPlayerViewController,
                       JWDRMContentKeyDataSource {
 
     var contentUUID: String?
-
+    var contentID: String?
+    var licenseUrl: String?
+    var drm: vudrmFairPlaySDK?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +35,7 @@ class ViewController: JWPlayerViewController,
     private func setUpPlayer() {
         // Open a do-catch block to catch possible errors with the builders.
         do {
-            let videoUrl = URL(string:EZDRMVideoEndpoint)!
+            let videoUrl = URL(string:VUDRMVideoEndpoint)!
 
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
             let playerItem = try JWPlayerItemBuilder()
@@ -67,6 +72,8 @@ class ViewController: JWPlayerViewController,
             return
         }
         self.contentUUID = String(uuid)
+        self.licenseUrl = uuid.replacingOccurrences(of: "skd", with: "https")
+        self.contentID = url.lastPathComponent
         handler(uuidData)
     }
 
@@ -77,12 +84,20 @@ class ViewController: JWPlayerViewController,
      */
     func appIdentifierForURL(_ url: URL, completionHandler handler: @escaping (Data?) -> Void) {
         print("url: \(url)")
-        guard let certUrl = URL(string: EZDRMCertificateEndpoint),
-              let appIdData = try? Data(contentsOf: certUrl) else {
-            handler(nil)
-            return
+
+        // obtain application Id / Application Certificate here.
+        do {
+            
+            self.drm = vudrmFairPlaySDK()
+            let applicationCertificate = try drm?.requestApplicationCertificate(token: VUDRMToken, contentID: contentID!)
+            
+            let applicationId: Data = applicationCertificate!
+            
+            handler(applicationId)
+        } catch {
+            let message = ["appIdentifierForURL": "Unexpected error: \(error)."]
+            print(message)
         }
-        handler(appIdData)
     }
 
     /**
@@ -93,24 +108,20 @@ class ViewController: JWPlayerViewController,
      - note: For resources that may expire, specify a renewal date and the content-type in the completion block.
      */
     func contentKeyWithSPCData(_ spcData: Data, completionHandler handler: @escaping (Data?, Date?, String?) -> Void) {
-        guard let contentUUID = self.contentUUID else {
-            handler(nil, nil, nil)
-            return
+        
+        do {
+            // Send SPC to Key Server and obtain CKC - renewal value must currently be 0 with JWPlayerSDK.
+            let ckcData = try self.drm!.requestContentKeyFromKeySecurityModule(spcData: spcData, token: VUDRMToken, assetID: contentID!, licenseURL: licenseUrl!, renewal: 0)
+            
+            let key: Data? = ckcData // obtain key here from server by providing the request.
+            let renewalDate: Date? // (optional)
+            renewalDate = nil // Not currently tested with VUDRM
+            let contentType = "application/octet-stream" // (optional)
+            
+            handler(key, renewalDate, contentType)
+        } catch {
+            let message = ["contentKeyWithSPCData": "Unexpected error: \(error)."]
+            print(message)
         }
-
-        let currentTime = Date().timeIntervalSince1970
-        let licenseApiPath = EZDRMLicenseAPIEndpoint.appendingFormat("/%@?p1=%li", contentUUID, currentTime)
-        var ckcRequest = URLRequest(url: URL(string: licenseApiPath)!)
-        ckcRequest.httpMethod = "POST"
-        ckcRequest.httpBody = spcData
-        ckcRequest.addValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
-
-        URLSession.shared.dataTask(with: ckcRequest) { (data, response, error) in
-            guard error == nil, let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                handler(nil, nil, nil)
-                return
-            }
-            handler(data, nil, nil)
-        }.resume()
     }
 }
