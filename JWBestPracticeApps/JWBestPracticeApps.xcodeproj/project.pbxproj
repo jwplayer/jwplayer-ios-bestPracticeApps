@@ -478,7 +478,6 @@
 		79CAAD342321D0FC002FFA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79CAAD362321D0FD002FFA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79CAAD392321D0FD002FFA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		79CAAD3B2321D0FD002FFA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79E3CC1D234E6FAB00EA07CA /* AirPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E3CC1F234E6FAB00EA07CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79E3CC21234E6FAB00EA07CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -1039,7 +1038,6 @@
 				79CAAD332321D0FC002FFA23 /* Main.storyboard */,
 				79CAAD362321D0FD002FFA23 /* Assets.xcassets */,
 				79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */,
-				79CAAD3B2321D0FD002FFA23 /* Info.plist */,
 			);
 			path = NativeControls;
 			sourceTree = "<group>";
