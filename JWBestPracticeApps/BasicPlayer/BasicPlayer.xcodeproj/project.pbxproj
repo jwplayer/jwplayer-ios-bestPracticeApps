@@ -173,7 +173,6 @@
 				3B73971F26B8A12A00671DEC /* Frameworks */,
 				3B73972026B8A12A00671DEC /* Resources */,
 				DBDE934C97E3458CDF1B9EEB /* [CP] Embed Pods Frameworks */,
-				B0953C6FEDAAF3B4750D4A9B /* [CP] Copy Pods Resources */,
 				3B73975A26B9C2EF00671DEC /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -194,7 +193,6 @@
 				3B73973726B9B3E500671DEC /* Frameworks */,
 				3B73973826B9B3E500671DEC /* Resources */,
 				4799671C55380AA3A0232BA5 /* [CP] Embed Pods Frameworks */,
-				6ACAE29E278A5F86AA546B4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,23 +280,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicPlayer-ObjC/Pods-BasicPlayer-ObjC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6ACAE29E278A5F86AA546B4C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BasicPlayer-ObjC/Pods-BasicPlayer-ObjC-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BasicPlayer-ObjC/Pods-BasicPlayer-ObjC-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicPlayer-ObjC/Pods-BasicPlayer-ObjC-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6FC4233F63401D730BC0A868 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,23 +300,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0953C6FEDAAF3B4750D4A9B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BasicPlayer-Swift/Pods-BasicPlayer-Swift-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BasicPlayer-Swift/Pods-BasicPlayer-Swift-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicPlayer-Swift/Pods-BasicPlayer-Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBDE934C97E3458CDF1B9EEB /* [CP] Embed Pods Frameworks */ = {

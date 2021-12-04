@@ -107,7 +107,6 @@
 				799E465B26C1913D00BBBB98 /* Frameworks */,
 				799E465C26C1913D00BBBB98 /* Resources */,
 				543FCA5702E9B000D4B49746 /* [CP] Embed Pods Frameworks */,
-				DCA684DC5A2A5FE7BD8A1E82 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,23 +201,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWPlayer Ads/Pods-JWPlayer Ads-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCA684DC5A2A5FE7BD8A1E82 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JWPlayer Ads/Pods-JWPlayer Ads-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JWPlayer Ads/Pods-JWPlayer Ads-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWPlayer Ads/Pods-JWPlayer Ads-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

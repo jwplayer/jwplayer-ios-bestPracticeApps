@@ -31,4 +31,7 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ChromeCast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
+   </FileRef>
 </Workspace>

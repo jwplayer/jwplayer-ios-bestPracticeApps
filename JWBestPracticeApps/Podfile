@@ -16,14 +16,12 @@ end
 
 target 'BasicPlayer-ObjC' do
   project 'BasicPlayer/BasicPlayer'
-  common_Cast
   common_Google_IMA
   common_JWPlayer
 end
 
 target 'BasicPlayer-Swift' do
   project 'BasicPlayer/BasicPlayer'
-  common_Cast
   common_Google_IMA
   common_JWPlayer
 end
@@ -48,21 +46,18 @@ end
 target 'JWPlayer Ads' do
     project 'JWPlayer Ads/JWPlayer Ads'
     common_JWPlayer
-    common_Cast
 end
 
 target 'Google IMA Ads' do
   project 'Google IMA Ads/Google IMA Ads'
   common_JWPlayer
   common_Google_IMA
-  common_Cast
 end
 
 target 'Google DAI Ads' do
   project 'Google DAI Ads/Google DAI Ads'
   common_JWPlayer
   common_Google_IMA
-  common_Cast
 end
 
 target 'Recommendations' do

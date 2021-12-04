@@ -107,7 +107,6 @@
 				799E46F126C2E89400BBBB98 /* Frameworks */,
 				799E46F226C2E89400BBBB98 /* Resources */,
 				6F711A775442452676C75C7E /* [CP] Embed Pods Frameworks */,
-				12D1304EAA24A91EB60B422D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,23 +164,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12D1304EAA24A91EB60B422D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Google DAI Ads/Pods-Google DAI Ads-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Google DAI Ads/Pods-Google DAI Ads-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google DAI Ads/Pods-Google DAI Ads-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		373C11380667286A77675111 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
