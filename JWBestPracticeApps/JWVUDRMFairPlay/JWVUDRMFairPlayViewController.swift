@@ -17,6 +17,7 @@ class JWVUDRMFairPlayViewController: JWBasicVideoViewController, JWDrmDataSource
     var contentID: String?
     var licenseUrl: String?
     var parsedAssetID: NSURL?
+    var gotURI : Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,53 +93,59 @@ class JWVUDRMFairPlayViewController: JWBasicVideoViewController, JWDrmDataSource
         let message = ["getAssetID": "Parsing Content Key ID from manifest with \(videoUrl)"]
         print(message)
         var request = URLRequest(url: videoUrl as URL)
-        var gotURI = false
+        gotURI = false
         request.httpMethod = "GET"
         let session = URLSession(configuration: URLSessionConfiguration.default)
-        let task = session.dataTask(with: request) { data, response, _ in
+        let task = session.dataTask(with: request) { [weak self] data, response, _ in
             guard let data = data else { return }
-            let strData = String(data: data, encoding: .utf8)!
-            if strData.contains("EXT-X-SESSION-KEY") || strData.contains("EXT-X-KEY") {
-                let start = strData.range(of: "URI=\"")!.upperBound
-                let end = strData[start...].range(of: "\"")!.lowerBound
-                let keyUrlString = strData[start..<end]
-                let keyUrl = URL(string: String(keyUrlString))
-                let message = ["getAssetID": "Parsed Content Key ID from manifest: \(keyUrlString)"]
-                print(message)
-                self.parsedAssetID = keyUrl as NSURL?
-                gotURI = true
-            } else {
-                // This could be HLS content with variants
-                if strData.contains("EXT-X-STREAM-INF") {
-                    // Prepare the new variant video url last path components
-                    let start = strData.range(of: "EXT-X-STREAM-INF")!.upperBound
-                    let end = strData[start...].range(of: ".m3u8")!.upperBound
-                    let strData2 = strData[start..<end]
-                    let start2 = strData2.range(of: "\n")!.lowerBound
-                    let end2 = strData2[start...].range(of: ".m3u8")!.upperBound
-                    let unparsedVariantUrl = strData[start2..<end2]
-                    let variantUrl = unparsedVariantUrl.replacingOccurrences(of: "\n", with: "")
-                    // Prepare the new variant video url
-                    let videoUrlString = videoUrl.absoluteString
-                    let replaceString = String(videoUrl.lastPathComponent!)
-                    if let unwrappedVideoUrlString = videoUrlString {
-                        let newVideoUrlString = unwrappedVideoUrlString.replacingOccurrences(of: replaceString, with: variantUrl)
-                        let pathURL = NSURL(string: newVideoUrlString)!
-                        // Push the newly compiled variant video URL through this method
-                        self.getAssetID(videoUrl: pathURL){
-                        }
-                    }
-                } else {
-                    // Nothing we understand, yet
-                    let message = ["getAssetID": "Unable to parse URI from manifest. EXT-X-SESSION-KEY, EXT-X-KEY, or variant not found."]
-                    print(message)
-                }
-            }
-            while !gotURI {
+            
+            self!.parsePlaylistData(data: data, videoUrl:videoUrl)
+            
+            while !self!.gotURI! {
                 // wait
             }
             completion()
         }
         task.resume()
+    }
+    
+    func parsePlaylistData (data: Data, videoUrl: NSURL) {
+        let strData = String(data: data, encoding: .utf8)!
+        if strData.contains("EXT-X-SESSION-KEY") || strData.contains("EXT-X-KEY") {
+            let start = strData.range(of: "URI=\"")!.upperBound
+            let end = strData[start...].range(of: "\"")!.lowerBound
+            let keyUrlString = strData[start..<end]
+            let keyUrl = URL(string: String(keyUrlString))
+            let message = ["getAssetID": "Parsed Content Key ID from manifest: \(keyUrlString)"]
+            print(message)
+            parsedAssetID = keyUrl as NSURL?
+            gotURI = true
+        } else {
+            // This could be HLS content with variants
+            if strData.contains("EXT-X-STREAM-INF") {
+                // Prepare the new variant video url last path components
+                let start = strData.range(of: "EXT-X-STREAM-INF")!.upperBound
+                let end = strData[start...].range(of: ".m3u8")!.upperBound
+                let strData2 = strData[start..<end]
+                let start2 = strData2.range(of: "\n")!.lowerBound
+                let end2 = strData2[start...].range(of: ".m3u8")!.upperBound
+                let unparsedVariantUrl = strData[start2..<end2]
+                let variantUrl = unparsedVariantUrl.replacingOccurrences(of: "\n", with: "")
+                // Prepare the new variant video url
+                let videoUrlString = videoUrl.absoluteString
+                let replaceString = String(videoUrl.lastPathComponent!)
+                if let unwrappedVideoUrlString = videoUrlString {
+                    let newVideoUrlString = unwrappedVideoUrlString.replacingOccurrences(of: replaceString, with: variantUrl)
+                    let pathURL = NSURL(string: newVideoUrlString)!
+                    // Push the newly compiled variant video URL through this method
+                    self.getAssetID(videoUrl: pathURL){
+                    }
+                }
+            } else {
+                // Nothing we understand, yet
+                let message = ["getAssetID": "Unable to parse URI from manifest. EXT-X-SESSION-KEY, EXT-X-KEY, or variant not found."]
+                print(message)
+            }
+        }
     }
 }
