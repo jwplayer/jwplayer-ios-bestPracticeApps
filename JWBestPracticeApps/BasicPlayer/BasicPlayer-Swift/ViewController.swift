@@ -7,6 +7,7 @@
 
 import UIKit
 import JWPlayerKit
+import AVFoundation
 
 /**
  Provides minimal setup for a JWPlayerViewController.
@@ -37,6 +38,10 @@ class ViewController: JWPlayerViewController {
         let playerItembuilder = JWPlayerItemBuilder()
             .file(videoUrl)
             .posterImage(posterUrl)
+        
+        let cookies = getCookieOptions(name: "TEST-Name", value: "TEST-Value")
+        playerItembuilder.assetOptions(cookies)
+
         var playerItem: JWPlayerItem!
         do {
             playerItem = try playerItembuilder.build()
@@ -61,6 +66,22 @@ class ViewController: JWPlayerViewController {
 
         // Lastly, use the created JWPlayerConfiguration to set up the player.
         player.configurePlayer(with: config)
+    }
+    
+    func getCookieOptions(name: String, value: String) -> [String:Any] {
+        let cookieProps: [HTTPCookiePropertyKey: Any] = [
+            .domain: "https://example.com",
+            .path: "/",
+            .name: name,
+            .value: value,
+        ]
+
+        if let cookie = HTTPCookie(properties: cookieProps) {
+            HTTPCookieStorage.shared.setCookie(cookie)
+            print("\n Cookie Set! \n")
+        }
+        let sharedCookies = HTTPCookieStorage.shared.cookies ?? []
+        return  [AVURLAssetHTTPCookiesKey: sharedCookies]
     }
 }
 
