@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../jwplayer-ios-sdk/SDK/JWPlayer-iOS-SDK.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:AdvancedPlayer/AdvancedPlayer.xcodeproj">
    </FileRef>
    <FileRef
