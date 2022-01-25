@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  BasicPlayer-Swift
+//  AdvancedPlayer
 //
-//  Created by Michael Salvador on 8/2/21.
+//  Created by Michael Salvador on 1/20/22.
 //
 
 import UIKit
@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         // Add your JW Player license key.
-        JWPlayerKitLicense.setLicenseKey("XESWDHH3RTkYqna+1TNpjWbJpQIES/MRY9CoJvIxVYL795nYoVE4w8yJX4Xq80rF9CJ28CgxKKB2ZEv7")
+        JWPlayerKitLicense.setLicenseKey("c7mmCiDy/Ba/ccSm4f3Co6dts3OgoX+Q1nKawKlPd8oXvcxg")
         // JWPlayerKitLicense.setLicenseKey( )
-
+        
         return true
     }
 
