@@ -17,6 +17,9 @@ class ViewController: JWPlayerViewController {
     private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
     private let recommendationsString = "https://playertest.longtailvideo.com/related/three_item_feed.json"
 
+    // Use this property to switch between global or player item recommendations.
+    private var useRecPerPlayerItem = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,19 +41,30 @@ class ViewController: JWPlayerViewController {
         do {
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
             // Add a URL to the recommendations feed. This will cause the recommendations menu to become available.
-            let playerItem = try JWPlayerItemBuilder()
+            let playerItemBuilder = JWPlayerItemBuilder()
                 .file(videoUrl)
                 .posterImage(posterUrl)
-                .recommendations(recommendationsUrl)
-                .build()
+
+            // Configure recommendations per player item
+            if useRecPerPlayerItem {
+                playerItemBuilder.recommendations(recommendationsUrl)
+            }
+
+            let playerItem = try playerItemBuilder.build()
             
             // Second, create a JWRelatedContentConfiguration and set what to do on completion.
             // You have a few options, including showing the screen, or displaying a countdown until the next item plays.
-            let relatedConfig = JWRelatedContentConfigurationBuilder()
-                .onComplete(.autoplay)
+            let relatedConfigBuilder = JWRelatedContentConfigurationBuilder()
+                .onComplete(.none)
                 .autoplayTimer(5)
-                .build()
-            
+
+            // Configure global recommendations
+            if !useRecPerPlayerItem {
+                relatedConfigBuilder.url(recommendationsUrl)
+            }
+
+            let relatedConfig = relatedConfigBuilder.build()
+
             // Second, create a player config with the created JWPlayerItem. Add the related config.
             let config = try JWPlayerConfigurationBuilder()
                 .playlist([playerItem])
