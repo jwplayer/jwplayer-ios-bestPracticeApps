@@ -61,6 +61,43 @@ class ViewController: JWPlayerViewController {
 
         // Lastly, use the created JWPlayerConfiguration to set up the player.
         player.configurePlayer(with: config)
+        
+        player.mediaTimeObserver = { timeData in
+            if Int(timeData.position) % 5 == 0 {
+                print("""
+            === report ===
+            position: \(timeData.position)
+            BEFORE volume: \(self.player.volume)
+            """)
+                self.player.isMuted.toggle()
+                print("""
+            AFTER volume: \(self.player.volume)
+            +++
+            
+            """)
+            }
+        }
+    }
+    
+    override func jwplayerIsReady(_ player: JWPlayer) {
+        super.jwplayerIsReady(player)
+        player.volume = 1
     }
 }
 
+extension JWPlayer {
+    var isMuted: Bool {
+        get { volume == 0 }
+        set { newValue ? mute() : unmute() }
+    }
+    
+    func mute() {
+        guard !isMuted else { return }
+        volume = 0
+    }
+    
+    func unmute() {
+        guard isMuted else { return }
+        volume = 1
+    }
+}
