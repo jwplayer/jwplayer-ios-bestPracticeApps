@@ -54,7 +54,7 @@ class ViewController: JWPlayerViewController {
             // Configure recommendations either global or per player item.
             if useRecPerPlayerItem {
                 playerItemBuilder.recommendations(recommendationsUrl)
-            } else if !useRecPerPlayerItem {
+            } else {
                 relatedConfigBuilder.url(recommendationsUrl)
             }
 
