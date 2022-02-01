@@ -44,13 +44,6 @@ class ViewController: JWPlayerViewController {
             let playerItemBuilder = JWPlayerItemBuilder()
                 .file(videoUrl)
                 .posterImage(posterUrl)
-
-            // Configure recommendations per player item
-            if useRecPerPlayerItem {
-                playerItemBuilder.recommendations(recommendationsUrl)
-            }
-
-            let playerItem = try playerItemBuilder.build()
             
             // Second, create a JWRelatedContentConfiguration and set what to do on completion.
             // You have a few options, including showing the screen, or displaying a countdown until the next item plays.
@@ -58,11 +51,14 @@ class ViewController: JWPlayerViewController {
                 .onComplete(.none)
                 .autoplayTimer(5)
 
-            // Configure global recommendations
-            if !useRecPerPlayerItem {
+            // Configure recommendations either global or per player item.
+            if useRecPerPlayerItem {
+                playerItemBuilder.recommendations(recommendationsUrl)
+            } else if !useRecPerPlayerItem {
                 relatedConfigBuilder.url(recommendationsUrl)
             }
 
+            let playerItem = try playerItemBuilder.build()
             let relatedConfig = relatedConfigBuilder.build()
 
             // Second, create a player config with the created JWPlayerItem. Add the related config.
