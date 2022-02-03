@@ -11,6 +11,7 @@ def common_Google_IMA
 end
 
 def common_JWPlayer
+    pod 'JWPlayerKit', '~> 4.3'
 end
 
 target 'BasicPlayer-ObjC' do
