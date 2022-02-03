@@ -13,25 +13,9 @@
 		3B6C72432799CC6700C14436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C72412799CC6700C14436 /* Main.storyboard */; };
 		3B6C72452799CC6A00C14436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C72442799CC6A00C14436 /* Assets.xcassets */; };
 		3B6C72482799CC6A00C14436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C72462799CC6A00C14436 /* LaunchScreen.storyboard */; };
-		3B6C72512799FA5700C14436 /* JWPlayerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6C72502799FA5700C14436 /* JWPlayerKit.framework */; };
-		3B6C72522799FA5700C14436 /* JWPlayerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6C72502799FA5700C14436 /* JWPlayerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B6C727827A0AAB200C14436 /* CustomControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C727727A0AAB200C14436 /* CustomControls.xib */; };
 		3B6C727A27A0AABF00C14436 /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C727927A0AABF00C14436 /* CustomControls.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3B6C72532799FA5700C14436 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3B6C72522799FA5700C14436 /* JWPlayerKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B6C72382799CC6700C14436 /* AdvancedPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B6C72512799FA5700C14436 /* JWPlayerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +93,6 @@
 				3B6C72342799CC6700C14436 /* Sources */,
 				3B6C72352799CC6700C14436 /* Frameworks */,
 				3B6C72362799CC6700C14436 /* Resources */,
-				3B6C72532799FA5700C14436 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
