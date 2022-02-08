@@ -33,6 +33,10 @@ class PlayerViewController: ViewController, JWPlayerDelegate {
     override func loadView() {
         view = JWPlayerView()
         view.backgroundColor = .black
+        
+        let adControls = AdControlsView(frame: view.bounds)
+        view.addSubview(adControls)
+        adControls.fillSuperview()
     }
     
     // MARK: - JWPlayerDelegate

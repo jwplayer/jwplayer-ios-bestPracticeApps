@@ -19,9 +19,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-w2-l7M">
-                    <rect key="frame" x="316" y="0.0" width="98" height="31"/>
+                    <rect key="frame" x="294" y="0.0" width="120" height="31"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="98" id="EhZ-cX-hfM"/>
+                        <constraint firstAttribute="width" constant="120" id="EhZ-cX-hfM"/>
                         <constraint firstAttribute="height" constant="31" id="tDl-3R-vX9"/>
                     </constraints>
                     <state key="normal" title="Button"/>
@@ -33,9 +33,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzD-Bi-suK">
-                    <rect key="frame" x="316" y="248" width="102" height="31"/>
+                    <rect key="frame" x="294" y="248" width="120" height="31"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="102" id="1nZ-l4-Fmn"/>
+                        <constraint firstAttribute="width" constant="120" id="1nZ-l4-Fmn"/>
                         <constraint firstAttribute="height" constant="31" id="6XS-yZ-Pde"/>
                     </constraints>
                     <state key="normal" title="Button"/>
@@ -65,12 +65,12 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="UDu-sR-fxH" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="1UX-T3-tcx"/>
-                <constraint firstItem="UDu-sR-fxH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6dE-i1-yWA"/>
+                <constraint firstItem="UDu-sR-fxH" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="1UX-T3-tcx"/>
+                <constraint firstItem="UDu-sR-fxH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6dE-i1-yWA"/>
                 <constraint firstItem="g4g-w2-l7M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hre-SA-c6J"/>
                 <constraint firstItem="g4g-w2-l7M" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="Iw1-Qt-SZd"/>
-                <constraint firstItem="GzD-Bi-suK" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Iwu-Wd-b8b"/>
-                <constraint firstItem="GzD-Bi-suK" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="4" id="Y4t-d0-xeJ"/>
+                <constraint firstItem="GzD-Bi-suK" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Iwu-Wd-b8b"/>
+                <constraint firstItem="GzD-Bi-suK" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="Y4t-d0-xeJ"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
