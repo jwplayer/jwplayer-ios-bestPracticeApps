@@ -14,6 +14,9 @@
       location = "group:Chromecast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Custom UI/Custom UI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
    </FileRef>
    <FileRef
