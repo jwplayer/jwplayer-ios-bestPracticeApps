@@ -64,3 +64,8 @@ target 'Recommendations' do
   project 'Recommendations/Recommendations'
   common_JWPlayer
 end
+
+target 'Custom UI' do
+  project 'Custom UI/Custom UI'
+  common_JWPlayer
+end
