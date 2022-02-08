@@ -14,6 +14,10 @@
 		8076839627B2C0B000A24DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8076839527B2C0B000A24DF8 /* Assets.xcassets */; };
 		8076839927B2C0B000A24DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8076839727B2C0B000A24DF8 /* LaunchScreen.storyboard */; };
 		807683A127B2C45B00A24DF8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683A027B2C45B00A24DF8 /* PlayerViewController.swift */; };
+		807683A627B2E9FA00A24DF8 /* AdControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 807683A527B2E9FA00A24DF8 /* AdControls.xib */; };
+		807683A827B2F32300A24DF8 /* AdControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683A727B2F32300A24DF8 /* AdControlsView.swift */; };
+		807683AB27B2F49200A24DF8 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683AA27B2F49200A24DF8 /* XibView.swift */; };
+		807683AE27B2F6DE00A24DF8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683AD27B2F6DE00A24DF8 /* UIView.swift */; };
 		E6D299EEEC104C9E2A162B57 /* Pods_Custom_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAC3A7013E76CBB40649B59 /* Pods_Custom_UI.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +32,10 @@
 		8076839827B2C0B000A24DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8076839A27B2C0B000A24DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		807683A027B2C45B00A24DF8 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		807683A527B2E9FA00A24DF8 /* AdControls.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdControls.xib; sourceTree = "<group>"; };
+		807683A727B2F32300A24DF8 /* AdControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdControlsView.swift; sourceTree = "<group>"; };
+		807683AA27B2F49200A24DF8 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		807683AD27B2F6DE00A24DF8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A554020BC0A926C37404D366 /* Pods-Custom UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.debug.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.debug.xcconfig"; sourceTree = "<group>"; };
 		AC2D516550EDD22D5AC0C888 /* Pods-Custom UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.release.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +94,9 @@
 		807683A227B2C46800A24DF8 /* Custom Player */ = {
 			isa = PBXGroup;
 			children = (
+				807683AC27B2F6B400A24DF8 /* Extensions */,
+				807683A927B2F47100A24DF8 /* Views */,
+				807683A427B2E99300A24DF8 /* xibs */,
 				807683A027B2C45B00A24DF8 /* PlayerViewController.swift */,
 			);
 			path = "Custom Player";
@@ -99,6 +110,31 @@
 				8076839027B2C0AE00A24DF8 /* ViewController.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		807683A427B2E99300A24DF8 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				807683A527B2E9FA00A24DF8 /* AdControls.xib */,
+			);
+			path = xibs;
+			sourceTree = "<group>";
+		};
+		807683A927B2F47100A24DF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				807683A727B2F32300A24DF8 /* AdControlsView.swift */,
+				807683AA27B2F49200A24DF8 /* XibView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		807683AC27B2F6B400A24DF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				807683AD27B2F6DE00A24DF8 /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9717EC764E6ABD682F2B97F2 /* Pods */ = {
@@ -171,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807683A627B2E9FA00A24DF8 /* AdControls.xib in Resources */,
 				8076839927B2C0B000A24DF8 /* LaunchScreen.storyboard in Resources */,
 				8076839627B2C0B000A24DF8 /* Assets.xcassets in Resources */,
 				8076839427B2C0AE00A24DF8 /* Main.storyboard in Resources */,
@@ -228,7 +265,10 @@
 			files = (
 				8076839127B2C0AE00A24DF8 /* ViewController.swift in Sources */,
 				807683A127B2C45B00A24DF8 /* PlayerViewController.swift in Sources */,
+				807683A827B2F32300A24DF8 /* AdControlsView.swift in Sources */,
+				807683AE27B2F6DE00A24DF8 /* UIView.swift in Sources */,
 				8076838D27B2C0AE00A24DF8 /* AppDelegate.swift in Sources */,
+				807683AB27B2F49200A24DF8 /* XibView.swift in Sources */,
 				8076838F27B2C0AE00A24DF8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
