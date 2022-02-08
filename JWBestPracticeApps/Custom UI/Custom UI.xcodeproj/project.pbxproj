@@ -20,6 +20,7 @@
 		807683AE27B2F6DE00A24DF8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683AD27B2F6DE00A24DF8 /* UIView.swift */; };
 		807683B027B2FDBE00A24DF8 /* VideoControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 807683AF27B2FDBE00A24DF8 /* VideoControls.xib */; };
 		807683B227B30DC600A24DF8 /* VideoControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683B127B30DC600A24DF8 /* VideoControlsView.swift */; };
+		807683B427B3159C00A24DF8 /* PlayerViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683B327B3159C00A24DF8 /* PlayerViewManager.swift */; };
 		E6D299EEEC104C9E2A162B57 /* Pods_Custom_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAC3A7013E76CBB40649B59 /* Pods_Custom_UI.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		807683AD27B2F6DE00A24DF8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		807683AF27B2FDBE00A24DF8 /* VideoControls.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoControls.xib; sourceTree = "<group>"; };
 		807683B127B30DC600A24DF8 /* VideoControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControlsView.swift; sourceTree = "<group>"; };
+		807683B327B3159C00A24DF8 /* PlayerViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewManager.swift; sourceTree = "<group>"; };
 		A554020BC0A926C37404D366 /* Pods-Custom UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.debug.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.debug.xcconfig"; sourceTree = "<group>"; };
 		AC2D516550EDD22D5AC0C888 /* Pods-Custom UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.release.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 				807683A927B2F47100A24DF8 /* Views */,
 				807683A427B2E99300A24DF8 /* xibs */,
 				807683A027B2C45B00A24DF8 /* PlayerViewController.swift */,
+				807683B327B3159C00A24DF8 /* PlayerViewManager.swift */,
 			);
 			path = "Custom Player";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				8076838D27B2C0AE00A24DF8 /* AppDelegate.swift in Sources */,
 				807683AB27B2F49200A24DF8 /* XibView.swift in Sources */,
 				8076838F27B2C0AE00A24DF8 /* SceneDelegate.swift in Sources */,
+				807683B427B3159C00A24DF8 /* PlayerViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

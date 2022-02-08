@@ -11,7 +11,7 @@ import JWPlayerKit
 /**
  The PlayerViewController contains the JWPlayerView, and handles the events and changing of the interfaces.
  */
-class PlayerViewController: ViewController, JWPlayerDelegate {
+class PlayerViewController: ViewController {
     
     // MARK: - Public Methods and Properties
     
@@ -29,7 +29,12 @@ class PlayerViewController: ViewController, JWPlayerDelegate {
     
     // MARK: - Player View Handling
     
-    private var playerView: JWPlayerView!
+    fileprivate var viewManager = PlayerViewManager()
+    
+    private var playerView: JWPlayerView {
+        return viewManager.playerView
+    }
+    
     private var player: JWPlayer {
         return playerView.player
     }
@@ -39,22 +44,18 @@ class PlayerViewController: ViewController, JWPlayerDelegate {
         
         view.backgroundColor = .black
         
-        // Setup the player view.
-        let playerView = JWPlayerView()
-        view.addSubview(playerView)
-        playerView.fillSuperview()
-        self.playerView = playerView
-        
-        // Add the controls.
-        let adControls = AdControlsView(frame: view.bounds)
-        view.addSubview(adControls)
-        adControls.fillSuperview()
+        viewManager.setController(self)
         
         // Setup the player
-        playerView.player.delegate = self
+        player.delegate = self
+        player.playbackStateDelegate = self
+        player.adDelegate = self
     }
-    
-    // MARK: - JWPlayerDelegate
+}
+
+// MARK: - JWPlayerDelegate
+
+extension PlayerViewController: JWPlayerDelegate {
     
     func jwplayerIsReady(_ player: JWPlayer) {
         player.play()
@@ -78,5 +79,106 @@ class PlayerViewController: ViewController, JWPlayerDelegate {
     
     func jwplayer(_ player: JWPlayer, encounteredAdError code: UInt, message: String) {
         print("JWPlayer Ad Error (\(code)): \(message)")
+    }
+}
+
+extension PlayerViewController: JWPlayerStateDelegate {
+    func jwplayerContentWillComplete(_ player: JWPlayer) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, willPlayWithReason reason: JWPlayReason) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayerContentIsBuffering(_ player: JWPlayer) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, updatedBuffer percent: Double, position time: JWTimeData) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayerContentDidComplete(_ player: JWPlayer) {
+        DispatchQueue.main.async { [weak viewManager] in
+            viewManager?.interface = .none
+        }
+    }
+    
+    func jwplayer(_ player: JWPlayer, didFinishLoadingWithTime loadTime: TimeInterval) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, isPlayingWithReason reason: JWPlayReason) {
+        DispatchQueue.main.async { [weak viewManager] in
+            viewManager?.state = .playing
+        }
+    }
+    
+    func jwplayer(_ player: JWPlayer, isAttemptingToPlay playlistItem: JWPlayerItem, reason: JWPlayReason) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, didPauseWithReason reason: JWPauseReason) {
+        DispatchQueue.main.async { [weak viewManager] in
+            viewManager?.state = .paused
+        }
+    }
+    
+    func jwplayer(_ player: JWPlayer, didBecomeIdleWithReason reason: JWIdleReason) {
+        DispatchQueue.main.async { [weak viewManager] in
+            viewManager?.state = .idle
+        }
+    }
+    
+    func jwplayer(_ player: JWPlayer, isVisible: Bool) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, didLoadPlaylist playlist: [JWPlayerItem]) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, didLoadPlaylistItem item: JWPlayerItem, at index: UInt) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayerPlaylistHasCompleted(_ player: JWPlayer) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, usesMediaType type: JWMediaType) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, seekedFrom oldPosition: TimeInterval, to newPosition: TimeInterval) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayerHasSeeked(_ player: JWPlayer) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, playbackRateChangedTo rate: Double, at time: TimeInterval) {
+        // Unimplemented in this example.
+    }
+}
+
+extension PlayerViewController: JWAdDelegate {
+    func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
+        DispatchQueue.main.async { [weak viewManager] in
+            switch event.type {
+            case .adBreakStart:
+                viewManager?.interface = .ads
+            case .adBreakEnd:
+                viewManager?.interface = .video
+            case .pause:
+                viewManager?.state = .paused
+            case .play:
+                viewManager?.state = .playing
+            default:
+                break
+            }
+        }
     }
 }
