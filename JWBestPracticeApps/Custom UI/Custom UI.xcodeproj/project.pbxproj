@@ -18,6 +18,8 @@
 		807683A827B2F32300A24DF8 /* AdControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683A727B2F32300A24DF8 /* AdControlsView.swift */; };
 		807683AB27B2F49200A24DF8 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683AA27B2F49200A24DF8 /* XibView.swift */; };
 		807683AE27B2F6DE00A24DF8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683AD27B2F6DE00A24DF8 /* UIView.swift */; };
+		807683B027B2FDBE00A24DF8 /* VideoControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 807683AF27B2FDBE00A24DF8 /* VideoControls.xib */; };
+		807683B227B30DC600A24DF8 /* VideoControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683B127B30DC600A24DF8 /* VideoControlsView.swift */; };
 		E6D299EEEC104C9E2A162B57 /* Pods_Custom_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAC3A7013E76CBB40649B59 /* Pods_Custom_UI.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		807683A727B2F32300A24DF8 /* AdControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdControlsView.swift; sourceTree = "<group>"; };
 		807683AA27B2F49200A24DF8 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		807683AD27B2F6DE00A24DF8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		807683AF27B2FDBE00A24DF8 /* VideoControls.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoControls.xib; sourceTree = "<group>"; };
+		807683B127B30DC600A24DF8 /* VideoControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControlsView.swift; sourceTree = "<group>"; };
 		A554020BC0A926C37404D366 /* Pods-Custom UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.debug.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.debug.xcconfig"; sourceTree = "<group>"; };
 		AC2D516550EDD22D5AC0C888 /* Pods-Custom UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.release.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				807683A527B2E9FA00A24DF8 /* AdControls.xib */,
+				807683AF27B2FDBE00A24DF8 /* VideoControls.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				807683A727B2F32300A24DF8 /* AdControlsView.swift */,
+				807683B127B30DC600A24DF8 /* VideoControlsView.swift */,
 				807683AA27B2F49200A24DF8 /* XibView.swift */,
 			);
 			path = Views;
@@ -210,6 +216,7 @@
 				807683A627B2E9FA00A24DF8 /* AdControls.xib in Resources */,
 				8076839927B2C0B000A24DF8 /* LaunchScreen.storyboard in Resources */,
 				8076839627B2C0B000A24DF8 /* Assets.xcassets in Resources */,
+				807683B027B2FDBE00A24DF8 /* VideoControls.xib in Resources */,
 				8076839427B2C0AE00A24DF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807683B227B30DC600A24DF8 /* VideoControlsView.swift in Sources */,
 				8076839127B2C0AE00A24DF8 /* ViewController.swift in Sources */,
 				807683A127B2C45B00A24DF8 /* PlayerViewController.swift in Sources */,
 				807683A827B2F32300A24DF8 /* AdControlsView.swift in Sources */,
