@@ -17,26 +17,41 @@ class PlayerViewController: ViewController, JWPlayerDelegate {
     
     var config: JWPlayerConfiguration? {
         didSet {
-            guard let config = self.config else {
+            // Load the config, and if necessary, trigger viewDidLoad.
+            // If viewDidLoad is not triggered, then playerView is nil.
+            guard let config = self.config, view != nil else {
                 return
             }
+            
             playerView.player.configurePlayer(with: config)
         }
     }
     
     // MARK: - Player View Handling
     
-    private var playerView: JWPlayerView {
-        return view as! JWPlayerView
+    private var playerView: JWPlayerView!
+    private var player: JWPlayer {
+        return playerView.player
     }
     
-    override func loadView() {
-        view = JWPlayerView()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         view.backgroundColor = .black
         
+        // Setup the player view.
+        let playerView = JWPlayerView()
+        view.addSubview(playerView)
+        playerView.fillSuperview()
+        self.playerView = playerView
+        
+        // Add the controls.
         let adControls = AdControlsView(frame: view.bounds)
         view.addSubview(adControls)
         adControls.fillSuperview()
+        
+        // Setup the player
+        playerView.player.delegate = self
     }
     
     // MARK: - JWPlayerDelegate
