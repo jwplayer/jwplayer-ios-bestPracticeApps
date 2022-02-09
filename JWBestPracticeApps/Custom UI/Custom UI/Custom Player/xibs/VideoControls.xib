@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoControlsView" customModule="Custom_UI" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="tEb-xv-xJK"/>
+                <outlet property="playPauseButton" destination="IMO-AS-fRM" id="jfP-14-iw9"/>
                 <outlet property="progressView" destination="xZf-rt-I9Z" id="DFb-vO-RSk"/>
             </connections>
         </placeholder>

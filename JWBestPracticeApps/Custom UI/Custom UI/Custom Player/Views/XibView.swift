@@ -19,7 +19,15 @@ class XibView: UIView {
     
     weak var buttonListener: InterfaceButtonListener?
     
-    var state: JWPlayerState = .idle
+    var playerState: JWPlayerState = .idle {
+        didSet {
+            guard oldValue != playerState else {
+                return
+            }
+            
+            onPlayerStateChanged()
+        }
+    }
     
     // MARK: - Lifecycle
 
@@ -54,5 +62,9 @@ class XibView: UIView {
     private func load(xib name: String, owner: Any) -> [Any]? {
         let objs = Bundle.main.loadNibNamed(name, owner: owner, options: nil)
         return objs
+    }
+    
+    open func onPlayerStateChanged() {
+        
     }
 }

@@ -37,7 +37,7 @@ class PlayerViewManager {
             container.addSubview(currentInterface)
             currentInterface.fillSuperview()
             currentInterface.buttonListener = buttonListener
-            currentInterface.state = state
+            currentInterface.playerState = state
         }
     }
     
@@ -84,6 +84,6 @@ class PlayerViewManager {
     }
     
     private func onStateChanged() {
-        currentInterface?.state = state
+        currentInterface?.playerState = state
     }
 }

@@ -12,6 +12,20 @@ class VideoControlsView: XibView {
     override var xibName: String { "VideoControls" }
     
     @IBOutlet weak var progressView: UIProgressView?
+    @IBOutlet weak var playPauseButton: UIButton?
+    
+    override func onPlayerStateChanged() {
+        super.onPlayerStateChanged()
+        
+        switch playerState {
+        case .playing:
+            let image = UIImage(systemName: "pause.fill")
+            playPauseButton?.setImage(image, for: .normal)
+        default:
+            let image = UIImage(systemName: "play.fill")
+            playPauseButton?.setImage(image, for: .normal)
+        }
+    }
     
     override func setupView() {
         super.setupView()
@@ -20,7 +34,7 @@ class VideoControlsView: XibView {
     }
     
     @IBAction func onPlayPauseButtonTapped(_ button: UIButton) {
-        if state == .playing {
+        if playerState == .playing {
             buttonListener?.interfaceButtonTapped(.pause)
         }
         else {
