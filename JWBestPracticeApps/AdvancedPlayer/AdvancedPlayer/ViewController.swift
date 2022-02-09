@@ -24,10 +24,13 @@ class ViewController: JWPlayerViewController,
     private let videoUrlString = "https://playertest.longtailvideo.com/adaptive/oceans/oceans.m3u8"
     private let posterUrlString = "https://d3el35u4qe4frz.cloudfront.net/bkaovAYt-480.jpg"
 
-    // custom UI
+    // Custom controls to overlay on the player
     var customControls: CustomControls!
+    // Whether or not user is currently dragging scrub bar
     var progressBarScrubbing: Bool = false
+    // The skip offset of the current ad
     var skipOffset: Double?
+    // The view controller that manages the fullscreen mode
     var fullScreenVC: JWFullScreenViewController?
 
     override func viewDidLoad() {
@@ -38,10 +41,10 @@ class ViewController: JWPlayerViewController,
         // Set the view's background color to black for better contrast.
         view.backgroundColor = .black
 
-        // MARK: - 1. Hide & disable built-in controls/ad controls
+        // MARK: 1. Hide & disable built-in controls/ad controls
         interfaceBehavior = .hidden
 
-        // MARK: - 2. Add custom controls
+        // MARK: 2. Add custom controls
         customControls = UINib(nibName: "CustomControls", bundle: .main).instantiate(withOwner: nil, options: nil).first as? CustomControls
         customControls.translatesAutoresizingMaskIntoConstraints = false
         customControls.delegate = self
@@ -58,6 +61,7 @@ class ViewController: JWPlayerViewController,
         let videoUrl = URL(string:videoUrlString)!
         let posterUrl = URL(string:posterUrlString)!
 
+        // First, create the player item
         let playerItembuilder = JWPlayerItemBuilder()
             .file(videoUrl)
             .posterImage(posterUrl)
@@ -70,8 +74,9 @@ class ViewController: JWPlayerViewController,
             return
         }
 
+        // Second, create an advertising configuation. In this case, we're providing a VMAP URL.
         let advertisingConfigBuilder = JWAdsAdvertisingConfigBuilder()
-            .vmapURL(URL(string: "https://s3.amazonaws.com/george.success.jwplayer.com/demos/vmap_midroll_preroll.xml")!)
+            .vmapURL(URL(string: "https://playertest.longtailvideo.com.s3.amazonaws.com/vmap/vmap-schedule-pre-mid-post.xml")!)
         var advertisingConfig: JWAdvertisingConfig!
         do {
             advertisingConfig = try advertisingConfigBuilder.build()
@@ -81,6 +86,7 @@ class ViewController: JWPlayerViewController,
             return
         }
 
+        // Third, create a player configuration, supplying the created player item and advertising configuration.
         let configBuilder = JWPlayerConfigurationBuilder()
             .playlist([playerItem])
             .advertising(advertisingConfig)
@@ -93,11 +99,13 @@ class ViewController: JWPlayerViewController,
             return
         }
 
+        // Configure the player using the created player configuration.
         player.configurePlayer(with: config)
     }
 
-    // MARK: - Add custom controls
-
+    /**
+     Remove custom controls from superview, and add them to passed view.
+     */
     func addCustomControls(toView view: UIView) {
         customControls.removeFromSuperview()
         view.addSubview(customControls)
@@ -110,6 +118,8 @@ class ViewController: JWPlayerViewController,
     // MARK: - CustomControlsDelegate
 
     func progressBarTouchUp(_ slider: UISlider) {
+        // When a user removes their finger from the progress bar, seek to the point
+        // of progress
         player.seek(to: Double(customControls.progressBar.value))
         progressBarScrubbing = false
     }
@@ -129,6 +139,7 @@ class ViewController: JWPlayerViewController,
 
     override func jwplayer(_ player: JWPlayer, didPauseWithReason reason: JWPauseReason) {
         super.jwplayer(player, didPauseWithReason: reason)
+        // Set the play/pause button image on the main thread
         DispatchQueue.main.async { [weak self] in
             self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
         }
@@ -136,6 +147,7 @@ class ViewController: JWPlayerViewController,
 
     override func jwplayer(_ player: JWPlayer, isPlayingWithReason reason: JWPlayReason) {
         super.jwplayer(player, isPlayingWithReason: reason)
+        // Set the play/pause button image on the main thread
         DispatchQueue.main.async { [weak self] in
             self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
         }
@@ -157,12 +169,14 @@ class ViewController: JWPlayerViewController,
         }
     }
 
-    // MARK: - 3. Observer for 'didFinishLoadingWithTime' event. 'didFinishLoadingWithTime' is analogous to the `onFirstFrame` event in version 3.x.
+    // MARK: 3. Observer for 'didFinishLoadingWithTime' event. 'didFinishLoadingWithTime' is analogous to the `onFirstFrame` event in version 3.x.
 
     override func jwplayer(_ player: JWPlayer, didFinishLoadingWithTime loadTime: TimeInterval) {
         super.jwplayer(player, didFinishLoadingWithTime: loadTime)
 
     }
+
+    // MARK: - Observer ad events
 
     override func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
         super.jwplayer(player, adEvent: event)
@@ -172,7 +186,7 @@ class ViewController: JWPlayerViewController,
 
         switch event.type {
         case .impression, .meta:
-            // MARK: - 4. Detect whether an upcoming ad is skippable
+            // MARK: 4. Detect whether an upcoming ad is skippable
             // If the ad has a skip offset >= 0, it's skippable.
             if let skipOffset = event[.skipOffset] as? TimeInterval, skipOffset >= 0 {
                 self.skipOffset = skipOffset
@@ -216,10 +230,12 @@ class ViewController: JWPlayerViewController,
         }
     }
 
-    // MARK: - 5. Time observation for content
+    // MARK: 5. Time observation for content
 
     override func onMediaTimeEvent(_ time: JWTimeData) {
         super.onMediaTimeEvent(time)
+        // If the user is not scrubbing, update the progress bar to reflect the current
+        // playback position
         if progressBarScrubbing == false {
             DispatchQueue.main.async { [weak self] in
                 self?.customControls.progressBar.maximumValue = Float(time.duration)
@@ -229,20 +245,24 @@ class ViewController: JWPlayerViewController,
     }
 
 
-    // MARK: - 6. Time observation for ads
+    // MARK: 6. Time observation for ads
 
     override func onAdTimeEvent(_ time: JWTimeData) {
         super.onAdTimeEvent(time)
+        // Update the progress bar to reflect the new playback position of the ad
         DispatchQueue.main.async { [weak self] in
             self?.customControls.progressBar.maximumValue = Float(time.duration)
             self?.customControls.progressBar.value = Float(time.position)
 
+            // If there is no skip offset, set the skip button title to "Skip Ad"
             guard self?.skipOffset != nil,
                   self!.skipOffset! - time.position > 0 else {
                       self?.customControls.skipButton.setTitle("Skip Ad", for: .normal)
                       return
                   }
 
+            // If there is a skip offset, set the skip button title to reflect how much time the developer has
+            // before they can skip
             let timeRemaining = Int(ceil(self!.skipOffset! - time.position))
             self?.customControls.skipButton.setTitle("Skip Ad in \(timeRemaining)", for: .normal)
         }
@@ -251,12 +271,13 @@ class ViewController: JWPlayerViewController,
     // MARK: - JWPlayerViewControllerDelegate
 
     func playerViewControllerWillGoFullScreen(_ controller: JWPlayerViewController) -> JWFullScreenViewController? {
-
+        // Create and retain a JWFullScreenViewController that we can use to add custom controls to
         self.fullScreenVC = JWFullScreenViewController()
         return self.fullScreenVC
     }
 
     func playerViewControllerDidGoFullScreen(_ controller: JWPlayerViewController) {
+        // When the player goes full screen, add our custom controls to the JWFullScreenViewController's view
         guard let fullScreenVC = fullScreenVC else {
             return
         }
@@ -269,6 +290,7 @@ class ViewController: JWPlayerViewController,
     }
 
     func playerViewControllerDidDismissFullScreen(_ controller: JWPlayerViewController) {
+        // When the player leaves full sreen, add our custom controls to the JWPlayerViewController's view
         addCustomControls(toView: view)
     }
 
