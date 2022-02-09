@@ -10,15 +10,23 @@ import JWPlayerKit
 import UIKit
 
 /**
- The PlayerViewController contains the JWPlayerView, and handles the events and changing of the interfaces.
+ The PlayerViewController handles all events from user input and from the player itself.
+ It leaves all management of the view hierarchy to PlayerViewManager, and informs this manager
+ on the state of the player so the view manager is updated accordingly.
  */
 class PlayerViewController: ViewController {
+    /// This url is updated when the ad impression event is received from the player.
+    /// We need to save this value in case the "Learn More" button is tapped, this way we can
+    /// open a browser with the specified url.
     fileprivate var adClickThroughUrl: URL?
     
+    /// When we enter full screen mode we save a reference to the view controller so we can dismiss it later.
     private var fullScreenViewController: FullScreenPlayerViewController?
     
     // MARK: - Public Methods and Properties
     
+    /// This is the config to load in the player. When set it will initialize the view hierarchy if it isn't set already, and
+    /// it will initialize the player with the given configuration.
     var config: JWPlayerConfiguration? {
         didSet {
             // Load the config, and if necessary, trigger viewDidLoad.
@@ -27,20 +35,20 @@ class PlayerViewController: ViewController {
                 return
             }
             
-            playerView.player.configurePlayer(with: config)
+            // Initialize the player
+            player.configurePlayer(with: config)
         }
     }
     
     // MARK: - Player View Handling
     
+    /// This is the view manager in charge of swapping interfaces and managing the view hierarchy.
+    /// It contains the `JWPlayerView` object.
     fileprivate var viewManager = PlayerViewManager()
     
-    private var playerView: JWPlayerView {
-        return viewManager.playerView
-    }
-    
+    /// A convenience property for accessing the player, via the `viewManager` and `JWPlayerView`
     fileprivate var player: JWPlayer {
-        return playerView.player
+        return viewManager.playerView.player
     }
     
     override func viewDidLoad() {
@@ -56,7 +64,9 @@ class PlayerViewController: ViewController {
         player.playbackStateDelegate = self
         player.adDelegate = self
         
-        // Setup the time observer
+        // Setup the time observer. This event is fired as the position updates on the
+        // video content, but not the advertising content. If you wish to listen to time
+        // events during advertisements, listen to `player.adTimeObserver`
         player.mediaTimeObserver = { [weak viewManager] (time) in
             DispatchQueue.main.async { [weak viewManager] in
                 viewManager?.currentTime = time
@@ -64,7 +74,7 @@ class PlayerViewController: ViewController {
         }
     }
     
-    /// When called, the video will be presented across the entire screen, in landscape.
+    /// When called, the video will be presented in full screen mode.
     func goFullScreen() {
         // Create the full screen view controller.
         fullScreenViewController = FullScreenPlayerViewController()
@@ -76,8 +86,10 @@ class PlayerViewController: ViewController {
         present(fullScreenViewController!, animated: true)
     }
     
-    // When called, the video returns to normal non-full screen size.
+    /// When called, the video returns to normal non-full screen size.
     func exitFullScreen() {
+        // Set this view controller as the new controller, and dismiss the
+        // full screen view controller.
         viewManager.setController(self)
         fullScreenViewController?.dismiss(animated: true, completion: nil)
     }
@@ -85,10 +97,12 @@ class PlayerViewController: ViewController {
 
 // MARK: - JWPlayerDelegate
 
+/// We observe callbacks from the JWPlayer object so we know when the video is ready to play
+/// and what errors and warnings are being reported. We set this view controller as the JWPlayerDelegate in `viewDidLoad`
 extension PlayerViewController: JWPlayerDelegate {
     
     func jwplayerIsReady(_ player: JWPlayer) {
-        player.play()
+        print("The player is initialized and ready.")
     }
     
     func jwplayer(_ player: JWPlayer, failedWithError code: UInt, message: String) {
@@ -112,6 +126,8 @@ extension PlayerViewController: JWPlayerDelegate {
     }
 }
 
+/// We observe player state callbacks from the JWPlayer object so we know when the player's state has changed.
+/// We set this view controller as the JWPlayerStateDelegate in `viewDidLoad`
 extension PlayerViewController: JWPlayerStateDelegate {
     func jwplayerContentWillComplete(_ player: JWPlayer) {
         // Unimplemented in this example.
@@ -131,6 +147,10 @@ extension PlayerViewController: JWPlayerStateDelegate {
     
     func jwplayerContentDidComplete(_ player: JWPlayer) {
         DispatchQueue.main.async { [weak viewManager] in
+            // When the video has finished playing, remove the interface.
+            // If you wish to be able to play the video again, set the interface
+            // to `video` and set the state to `paused`.
+            // Or, if you wish to restart the video, simply call `play()` on the player.
             viewManager?.interface = .none
         }
     }
@@ -141,6 +161,7 @@ extension PlayerViewController: JWPlayerStateDelegate {
     
     func jwplayer(_ player: JWPlayer, isPlayingWithReason reason: JWPlayReason) {
         DispatchQueue.main.async { [weak viewManager] in
+            // Set the state to playing, since play began.
             viewManager?.state = .playing
         }
     }
@@ -151,12 +172,18 @@ extension PlayerViewController: JWPlayerStateDelegate {
     
     func jwplayer(_ player: JWPlayer, didPauseWithReason reason: JWPauseReason) {
         DispatchQueue.main.async { [weak viewManager] in
+            // Set the state to paused, since the video has paused.
             viewManager?.state = .paused
         }
     }
     
     func jwplayer(_ player: JWPlayer, didBecomeIdleWithReason reason: JWIdleReason) {
         DispatchQueue.main.async { [weak viewManager] in
+            // While idle (play has not begun) we show the video interface.
+            // This allows the use to press the play button or enter full screen.
+            // This will display the poster image before play begins.
+            // To see the poster image, modify the config in ViewController.swift to set
+            // `autostart` to false.
             viewManager?.interface = .video
             viewManager?.state = .idle
         }
@@ -195,19 +222,31 @@ extension PlayerViewController: JWPlayerStateDelegate {
     }
 }
 
+/// We observe ad event callbacks from the JWPlayer object so we know when the player's advertising state or information has changed.
+/// We set this view controller as the JWAdDelegate in `viewDidLoad`
 extension PlayerViewController: JWAdDelegate {
     func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
         DispatchQueue.main.async { [weak viewManager, weak self] in
             switch event.type {
             case .adBreakStart:
+                // This event denotes when an advertisement has begun.
+                // This is an excellent time to switch to our custom ad interface.
                 viewManager?.interface = .ads
             case .adBreakEnd:
+                // Once the ad ends, we switch back to the video interface.
                 viewManager?.interface = .video
+                // We also clear out the adClickThroughURL when the ad ends.
+                self?.adClickThroughUrl = nil
             case .pause:
+                // We update the state when the ad is paused.
                 viewManager?.state = .paused
             case .play:
+                // We update the state when the ad begins playing.
                 viewManager?.state = .playing
             case .impression:
+                // An ad impression contains a lot of information about the ad.
+                // In this example, we save the URL to take the user to when they
+                // tap on the "Learn More" button.
                 let impression = event[.impression] as? JWAdImpression
                 self?.adClickThroughUrl = impression?.clickThroughURL
             default:
@@ -217,22 +256,32 @@ extension PlayerViewController: JWAdDelegate {
     }
 }
 
+/// Conforming to InterfaceButtonListener allows us to listen to button taps. This protocol is unique
+/// to this example application, and is not part of our SDK.
+/// We set this view controller as the button listener in `viewDidLoad`
 extension PlayerViewController: InterfaceButtonListener {
     func interfaceButtonTapped(_ button: InterfaceButton) {
         switch button {
         case .play:
+            // Begin playing the video when the play button is tapped.
             player.play()
         case .pause:
+            // Pause the video when the pause button is tapped.
             player.pause()
-        case .maximizeWindow:
+        case .enterFullScreen:
+            // Enter full screen mode when the user taps the "full screen" button.
             viewManager.windowState = .fullscreen
             goFullScreen()
-        case .minimizeWindow:
+        case .exitFullScreen:
+            // Exit full screen mode when the user taps the "exit full screen" button.
             viewManager.windowState = .normal
             exitFullScreen()
         case .skipAd:
+            // Skip the current ad when the user taps the "skip ad" button.
             player.skipAd()
         case .learnMore:
+            // If we have saved a valid URL from the ad impression, we will visit it
+            // when the user taps the "Learn More" button.
             guard let url = adClickThroughUrl, UIApplication.shared.canOpenURL(url) else {
                 return
             }

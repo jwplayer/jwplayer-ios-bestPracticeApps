@@ -9,6 +9,7 @@ import Foundation
 import JWPlayerKit
 import UIKit
 
+/// This view controller is used to display the video over the entire screen in landscape orientation.
 class FullScreenPlayerViewController: UIViewController {
     /// This hides the home indicator during full screen presentation.
     public override var prefersHomeIndicatorAutoHidden: Bool {

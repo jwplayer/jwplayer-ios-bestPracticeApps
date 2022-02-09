@@ -7,15 +7,28 @@
 
 import Foundation
 
+/// Constants representing buttons within our interfaces.
 enum InterfaceButton {
+    /// The play button.
     case play
+    /// The pause button.
     case pause
-    case maximizeWindow
-    case minimizeWindow
+    /// The button requesting to enter full screen mode.
+    case enterFullScreen
+    /// The button requesting to exit full screen mode.
+    case exitFullScreen
+    /// The button requesting to skip the current advertisement.
     case skipAd
+    /// The button requesting to learn more about what is being advertised.
     case learnMore
 }
 
+/// This protocol is conformed to by classes which listen for button presses.
+/// In this example, `PlayerViewController` listens for the button taps.
 protocol InterfaceButtonListener: AnyObject {
+    /**
+     This method is called when a button is tapped.
+     - parameter button: A constant denoting what button was tapped.
+     */
     func interfaceButtonTapped(_ button: InterfaceButton)
 }

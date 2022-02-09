@@ -97,10 +97,10 @@ class VideoControlsView: XibView {
     @IBAction func onFullScreenTapped(_ button: UIButton) {
         // Inform the button listener about which button ("full screen" or "dismiss full screen") was tapped.
         if windowState == .normal {
-            buttonListener?.interfaceButtonTapped(.maximizeWindow)
+            buttonListener?.interfaceButtonTapped(.enterFullScreen)
         }
         else {
-            buttonListener?.interfaceButtonTapped(.minimizeWindow)
+            buttonListener?.interfaceButtonTapped(.exitFullScreen)
         }
     }
 }
