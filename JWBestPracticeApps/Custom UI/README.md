@@ -16,7 +16,7 @@ This project uses JW Player VAST advertisements. When using our VAST implementat
 | Skip Ad | A button is displayed which allows the user to skip the ad. |
 | Learn More | A 'Learn More' button is displayed, and when clicked, takes the user to their web browser to view a site specified in the  advertisement's click-through url. |
 
-### Video Inteface
+### Video Interface
 
 When viewing the video we display a new, custom interface.
 
