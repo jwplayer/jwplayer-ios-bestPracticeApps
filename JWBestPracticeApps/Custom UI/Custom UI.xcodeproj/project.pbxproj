@@ -46,6 +46,7 @@
 		807683B327B3159C00A24DF8 /* PlayerViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewManager.swift; sourceTree = "<group>"; };
 		807683B527B32B6000A24DF8 /* InterfaceButtonListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceButtonListener.swift; sourceTree = "<group>"; };
 		807683B727B35E6B00A24DF8 /* FullScreenPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPlayerViewController.swift; sourceTree = "<group>"; };
+		807683B927B3FD1500A24DF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A554020BC0A926C37404D366 /* Pods-Custom UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.debug.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.debug.xcconfig"; sourceTree = "<group>"; };
 		AC2D516550EDD22D5AC0C888 /* Pods-Custom UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.release.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +74,7 @@
 		8076838027B2C0AE00A24DF8 = {
 			isa = PBXGroup;
 			children = (
+				807683B927B3FD1500A24DF8 /* README.md */,
 				8076838B27B2C0AE00A24DF8 /* Custom UI */,
 				8076838A27B2C0AE00A24DF8 /* Products */,
 				9717EC764E6ABD682F2B97F2 /* Pods */,
