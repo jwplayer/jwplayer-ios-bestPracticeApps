@@ -15,6 +15,11 @@ enum PlayerInterface {
     case ads
 }
 
+enum PlayerWindowState {
+    case fullscreen
+    case normal
+}
+
 class PlayerViewManager {
     let container = UIView()
     let playerView = JWPlayerView()
@@ -38,6 +43,7 @@ class PlayerViewManager {
             currentInterface.fillSuperview()
             currentInterface.buttonListener = buttonListener
             currentInterface.playerState = state
+            currentInterface.windowState = windowState
         }
     }
     
@@ -57,7 +63,17 @@ class PlayerViewManager {
                 return
             }
             
-            onStateChanged()
+            currentInterface?.playerState = state
+        }
+    }
+    
+    var windowState: PlayerWindowState = .normal {
+        didSet {
+            guard oldValue != windowState else {
+                return
+            }
+            
+            currentInterface?.windowState = windowState
         }
     }
     
@@ -81,9 +97,5 @@ class PlayerViewManager {
         case .ads:
             currentInterface = AdControlsView(frame: container.bounds)
         }
-    }
-    
-    private func onStateChanged() {
-        currentInterface?.playerState = state
     }
 }

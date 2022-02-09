@@ -29,6 +29,16 @@ class XibView: UIView {
         }
     }
     
+    var windowState: PlayerWindowState = .normal {
+        didSet {
+            guard oldValue != windowState else {
+                return
+            }
+            
+            onWindowStateChanged()
+        }
+    }
+    
     // MARK: - Lifecycle
 
     override init(frame: CGRect) {
@@ -65,6 +75,10 @@ class XibView: UIView {
     }
     
     open func onPlayerStateChanged() {
+        
+    }
+    
+    open func onWindowStateChanged() {
         
     }
 }

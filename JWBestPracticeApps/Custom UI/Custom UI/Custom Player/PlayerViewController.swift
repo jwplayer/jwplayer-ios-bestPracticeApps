@@ -198,9 +198,9 @@ extension PlayerViewController: InterfaceButtonListener {
         case .pause:
             player.pause()
         case .maximizeWindow:
-            print("maximize tapped")
+            viewManager.windowState = .fullscreen
         case .minimizeWindow:
-            print("minimize tapped")
+            viewManager.windowState = .normal
         case .skipAd:
             player.skipAd()
         case .learnMore:

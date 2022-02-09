@@ -13,6 +13,7 @@ class VideoControlsView: XibView {
     
     @IBOutlet weak var progressView: UIProgressView?
     @IBOutlet weak var playPauseButton: UIButton?
+    @IBOutlet weak var fullScreenButton: UIButton?
     
     override func onPlayerStateChanged() {
         super.onPlayerStateChanged()
@@ -24,6 +25,19 @@ class VideoControlsView: XibView {
         default:
             let image = UIImage(systemName: "play.fill")
             playPauseButton?.setImage(image, for: .normal)
+        }
+    }
+    
+    override func onWindowStateChanged() {
+        super.onWindowStateChanged()
+        
+        switch windowState {
+        case .normal:
+            let image = UIImage(systemName: "arrow.up.left.and.arrow.down.right")
+            fullScreenButton?.setImage(image, for: .normal)
+        default:
+            let image = UIImage(systemName: "arrow.down.right.and.arrow.up.left")
+            fullScreenButton?.setImage(image, for: .normal)
         }
     }
     
@@ -43,6 +57,11 @@ class VideoControlsView: XibView {
     }
     
     @IBAction func onFullScreenTapped(_ button: UIButton) {
-        print("tapped")
+        if windowState == .normal {
+            buttonListener?.interfaceButtonTapped(.maximizeWindow)
+        }
+        else {
+            buttonListener?.interfaceButtonTapped(.minimizeWindow)
+        }
     }
 }
