@@ -41,9 +41,12 @@ class PlayerViewManager {
 
             container.addSubview(currentInterface)
             currentInterface.fillSuperview()
+            
+            // Set the state variables.
             currentInterface.buttonListener = buttonListener
             currentInterface.playerState = state
             currentInterface.windowState = windowState
+            currentInterface.currentTime = currentTime
         }
     }
     
@@ -74,6 +77,12 @@ class PlayerViewManager {
             }
             
             currentInterface?.windowState = windowState
+        }
+    }
+    
+    var currentTime: JWTimeData? {
+        didSet {
+            currentInterface?.currentTime = currentTime
         }
     }
     

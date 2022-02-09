@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import JWPlayerKit
 
 class VideoControlsView: XibView {
     override var xibName: String { "VideoControls" }
@@ -14,6 +15,18 @@ class VideoControlsView: XibView {
     @IBOutlet weak var progressView: UIProgressView?
     @IBOutlet weak var playPauseButton: UIButton?
     @IBOutlet weak var fullScreenButton: UIButton?
+    
+    override var currentTime: JWTimeData? {
+        didSet {
+            guard let position = currentTime?.position,
+                  let duration = currentTime?.duration else {
+                      progressView?.progress = 0.0
+                      return
+                  }
+            
+            progressView?.progress = Float(position / duration)
+        }
+    }
     
     override func onPlayerStateChanged() {
         super.onPlayerStateChanged()

@@ -39,6 +39,8 @@ class XibView: UIView {
         }
     }
     
+    var currentTime: JWTimeData?
+    
     // MARK: - Lifecycle
 
     override init(frame: CGRect) {

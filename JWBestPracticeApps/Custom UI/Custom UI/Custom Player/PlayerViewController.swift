@@ -53,6 +53,21 @@ class PlayerViewController: ViewController {
         player.delegate = self
         player.playbackStateDelegate = self
         player.adDelegate = self
+        
+        // Setup the time observer
+        player.mediaTimeObserver = { [weak viewManager] (time) in
+            DispatchQueue.main.async { [weak viewManager] in
+                viewManager?.currentTime = time
+            }
+        }
+    }
+    
+    func goFullScreen() {
+        
+    }
+    
+    func exitFullScreen() {
+        
     }
 }
 
