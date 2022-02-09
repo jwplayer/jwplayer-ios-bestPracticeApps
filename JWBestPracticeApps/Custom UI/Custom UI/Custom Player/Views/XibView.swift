@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import JWPlayerKit
 
 /**
  All views which are defined by a XIB file use this superclass. This superclass should not be used on its own.
@@ -15,6 +16,10 @@ class XibView: UIView {
     @IBOutlet weak var contentView: UIView!
     
     open var xibName: String { "" }
+    
+    weak var buttonListener: InterfaceButtonListener?
+    
+    var state: JWPlayerState = .idle
     
     // MARK: - Lifecycle
 

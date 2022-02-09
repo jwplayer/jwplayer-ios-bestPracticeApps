@@ -20,7 +20,12 @@ class VideoControlsView: XibView {
     }
     
     @IBAction func onPlayPauseButtonTapped(_ button: UIButton) {
-        print("tapped")
+        if state == .playing {
+            buttonListener?.interfaceButtonTapped(.pause)
+        }
+        else {
+            buttonListener?.interfaceButtonTapped(.play)
+        }
     }
     
     @IBAction func onFullScreenTapped(_ button: UIButton) {

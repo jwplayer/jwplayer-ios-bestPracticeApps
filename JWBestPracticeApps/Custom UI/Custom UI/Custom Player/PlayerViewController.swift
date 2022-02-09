@@ -35,7 +35,7 @@ class PlayerViewController: ViewController {
         return viewManager.playerView
     }
     
-    private var player: JWPlayer {
+    fileprivate var player: JWPlayer {
         return playerView.player
     }
     
@@ -45,6 +45,7 @@ class PlayerViewController: ViewController {
         view.backgroundColor = .black
         
         viewManager.setController(self)
+        viewManager.buttonListener = self
         
         // Setup the player
         player.delegate = self
@@ -127,6 +128,7 @@ extension PlayerViewController: JWPlayerStateDelegate {
     
     func jwplayer(_ player: JWPlayer, didBecomeIdleWithReason reason: JWIdleReason) {
         DispatchQueue.main.async { [weak viewManager] in
+            viewManager?.interface = .video
             viewManager?.state = .idle
         }
     }
@@ -179,6 +181,25 @@ extension PlayerViewController: JWAdDelegate {
             default:
                 break
             }
+        }
+    }
+}
+
+extension PlayerViewController: InterfaceButtonListener {
+    func interfaceButtonTapped(_ button: InterfaceButton) {
+        switch button {
+        case .play:
+            player.play()
+        case .pause:
+            player.pause()
+        case .maximizeWindow:
+            print("maximize tapped")
+        case .minimizeWindow:
+            print("minimize tapped")
+        case .skipAd:
+            player.skipAd()
+        case .learnMore:
+            print("learn more tapped")
         }
     }
 }

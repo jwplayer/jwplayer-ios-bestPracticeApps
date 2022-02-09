@@ -19,6 +19,12 @@ class PlayerViewManager {
     let container = UIView()
     let playerView = JWPlayerView()
     
+    weak var buttonListener: InterfaceButtonListener? {
+        didSet {
+            currentInterface?.buttonListener = buttonListener
+        }
+    }
+    
     private var currentInterface: XibView? {
         willSet {
             currentInterface?.removeFromSuperview()
@@ -30,6 +36,8 @@ class PlayerViewManager {
 
             container.addSubview(currentInterface)
             currentInterface.fillSuperview()
+            currentInterface.buttonListener = buttonListener
+            currentInterface.state = state
         }
     }
     
@@ -76,6 +84,6 @@ class PlayerViewManager {
     }
     
     private func onStateChanged() {
-        
+        currentInterface?.state = state
     }
 }

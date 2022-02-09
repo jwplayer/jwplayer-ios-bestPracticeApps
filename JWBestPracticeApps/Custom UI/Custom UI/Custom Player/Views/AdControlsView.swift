@@ -12,14 +12,19 @@ class AdControlsView: XibView {
     override var xibName: String { "AdControls" }
     
     @IBAction func onPlayPauseButtonTapped(_ button: UIButton) {
-        print("tapped")
+        if state == .playing {
+            buttonListener?.interfaceButtonTapped(.pause)
+        }
+        else {
+            buttonListener?.interfaceButtonTapped(.play)
+        }
     }
     
     @IBAction func onSkipTapped(_ button: UIButton) {
-        print("tapped")
+        buttonListener?.interfaceButtonTapped(.skipAd)
     }
     
     @IBAction func onLearnMoreTapped(_ button: UIButton) {
-        print("tapped")
+        buttonListener?.interfaceButtonTapped(.learnMore)
     }
 }
