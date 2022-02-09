@@ -15,6 +15,8 @@ import UIKit
 class PlayerViewController: ViewController {
     fileprivate var adClickThroughUrl: URL?
     
+    private var fullScreenViewController: FullScreenPlayerViewController?
+    
     // MARK: - Public Methods and Properties
     
     var config: JWPlayerConfiguration? {
@@ -62,12 +64,22 @@ class PlayerViewController: ViewController {
         }
     }
     
+    /// When called, the video will be presented across the entire screen, in landscape.
     func goFullScreen() {
+        // Create the full screen view controller.
+        fullScreenViewController = FullScreenPlayerViewController()
+        fullScreenViewController!.modalPresentationStyle = .fullScreen
         
+        // Assign the full screen view controller as the new controller
+        // so the video is put into its view hierarchy, and present it.
+        viewManager.setController(fullScreenViewController!)
+        present(fullScreenViewController!, animated: true)
     }
     
+    // When called, the video returns to normal non-full screen size.
     func exitFullScreen() {
-        
+        viewManager.setController(self)
+        fullScreenViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -214,8 +226,10 @@ extension PlayerViewController: InterfaceButtonListener {
             player.pause()
         case .maximizeWindow:
             viewManager.windowState = .fullscreen
+            goFullScreen()
         case .minimizeWindow:
             viewManager.windowState = .normal
+            exitFullScreen()
         case .skipAd:
             player.skipAd()
         case .learnMore:
