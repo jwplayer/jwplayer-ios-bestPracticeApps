@@ -15,11 +15,6 @@ import UIKit
  on the state of the player so the view manager is updated accordingly.
  */
 class PlayerViewController: ViewController {
-    /// This url is updated when the ad impression event is received from the player.
-    /// We need to save this value in case the "Learn More" button is tapped, this way we can
-    /// open a browser with the specified url.
-    fileprivate var adClickThroughUrl: URL?
-    
     /// When we enter full screen mode we save a reference to the view controller so we can dismiss it later.
     private var fullScreenViewController: FullScreenPlayerViewController?
     
@@ -129,6 +124,7 @@ extension PlayerViewController: JWPlayerDelegate {
 /// We observe player state callbacks from the JWPlayer object so we know when the player's state has changed.
 /// We set this view controller as the JWPlayerStateDelegate in `viewDidLoad`
 extension PlayerViewController: JWPlayerStateDelegate {
+    
     func jwplayerContentWillComplete(_ player: JWPlayer) {
         // Unimplemented in this example.
     }
@@ -142,6 +138,14 @@ extension PlayerViewController: JWPlayerStateDelegate {
     }
     
     func jwplayer(_ player: JWPlayer, updatedBuffer percent: Double, position time: JWTimeData) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, isBufferingWithReason reason: JWBufferReason) {
+        // Unimplemented in this example.
+    }
+    
+    func jwplayer(_ player: JWPlayer, updatedCues cues: [JWCue]) {
         // Unimplemented in this example.
     }
     
@@ -226,7 +230,7 @@ extension PlayerViewController: JWPlayerStateDelegate {
 /// We set this view controller as the JWAdDelegate in `viewDidLoad`
 extension PlayerViewController: JWAdDelegate {
     func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
-        DispatchQueue.main.async { [weak viewManager, weak self] in
+        DispatchQueue.main.async { [weak viewManager] in
             switch event.type {
             case .adBreakStart:
                 // This event denotes when an advertisement has begun.
@@ -235,20 +239,12 @@ extension PlayerViewController: JWAdDelegate {
             case .adBreakEnd:
                 // Once the ad ends, we switch back to the video interface.
                 viewManager?.interface = .video
-                // We also clear out the adClickThroughURL when the ad ends.
-                self?.adClickThroughUrl = nil
             case .pause:
                 // We update the state when the ad is paused.
                 viewManager?.state = .paused
             case .play:
                 // We update the state when the ad begins playing.
                 viewManager?.state = .playing
-            case .impression:
-                // An ad impression contains a lot of information about the ad.
-                // In this example, we save the URL to take the user to when they
-                // tap on the "Learn More" button.
-                let impression = event[.impression] as? JWAdImpression
-                self?.adClickThroughUrl = impression?.clickThroughURL
             default:
                 break
             }
@@ -280,13 +276,7 @@ extension PlayerViewController: InterfaceButtonListener {
             // Skip the current ad when the user taps the "skip ad" button.
             player.skipAd()
         case .learnMore:
-            // If we have saved a valid URL from the ad impression, we will visit it
-            // when the user taps the "Learn More" button.
-            guard let url = adClickThroughUrl, UIApplication.shared.canOpenURL(url) else {
-                return
-            }
-            
-            UIApplication.shared.open(url)
+            player.openAdClickthrough()
         }
     }
 }
