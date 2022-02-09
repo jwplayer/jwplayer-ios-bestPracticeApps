@@ -7,11 +7,13 @@
 
 import Foundation
 import JWPlayerKit
+import UIKit
 
 /**
  The PlayerViewController contains the JWPlayerView, and handles the events and changing of the interfaces.
  */
 class PlayerViewController: ViewController {
+    fileprivate var adClickThroughUrl: URL?
     
     // MARK: - Public Methods and Properties
     
@@ -168,7 +170,7 @@ extension PlayerViewController: JWPlayerStateDelegate {
 
 extension PlayerViewController: JWAdDelegate {
     func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
-        DispatchQueue.main.async { [weak viewManager] in
+        DispatchQueue.main.async { [weak viewManager, weak self] in
             switch event.type {
             case .adBreakStart:
                 viewManager?.interface = .ads
@@ -178,6 +180,9 @@ extension PlayerViewController: JWAdDelegate {
                 viewManager?.state = .paused
             case .play:
                 viewManager?.state = .playing
+            case .impression:
+                let impression = event[.impression] as? JWAdImpression
+                self?.adClickThroughUrl = impression?.clickThroughURL
             default:
                 break
             }
@@ -199,7 +204,11 @@ extension PlayerViewController: InterfaceButtonListener {
         case .skipAd:
             player.skipAd()
         case .learnMore:
-            print("learn more tapped")
+            guard let url = adClickThroughUrl, UIApplication.shared.canOpenURL(url) else {
+                return
+            }
+            
+            UIApplication.shared.open(url)
         }
     }
 }
