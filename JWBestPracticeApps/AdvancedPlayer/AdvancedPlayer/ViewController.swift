@@ -76,7 +76,7 @@ class ViewController: JWPlayerViewController,
 
         // Second, create an advertising configuation. In this case, we're providing a VMAP URL.
         let advertisingConfigBuilder = JWAdsAdvertisingConfigBuilder()
-            .vmapURL(URL(string: "https://playertest.longtailvideo.com.s3.amazonaws.com/vmap/vmap-schedule-pre-mid-post.xml")!)
+            .vmapURL(URL(string: "http://playertest.longtailvideo.com.s3.amazonaws.com/vmap/vmap-schedule-pre-mid-post.xml")!)
         var advertisingConfig: JWAdvertisingConfig!
         do {
             advertisingConfig = try advertisingConfigBuilder.build()
