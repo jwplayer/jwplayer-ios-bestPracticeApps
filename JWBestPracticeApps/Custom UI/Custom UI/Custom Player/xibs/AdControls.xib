@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -27,7 +27,7 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Learn More">
-                        <color key="baseBackgroundColor" systemColor="labelColor"/>
+                        <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="onLearnMoreTapped:" destination="-1" eventType="touchUpInside" id="SLj-qg-5sx"/>
@@ -41,7 +41,7 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" image="forward.fill" catalog="system" imagePlacement="trailing" title="Skip Ad">
-                        <color key="baseBackgroundColor" systemColor="labelColor"/>
+                        <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="onSkipTapped:" destination="-1" eventType="touchUpInside" id="KZ3-HZ-7wk"/>
@@ -56,7 +56,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled">
                         <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
-                        <color key="baseBackgroundColor" systemColor="labelColor"/>
+                        <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="onPlayPauseButtonTapped:" destination="-1" eventType="touchUpInside" id="PYF-PI-TPu"/>
@@ -82,8 +82,5 @@
     <resources>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
