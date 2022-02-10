@@ -24,6 +24,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     [self.view addSubview:self.player.view];
 }
 

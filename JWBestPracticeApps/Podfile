@@ -5,6 +5,8 @@
 
 workspace 'JWBestPracticeApps'
 
+$PRIVATE_SOURCE = 'https://bitbucket.org/vualtomobile/vudrmfairplay-pods.git'
+
 def common_JW
     pod 'JWPlayer-SDK', '~> 3.21.0'
 end
@@ -17,6 +19,9 @@ def common_Google_IMA
     pod 'GoogleAds-IMA-iOS-SDK', '3.14.3'
 end
 
+def common_VUDRMFairplay
+    pod 'vudrmFairPlaySDK', :source => $PRIVATE_SOURCE
+end
 target 'JWBestPracticeApps' do
 
     common_JW
@@ -24,22 +29,22 @@ target 'JWBestPracticeApps' do
 end
 
 target 'BasicVideoViewController' do
-  
+
   common_JW
-  
+
 end
 
 target 'AutoplayVideoFeed' do
-  
+
   common_JW
-  
-end 
+
+end
 
 target 'GoogleDAI' do
-  
+
   common_JW
   common_Google_IMA
-  
+
 end
 
 target 'JWCasting' do
@@ -57,10 +62,10 @@ target 'JWCasting-GCKUICastButton' do
 end
 
 target 'Casting' do
-  
+
   common_JW
   common_Cast
-  
+
 end
 
 target 'Casting-GCKUICastButton' do
@@ -127,12 +132,20 @@ end
 
 target 'VoicerExtension' do
 
-end 
+end
 
 target 'JWFairPlayDrm' do
 
     common_JW
     common_Cast
+
+end
+
+target 'JWVUDRMFairPlay' do
+
+    common_JW
+    common_Cast
+    common_VUDRMFairplay
 
 end
 
@@ -151,28 +164,27 @@ target 'JWFriendlyObstructions' do
 end
 
 target 'FeedCollectionViewController' do
-  
+
   common_JW
-  
+
 end
 
 target 'FeedTableViewController' do
-  
+
   common_JW
-  
+
 end
 
 target 'NativeControls' do
-  
+
   common_JW
-  
+
 end
 
 target 'AirPlay' do
-  
+
   common_JW
-  
+
 end
 
 workspace 'JWBestPracticeApps'
-
