@@ -10,7 +10,10 @@ import JWPlayerKit
 
 class ViewController: JWPlayerViewController {
 
-    private let vmapUrlString = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
+    /// Google IMA's sample [VMAP Pre-, Mid-, and Post-rolls, Single Ads](https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/tags#vmap-pre-,-mid-,-and-post-rolls,-single-ads)
+    private let vmapUrlString =
+    "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
+//    "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
     private let videoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
     private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
 
@@ -33,7 +36,7 @@ class ViewController: JWPlayerViewController {
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
             let playerItem = try JWPlayerItemBuilder()
                 .file(videoUrl)
-                .posterImage(posterUrl)
+//                .posterImage(posterUrl)
                 .build()
 
             // Second, use the JWImaAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
