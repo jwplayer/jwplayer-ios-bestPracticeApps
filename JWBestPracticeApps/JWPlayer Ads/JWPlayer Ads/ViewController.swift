@@ -9,7 +9,7 @@ import UIKit
 import JWPlayerKit
 
 class ViewController: JWPlayerViewController {
-    private let adUrlString = "https://playertest.longtailvideo.com/pre-60s.xml"
+    private let adUrlString = "https://playertest.longtailvideo.com/pre.xml"
     private let videoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
     private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
 

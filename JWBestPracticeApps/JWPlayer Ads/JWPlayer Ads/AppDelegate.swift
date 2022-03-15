@@ -7,6 +7,7 @@
 
 import UIKit
 import JWPlayerKit
+import AVKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        // Add your JW Player license key.
-        // JWPlayerKitLicense.setLicenseKey(<#key: String#>)
+        #warning("Added your JW Player license key?")
+         JWPlayerKitLicense.setLicenseKey()
+        
+        try! AVAudioSession.sharedInstance()
+            .setCategory(.playback,
+                         mode: .moviePlayback,
+                         options: [])
+        
+        try! AVAudioSession.sharedInstance()
+            .setActive(true,
+                       options: [])
+
         
         return true
     }
