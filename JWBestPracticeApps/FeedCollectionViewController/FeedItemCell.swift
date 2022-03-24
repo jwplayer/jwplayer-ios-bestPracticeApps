@@ -10,7 +10,8 @@ import UIKit
 
 class FeedItemCell: UICollectionViewCell {
     
-    @IBOutlet var containerView: UIView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     
     weak var player: JWPlayerController? {
         didSet {

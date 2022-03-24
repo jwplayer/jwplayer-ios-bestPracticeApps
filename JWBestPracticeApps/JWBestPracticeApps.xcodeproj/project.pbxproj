@@ -265,6 +265,7 @@
 		F4EC7799223FD4410008B8DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EC7797223FD4410008B8DB /* LaunchScreen.storyboard */; };
 		F4EC779F223FD6C60008B8DB /* AnalyticsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC779E223FD6C60008B8DB /* AnalyticsObserver.swift */; };
 		FAAD4308E687AFDED427BC08 /* libPods-JWFairPlayDrm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F90D2C871352E8D125C728 /* libPods-JWFairPlayDrm.a */; };
+		FFBEFB310356C92DE704E4F8 /* libPods-JWVUDRMFairPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F1FE78CD4BE7A170300F2E /* libPods-JWVUDRMFairPlay.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -383,7 +384,9 @@
 		102713CA6A37E58E3F1100B9 /* Pods-JWConviva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.debug.xcconfig"; path = "Target Support Files/Pods-JWConviva/Pods-JWConviva.debug.xcconfig"; sourceTree = "<group>"; };
 		14D50278FA704F6055BB96A0 /* Pods-JWRemoteController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteController/Pods-JWRemoteController.debug.xcconfig"; sourceTree = "<group>"; };
 		14F90D2C871352E8D125C728 /* libPods-JWFairPlayDrm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWFairPlayDrm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A3A3B2FC3EEFF850C0662A /* Pods-JWVUDRMFairPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWVUDRMFairPlay.release.xcconfig"; path = "Target Support Files/Pods-JWVUDRMFairPlay/Pods-JWVUDRMFairPlay.release.xcconfig"; sourceTree = "<group>"; };
 		225762B280BFC763E8B44BDD /* Pods-JWBestPracticeApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWBestPracticeApps.debug.xcconfig"; path = "Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps.debug.xcconfig"; sourceTree = "<group>"; };
+		25F1FE78CD4BE7A170300F2E /* libPods-JWVUDRMFairPlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWVUDRMFairPlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FED43486DFC760A9C95890A /* libPods-AutoplayVideoFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoplayVideoFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30BC8067DDCD1BF20CCF0259 /* Pods-JWLockScreenControls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWLockScreenControls.release.xcconfig"; path = "Target Support Files/Pods-JWLockScreenControls/Pods-JWLockScreenControls.release.xcconfig"; sourceTree = "<group>"; };
 		3462E1EE86C78FB8789ABD20 /* Pods-JWRemotePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemotePlayer.debug.xcconfig"; path = "Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -654,6 +657,7 @@
 		B5BC26B11DAC20E500F32770 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		B73AD31FFDEF059E0F113B28 /* Pods-VoicerExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoicerExtension.release.xcconfig"; path = "Target Support Files/Pods-VoicerExtension/Pods-VoicerExtension.release.xcconfig"; sourceTree = "<group>"; };
 		BC6F76B1C580D859DE552F60 /* libPods-VoicerExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoicerExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C102968C2A357424874C71B2 /* Pods-JWVUDRMFairPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWVUDRMFairPlay.debug.xcconfig"; path = "Target Support Files/Pods-JWVUDRMFairPlay/Pods-JWVUDRMFairPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		C136B1155D892ADB24CF55A7 /* libPods-Casting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Casting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F6450C91BB9FBBAF35C008 /* Pods-JWRemoteCastController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteCastController/Pods-JWRemoteCastController.debug.xcconfig"; sourceTree = "<group>"; };
 		C5610B729DD99609AEEDB0AD /* libPods-FeedTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -754,6 +758,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBEFB310356C92DE704E4F8 /* libPods-JWVUDRMFairPlay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,6 +1012,7 @@
 				D489B2CE41219452529471F6 /* libPods-NativeControls.a */,
 				0D2FB6663F61F96FA2DD1008 /* libPods-Voicer.a */,
 				BC6F76B1C580D859DE552F60 /* libPods-VoicerExtension.a */,
+				25F1FE78CD4BE7A170300F2E /* libPods-JWVUDRMFairPlay.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1530,6 +1536,8 @@
 				9C4022A24BE526B4B82F8A93 /* Pods-Voicer.release.xcconfig */,
 				71CF0BBD9FFB741D61DA951E /* Pods-VoicerExtension.debug.xcconfig */,
 				B73AD31FFDEF059E0F113B28 /* Pods-VoicerExtension.release.xcconfig */,
+				C102968C2A357424874C71B2 /* Pods-JWVUDRMFairPlay.debug.xcconfig */,
+				21A3A3B2FC3EEFF850C0662A /* Pods-JWVUDRMFairPlay.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1744,10 +1752,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6477C05B274FF7A0009DF6A9 /* Build configuration list for PBXNativeTarget "JWVUDRMFairPlay" */;
 			buildPhases = (
+				6C81F7A0EF0376903EFE6950 /* [CP] Check Pods Manifest.lock */,
 				6477C04C274FF7A0009DF6A9 /* Sources */,
 				6477C050274FF7A0009DF6A9 /* Frameworks */,
 				6477C052274FF7A0009DF6A9 /* Resources */,
 				6477C056274FF7A0009DF6A9 /* Headers */,
+				0B054E9DA75FE5A6F99C8422 /* [CP] Embed Pods Frameworks */,
+				B2FD1A7ADDD0BEBB2DD1000B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2794,6 +2805,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NativeControls/Pods-NativeControls-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0B054E9DA75FE5A6F99C8422 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JWVUDRMFairPlay/Pods-JWVUDRMFairPlay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JWVUDRMFairPlay/Pods-JWVUDRMFairPlay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWVUDRMFairPlay/Pods-JWVUDRMFairPlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		169520D57D0D327184C68862 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3279,6 +3307,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6C81F7A0EF0376903EFE6950 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWVUDRMFairPlay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		771554CB11A9816EE9728BCB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3450,6 +3500,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirPlay/Pods-AirPlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2FD1A7ADDD0BEBB2DD1000B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JWVUDRMFairPlay/Pods-JWVUDRMFairPlay-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JWVUDRMFairPlay/Pods-JWVUDRMFairPlay-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWVUDRMFairPlay/Pods-JWVUDRMFairPlay-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B64FC308B64C4A58DCC1D5E0 /* [CP] Copy Pods Resources */ = {
@@ -4842,6 +4909,7 @@
 		};
 		6477C05C274FF7A0009DF6A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C102968C2A357424874C71B2 /* Pods-JWVUDRMFairPlay.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -4866,6 +4934,7 @@
 		};
 		6477C05D274FF7A0009DF6A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21A3A3B2FC3EEFF850C0662A /* Pods-JWVUDRMFairPlay.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
