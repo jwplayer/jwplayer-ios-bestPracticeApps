@@ -14,6 +14,7 @@ let FeedItemCellIdentifier: String = "FeedItemCell"
 class FeedItemCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     
     var player: JWPlayerController? {
         willSet {

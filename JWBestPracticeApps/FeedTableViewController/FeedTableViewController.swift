@@ -16,7 +16,8 @@ class FeedTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Register the custom cell view
-        self.tableView.register(UINib(nibName: FeedItemCellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: FeedItemCellIdentifier)
+        let nib = UINib(nibName: FeedItemCellIdentifier, bundle: Bundle.main)
+        self.tableView.register(nib, forCellReuseIdentifier: FeedItemCellIdentifier)
         
         fetchFeed()
     }
@@ -63,10 +64,12 @@ class FeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: FeedItemCellIdentifier, for: indexPath) as! FeedItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: FeedItemCellIdentifier, for: indexPath)
         
         // Add player view to the container view of the cell
-        cell.player = feed[indexPath.row]
+        if let cell = cell as? FeedItemCell {
+            cell.player = feed[indexPath.row]
+        }
         
         return cell
     }
