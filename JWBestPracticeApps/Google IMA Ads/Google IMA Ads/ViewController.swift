@@ -9,43 +9,55 @@ import UIKit
 import JWPlayerKit
 
 class ViewController: JWPlayerViewController {
-
-    private let vmapUrlString = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
-    private let videoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
-    private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Set up the player.
-        setUpPlayer()
+        setupPlayerWithAdsInPlayerItems()
     }
 
-    /**
-     Sets up the player with an advertising configuration.
-     */
-    private func setUpPlayer() {
-        let videoUrl = URL(string:videoUrlString)!
-        let posterUrl = URL(string:posterUrlString)!
-        let vmapURL = URL(string: vmapUrlString)!
-
+    lazy var videoUrl  = URL(string:videoUrlString)!
+    lazy var videoUrl2 = URL(string:videoUrlString2)!
+    lazy var posterUrl = URL(string:posterUrlString)!
+    
+    private func setupPlayerWithAdsInPlayerItems() {
         do {
-            // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
+            // ad breaks
+            // IMA Sample Ad, Single Skippable Linear
+            let adBreakIMA_SSL = try! JWAdBreakBuilder()
+                .offset(.preroll())
+                .tags([IMA_SSL])
+                .build()
+            
+            // IMA Sample Ad, Single Inline Linear
+            let adBreakIMA_SIL = try! JWAdBreakBuilder()
+                .offset(.preroll())
+                .tags([IMA_SIL])
+                .build()
+            
+            // player items
+            // Big Buck Bunny
             let playerItem = try JWPlayerItemBuilder()
                 .file(videoUrl)
                 .posterImage(posterUrl)
+                .adSchedule(breaks: [adBreakIMA_SSL])
                 .build()
-
-            // Second, use the JWImaAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
-            let adConfig = try JWImaAdvertisingConfigBuilder()
-                // Set the VMAP url for the builder to use.
-                .vmapURL(vmapURL)
+            
+            // Sintel trailer
+            let playerItem2 = try JWPlayerItemBuilder()
+                .file(videoUrl2)
+                .posterImage(posterUrl)
+                .adSchedule(breaks: [adBreakIMA_SIL])
                 .build()
-
+            
+            // IMA ad config
+            let imaAdConfig = try JWImaAdvertisingConfigBuilder()
+                .build()
+            
             // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig.
             let config = try JWPlayerConfigurationBuilder()
-                .playlist([playerItem])
-                .advertising(adConfig)
+                .playlist([playerItem, playerItem2])
+                .advertising(imaAdConfig)
                 .autostart(true)
                 .build()
 
@@ -53,7 +65,7 @@ class ViewController: JWPlayerViewController {
             player.configurePlayer(with: config)
         } catch {
             // Builders can throw, so be sure to handle build failures.
-            print(error.localizedDescription)
+            print("*** ERROR: \(error.localizedDescription)")
             return
         }
     }
@@ -113,5 +125,12 @@ class ViewController: JWPlayerViewController {
         print("An ad error has been encountered: (\(code))-\(message)")
     }
 
+    
+    fileprivate let videoUrlString  = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
+    fileprivate let videoUrlString2 = "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"
+    fileprivate let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
+    
+    fileprivate let IMA_SSL = URL(string: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=")!
+    
+    fileprivate let IMA_SIL = URL(string: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=")!
 }
-
