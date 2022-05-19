@@ -7,10 +7,11 @@
 
 import UIKit
 import JWPlayerKit
+import AVFoundation
 
 class ViewController: JWPlayerViewController {
 
-    private let vmapUrlString = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
+    private let vmapUrlString = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator="
     private let videoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
     private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
 
@@ -19,6 +20,16 @@ class ViewController: JWPlayerViewController {
 
         // Set up the player.
         setUpPlayer()
+        
+        try! AVAudioSession.sharedInstance()
+            .setCategory(.playback,
+                         mode: .moviePlayback,
+                         options: [])
+        
+        try! AVAudioSession.sharedInstance()
+            .setActive(true,
+                       options: [])
+
     }
 
     /**
@@ -36,10 +47,15 @@ class ViewController: JWPlayerViewController {
                 .posterImage(posterUrl)
                 .build()
 
+            let adBreak = try JWAdBreakBuilder()
+                .offset(.midroll(percent: 50))
+                .tags([URL(string: "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_preroll_skippable&sz=640x480&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=")!])
+                .build()
+            
             // Second, use the JWImaAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
             let adConfig = try JWImaAdvertisingConfigBuilder()
                 // Set the VMAP url for the builder to use.
-                .vmapURL(vmapURL)
+                .schedule([adBreak])
                 .build()
 
             // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig.
