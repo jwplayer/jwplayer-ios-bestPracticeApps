@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AdvancedPlayer/AdvancedPlayer.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:../README.md">
    </FileRef>
    <FileRef
       location = "group:BasicPlayer/BasicPlayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AdvancedPlayer/AdvancedPlayer.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ChromeCast/ChromeCast.xcodeproj">
@@ -33,6 +33,9 @@
    </FileRef>
    <FileRef
       location = "group:Recommendations/Recommendations.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Picture in Picture/Picture in Picture.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
