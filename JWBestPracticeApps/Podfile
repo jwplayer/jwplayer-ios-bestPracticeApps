@@ -74,3 +74,8 @@ target 'Custom UI' do
   project 'Custom UI/Custom UI'
   common_JWPlayer
 end
+
+target 'Picture in Picture' do
+  project 'Picture in Picture/Picture in Picture'
+  common_JWPlayer
+end
