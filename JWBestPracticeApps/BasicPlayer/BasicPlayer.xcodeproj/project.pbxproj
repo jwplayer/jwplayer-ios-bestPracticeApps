@@ -22,22 +22,7 @@
 		3B73974C26B9B3E500671DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B73974A26B9B3E500671DEC /* LaunchScreen.storyboard */; };
 		3B73974F26B9B3E500671DEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73974E26B9B3E500671DEC /* main.m */; };
 		3B73975826B9C2EE00671DEC /* Pods_BasicPlayer_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEC0F0004DAF4BEDBF090C6 /* Pods_BasicPlayer_Swift.framework */; };
-		3B73975926B9C2EE00671DEC /* Pods_BasicPlayer_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEC0F0004DAF4BEDBF090C6 /* Pods_BasicPlayer_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3B73975A26B9C2EF00671DEC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3B73975926B9C2EE00671DEC /* Pods_BasicPlayer_Swift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04D948B060F61BFC8B0E4334 /* Pods-BasicPlayer-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer-ObjC.release.xcconfig"; path = "Target Support Files/Pods-BasicPlayer-ObjC/Pods-BasicPlayer-ObjC.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,7 +158,6 @@
 				3B73971F26B8A12A00671DEC /* Frameworks */,
 				3B73972026B8A12A00671DEC /* Resources */,
 				DBDE934C97E3458CDF1B9EEB /* [CP] Embed Pods Frameworks */,
-				3B73975A26B9C2EF00671DEC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
