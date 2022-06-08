@@ -4,39 +4,50 @@
    <FileRef
       location = "group:../README.md">
    </FileRef>
-   <FileRef
-      location = "group:BasicPlayer/BasicPlayer.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:AdvancedPlayer/AdvancedPlayer.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ChromeCast/ChromeCast.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Chromecast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Custom UI/Custom UI.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Google DAI Ads/Google DAI Ads.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Google IMA Ads/Google IMA Ads.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Recommendations/Recommendations.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Picture in Picture/Picture in Picture.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "JWPlayerKit">
+      <FileRef
+         location = "group:BasicPlayer/BasicPlayer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:AdvancedPlayer/AdvancedPlayer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:ChromeCast/ChromeCast.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Chromecast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Custom UI/Custom UI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Google DAI Ads/Google DAI Ads.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Google IMA Ads/Google IMA Ads.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Recommendations/Recommendations.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Picture in Picture/Picture in Picture.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "JWPlayerTVKit">
+      <FileRef
+         location = "group:BasicTVPlayer/BasicTVPlayer.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
