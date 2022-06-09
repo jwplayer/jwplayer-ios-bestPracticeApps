@@ -2,6 +2,10 @@ platform :ios, '10.0'
 workspace 'JWBestPracticeApps-4x'
 use_frameworks!
 
+####################################
+####   JWPlayerKit iOS targets  ####
+####################################
+
 def common_Cast
     pod 'google-cast-sdk'
 end
@@ -78,4 +82,17 @@ end
 target 'Picture in Picture' do
   project 'Picture in Picture/Picture in Picture'
   common_JWPlayer
+end
+
+####################################
+#### JWPlayerTVKit tvOS targets ####
+####################################
+
+def common_JWPlayerTVKit
+    pod 'JWPlayerTVKit', '~> 4'
+end
+
+target 'BasicTVPlayer' do
+  project 'BasicTVPlayer/BasicTVPlayer'
+  common_JWPlayerTVKit
 end
