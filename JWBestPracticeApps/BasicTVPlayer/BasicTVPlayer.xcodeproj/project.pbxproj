@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79CA74342852957300BB16B5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 79CA74332852957300BB16B5 /* README.md */; };
 		79EBB5BF285153A500EC5182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBB5BE285153A500EC5182 /* AppDelegate.swift */; };
-		79EBB5C1285153A500EC5182 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBB5C0285153A500EC5182 /* ViewController.swift */; };
+		79EBB5C1285153A500EC5182 /* BasicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBB5C0285153A500EC5182 /* BasicPlayerViewController.swift */; };
 		79EBB5C4285153A500EC5182 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EBB5C2285153A500EC5182 /* Main.storyboard */; };
 		79EBB5C6285153A700EC5182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79EBB5C5285153A700EC5182 /* Assets.xcassets */; };
 		79EBB5C9285153A700EC5182 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EBB5C7285153A700EC5182 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79CA74332852957300BB16B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79EBB5BB285153A500EC5182 /* BasicTVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EBB5BE285153A500EC5182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79EBB5C0285153A500EC5182 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79EBB5C0285153A500EC5182 /* BasicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPlayerViewController.swift; sourceTree = "<group>"; };
 		79EBB5C3285153A500EC5182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79EBB5C5285153A700EC5182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79EBB5C8285153A700EC5182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,7 @@
 		79EBB5B2285153A500EC5182 = {
 			isa = PBXGroup;
 			children = (
+				79CA74332852957300BB16B5 /* README.md */,
 				79EBB5BD285153A500EC5182 /* BasicTVPlayer */,
 				79EBB5BC285153A500EC5182 /* Products */,
 				79EBB5F72851540E00EC5182 /* Frameworks */,
@@ -55,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				79EBB5BE285153A500EC5182 /* AppDelegate.swift */,
-				79EBB5C0285153A500EC5182 /* ViewController.swift */,
+				79EBB5C0285153A500EC5182 /* BasicPlayerViewController.swift */,
 				79EBB5C2285153A500EC5182 /* Main.storyboard */,
 				79EBB5C5285153A700EC5182 /* Assets.xcassets */,
 				79EBB5C7285153A700EC5182 /* LaunchScreen.storyboard */,
@@ -130,6 +133,7 @@
 			files = (
 				79EBB5C9285153A700EC5182 /* LaunchScreen.storyboard in Resources */,
 				79EBB5C6285153A700EC5182 /* Assets.xcassets in Resources */,
+				79CA74342852957300BB16B5 /* README.md in Resources */,
 				79EBB5C4285153A500EC5182 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79EBB5C1285153A500EC5182 /* ViewController.swift in Sources */,
+				79EBB5C1285153A500EC5182 /* BasicPlayerViewController.swift in Sources */,
 				79EBB5BF285153A500EC5182 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +307,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Debug;
 		};
@@ -328,7 +332,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Release;
 		};
