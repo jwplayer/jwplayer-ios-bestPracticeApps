@@ -8,7 +8,7 @@ This BestPractice project is composed of several targets which can be run as sep
 Showcasing functionality for the JWPlayerKit 4.x.x iOS SDK and JWPlayerTVKit 4.x.x tvOS SDK.
 
 |Platform | Project | Description|
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 |`iOS`|[Advanced Player](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/AdvancedPlayer) | Advanced implementation of JWPlayerKit SDK with VAST ads. |
 |`iOS`|[Basic Player](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/BasicPlayer) | Simple implementation of JWPlayerKit SDK with a single player item. |
 |`tvOS`|[BasicTVPlayer](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/BasicTVPlayer) | Simple implementation of JWPlayerTVKit SDK with a single player item. |

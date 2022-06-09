@@ -8,7 +8,7 @@ The **BasicTVPlayer** project provides minimal setup for a single player item.
 ### Implementation
 1. Set your JW Player license key:
     `JWPlayerKitLicense.setLicenseKey("#YOUR_LICENSE_KEY#")`
-2. Subclass from `JWCinematicViewController`:
+2. Subclass from *JWCinematicViewController*:
     `class PlayerViewController: JWCinematicViewController`
 3. Configure the player:
     ```swift
@@ -24,4 +24,5 @@ The **BasicTVPlayer** project provides minimal setup for a single player item.
         .build()
     
     // Last, configure the player
-    player.configurePlayer(with: config)```
+    player.configurePlayer(with: config)
+    ```
