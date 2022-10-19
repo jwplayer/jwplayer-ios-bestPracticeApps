@@ -89,7 +89,7 @@ end
 ####################################
 
 def common_JWPlayerTVKit
-    pod 'JWPlayerTVKit', '~> 4'
+    pod 'JWPlayerTVKit', '~> 1'
 end
 
 target 'BasicTVPlayer' do
