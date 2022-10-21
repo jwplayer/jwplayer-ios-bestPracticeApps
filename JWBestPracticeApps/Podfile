@@ -1,21 +1,21 @@
-platform :ios, '10.0'
-workspace 'JWBestPracticeApps-4x'
-use_frameworks!
-
 ####################################
 ####   JWPlayerKit iOS targets  ####
 ####################################
 
+def common_JWPlayer
+  platform :ios, '10.0'
+  workspace 'JWBestPracticeApps-4x'
+  use_frameworks!
+  
+  pod 'JWPlayerKit', '~> 4'
+end
+
 def common_Cast
-    pod 'google-cast-sdk'
+  pod 'google-cast-sdk'
 end
 
 def common_Google_IMA
-    pod 'GoogleAds-IMA-iOS-SDK', '~> 3.14.3'
-end
-
-def common_JWPlayer
-    pod 'JWPlayerKit', '~> 4'
+  pod 'GoogleAds-IMA-iOS-SDK', '~> 3.14.3'
 end
 
 target 'AdvancedPlayer' do
@@ -89,7 +89,10 @@ end
 ####################################
 
 def common_JWPlayerTVKit
-    pod 'JWPlayerTVKit', '~> 1'
+  platform :tvos, '14.0'
+  use_frameworks!
+  
+  pod 'JWPlayerTVKit', '~> 1'
 end
 
 target 'BasicTVPlayer' do
