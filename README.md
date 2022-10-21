@@ -1,6 +1,6 @@
 # JWPlayerKit 4.x Best Practice Apps
 
-This repository contains samples relating to the JWPlayerKit SDK version 4.x for iOS and JWPlayerTVKit SDK version 4.x for tvOS. 
+This repository contains samples relating to the JWPlayerKit SDK version 4.x for iOS and JWPlayerTVKit SDK version 1.x for tvOS. 
 
 ## BestPracticeApps
 
