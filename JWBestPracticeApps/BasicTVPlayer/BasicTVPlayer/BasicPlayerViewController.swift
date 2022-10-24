@@ -53,6 +53,7 @@ class BasicPlayerViewController: JWCinematicViewController {
      This method is called when the player is fully initialized.
      */
     override func jwplayerIsReady(_ player: JWPlayer) {
+        super.jwplayerIsReady(player)
         print("The player is ready")
     }
 
@@ -60,6 +61,7 @@ class BasicPlayerViewController: JWCinematicViewController {
      This method is called when the player encounters an error during setup and initialization.
      */
     override func jwplayer(_ player: JWPlayer, failedWithSetupError code: UInt, message: String) {
+        super.jwplayer(player, failedWithSetupError: code, message: message)
         print("An error occurred during player setup: [\(code)] \(message)")
     }
 
@@ -67,6 +69,7 @@ class BasicPlayerViewController: JWCinematicViewController {
      This method is called when the player encounters an error with playback.
      */
     override func jwplayer(_ player: JWPlayer, failedWithError code: UInt, message: String) {
+        super.jwplayer(player, failedWithError: code, message: message)
         print("A playback error occurred: [\(code)] \(message)")
     }
 
@@ -74,6 +77,7 @@ class BasicPlayerViewController: JWCinematicViewController {
      This method is called when the player encounters a warning within the SDK.
      */
     override func jwplayer(_ player: JWPlayer, encounteredWarning code: UInt, message: String) {
+        super.jwplayer(player, encounteredWarning: code, message: message)
         print("Warning: [\(code)] \(message)")
     }
 
