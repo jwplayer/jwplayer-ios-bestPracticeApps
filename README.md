@@ -20,6 +20,7 @@ The BestPracticeApps [workspace](https://developer.apple.com/documentation/xcode
 |`iOS`|[JWPlayer Ads](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/JWPlayer%20Ads#jwplayer-ads---best-practices-app) | Simple implementation of JWPlayerKit SDK with advertising. |
 |`iOS`|[Recommendations](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/Recommendations) | Simple implementation including recommended related content. |
 |`iOS`|[Picture in Picture](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/Picture%20in%20Picture) | Demonstrates how to enable Picture in Picture. |
+|`iOS`|[Captions](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/Captions) | Demonstrates how to handle caption events. |
 
 [^chromecastDisclaimer]: Unlike the other apps in this project which are *working* code examples, this app is a valid code example that nevertheless does **not** work as-is. 
 Rather, it requires the **dynamic** build of the Google Cast SDK. As Google does not distribute this via CocoaPods, it must be [added manually](https://developers.google.com/cast/docs/ios_sender#manual_setup) to a given project — as we do not include external frameworks in our repositories. Please refer to our [documentation](https://developer.jwplayer.com/jwplayer/docs/ios-enable-casting-to-chromecast-devices) for more information.

@@ -40,6 +40,9 @@
       <FileRef
          location = "group:Picture in Picture/Picture in Picture.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Captions/Captions.xcodeproj">
+      </FileRef>
    </Group>
    <Group
       location = "container:"

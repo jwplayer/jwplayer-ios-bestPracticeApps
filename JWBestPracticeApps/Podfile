@@ -84,6 +84,11 @@ target 'Picture in Picture' do
   common_JWPlayer
 end
 
+target 'Captions' do
+  project 'Captions/Captions'
+  common_JWPlayer
+end
+
 ####################################
 #### JWPlayerTVKit tvOS targets ####
 ####################################
