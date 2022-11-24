@@ -11,6 +11,7 @@
 		115269EF292D87AF006297F0 /* JWPlayerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11F24D75291EB197000B6669 /* JWPlayerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		115269F1292D87B1006297F0 /* Pods_DRM_Fairplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */; };
 		115269F6292E72F8006297F0 /* TokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115269F5292E72F8006297F0 /* TokenGenerator.swift */; };
+		11526A1A292F215E006297F0 /* JWTestAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11526A19292F215D006297F0 /* JWTestAsset.swift */; };
 		11F24D7B2923086A000B6669 /* DeliveryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F24D7A2923086A000B6669 /* DeliveryAPI.swift */; };
 		79AF09FA26BDBEAF002E638C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF09F926BDBEAF002E638C /* AppDelegate.swift */; };
 		79AF09FC26BDBEAF002E638C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF09FB26BDBEAF002E638C /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		115269F5292E72F8006297F0 /* TokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenGenerator.swift; sourceTree = "<group>"; };
+		11526A19292F215D006297F0 /* JWTestAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTestAsset.swift; sourceTree = "<group>"; };
 		11F24D75291EB197000B6669 /* JWPlayerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JWPlayerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F24D7A2923086A000B6669 /* DeliveryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAPI.swift; sourceTree = "<group>"; };
 		393B1EBB1E37B6AB45D5930F /* Pods-DRM Fairplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRM Fairplay.debug.xcconfig"; path = "Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				79AF09FD26BDBEAF002E638C /* ViewController.swift */,
 				11F24D7A2923086A000B6669 /* DeliveryAPI.swift */,
 				115269F5292E72F8006297F0 /* TokenGenerator.swift */,
+				11526A19292F215D006297F0 /* JWTestAsset.swift */,
 				79AF09FF26BDBEAF002E638C /* Main.storyboard */,
 				79AF0A0226BDBEB1002E638C /* Assets.xcassets */,
 				79AF0A0426BDBEB1002E638C /* LaunchScreen.storyboard */,
@@ -239,6 +242,7 @@
 				79AF09FA26BDBEAF002E638C /* AppDelegate.swift in Sources */,
 				11F24D7B2923086A000B6669 /* DeliveryAPI.swift in Sources */,
 				79AF09FC26BDBEAF002E638C /* SceneDelegate.swift in Sources */,
+				11526A1A292F215E006297F0 /* JWTestAsset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
