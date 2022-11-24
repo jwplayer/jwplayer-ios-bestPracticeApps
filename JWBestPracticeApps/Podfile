@@ -3,11 +3,11 @@
 ####################################
 
 def common_JWPlayer
-  platform :ios, '10.0'
+  platform :ios, '16.0'
   workspace 'JWBestPracticeApps-4x'
   use_frameworks!
   
-  pod 'JWPlayerKit', '~> 4'
+#  pod 'JWPlayerKit', '~> 4'
 end
 
 def common_Cast
@@ -50,6 +50,8 @@ end
 target 'DRM Fairplay' do
   project 'DRM Fairplay/DRM Fairplay'
   common_JWPlayer
+  pod 'SwiftJWT'
+
 end
 
 target 'JWPlayer Ads' do
