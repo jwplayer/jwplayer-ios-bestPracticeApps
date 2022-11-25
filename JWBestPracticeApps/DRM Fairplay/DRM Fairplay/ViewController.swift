@@ -16,7 +16,7 @@ class ViewController: JWPlayerViewController,
     /// The locator for the certificate
     var certificateURLStr: String?
     /// The server playback context locator
-    /// This is ued to request the content key from the Key Server Module
+    /// This is used to request the content key from the Key Server Module
     var processSPCURLStr: String?
     // The video URL that we get from decoding the playlist
     var videoURL: String?
@@ -29,6 +29,7 @@ class ViewController: JWPlayerViewController,
     private func createPlaylist(from url: URL) {
         let urlRequest = URLRequest(url: url)
         let semaphore = DispatchSemaphore(value: 0)
+        // Signed URLs locate the playlist from JWPlayer's CDN, we then try to decode the playlist into a DRMPlaylist.
         let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
             defer { semaphore.signal() }
             guard let self = self else {
@@ -42,12 +43,14 @@ class ViewController: JWPlayerViewController,
             // Try to decode the response into a DRM playlist.
             do {
                 let drmPlaylist = try JSONDecoder().decode(DRMPlaylist.self, from: data)
-            
+                // The playlist item has several sources we want to use the m3u8 file, for that we use the first source that has an mpegurl type.
                 guard let source = drmPlaylist.playlist.first?.sources.first(where: { $0.type == "application/vnd.apple.mpegurl"}) else {
                     return
                 }
                 let drm = source.drm
+                // We get the certificate URL from the Fairplay object
                 self.certificateURLStr = drm.fairplay?.certificateURL
+                // We get the processSPC from the Fairplay object
                 self.processSPCURLStr = drm.fairplay?.processSpcURL
                 self.videoURL = source.file
             } catch {
