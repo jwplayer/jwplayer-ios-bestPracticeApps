@@ -82,9 +82,7 @@ class ViewController: JWPlayerViewController,
             // Third, set the data source class. This class conforms to JWDRMContentKeyDataSource, and defines methods which affect DRM.
             player.contentKeyDataSource = self
             // Lastly, use the created JWPlayerConfiguration to set up the player.
-            DispatchQueue.main.async {
-                self.player.configurePlayer(with: config)
-            }
+            player.configurePlayer(with: config)
         } catch {
             // Builders can throw, so be sure to handle the build failures.
             print(error.localizedDescription)
