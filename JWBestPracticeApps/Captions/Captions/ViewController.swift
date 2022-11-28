@@ -72,7 +72,7 @@ class ViewController: UIViewController, PlayerCaptionsDelegate {
         /**
          If `true`, the player will not render captions on the screen if a caption track is selected, however, you will still receive caption events, including `func jwplayer(_ player: JWPlayer, captionPresented caption: [String], at time: JWTimeData)`. By default, this flag is `false`.
          */
-        player?.suppressesCaptionRendering = !sender.isOn
+        player?.suppressesCaptionRendering = sender.isOn
     }
     
     // MARK: - JWAVDelegate
