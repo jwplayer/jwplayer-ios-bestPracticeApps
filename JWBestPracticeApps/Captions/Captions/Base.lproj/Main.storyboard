@@ -23,7 +23,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="26z-lH-yHn">
                                         <rect key="frame" x="0.0" y="0.0" width="357" height="29.666666666666668"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Supress caption rendering" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-op-9u8">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Supress caption rendering" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-op-9u8">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="29.666666666666668"/>
                                                 <connections>
                                                     <action selector="captionRenderingChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hyW-FQ-vzH"/>
