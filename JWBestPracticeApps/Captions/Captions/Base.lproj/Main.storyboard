@@ -17,46 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL8-L8-BIl">
-                                <rect key="frame" x="0.0" y="59" width="393" height="220"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="BP0-kj-FAM"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="Iix-pZ-QTx" kind="embed" id="ybm-gB-smS"/>
-                                </connections>
-                            </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-ag-hPH">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-ag-hPH">
                                 <rect key="frame" x="18" y="299" width="357" height="501"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="26z-lH-yHn">
-                                        <rect key="frame" x="0.0" y="0.0" width="357" height="30.333333333333332"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="26z-lH-yHn">
+                                        <rect key="frame" x="0.0" y="0.0" width="357" height="29.666666666666668"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Supress caption rendering" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-op-9u8">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="30.333333333333332"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Supress caption rendering" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-op-9u8">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="29.666666666666668"/>
                                                 <connections>
                                                     <action selector="captionRenderingChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hyW-FQ-vzH"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supress caption rendering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arm-2J-NVe">
-                                                <rect key="frame" x="57" y="0.0" width="300" height="30.333333333333332"/>
+                                                <rect key="frame" x="57" y="4.6666666666666856" width="300" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-ia-Itn">
-                                        <rect key="frame" x="0.0" y="48.333333333333314" width="357" height="21.333333333333329"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-ia-Itn">
+                                        <rect key="frame" x="0.0" y="45.666666666666686" width="357" height="21.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption Track:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLD-ns-0vK">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.33333333333333" height="21.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.33333333333333" height="21.666666666666668"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8S-Hx-Lcp">
-                                                <rect key="frame" x="133.33333333333337" y="0.0" width="223.66666666666663" height="21.333333333333332"/>
+                                                <rect key="frame" x="133.33333333333337" y="0.0" width="223.66666666666663" height="21.666666666666668"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -64,7 +55,7 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNT-Yc-7xz">
-                                        <rect key="frame" x="0.0" y="87.666666666666714" width="357" height="413.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="83.333333333333286" width="357" height="417.66666666666674"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -72,10 +63,17 @@
                                     </textView>
                                 </subviews>
                             </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL8-L8-BIl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="220"/>
+                                <connections>
+                                    <segue destination="Iix-pZ-QTx" kind="embed" id="ybm-gB-smS"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ZL8-L8-BIl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.258216" id="DdD-T2-Uh0"/>
                             <constraint firstItem="HuZ-ag-hPH" firstAttribute="top" secondItem="ZL8-L8-BIl" secondAttribute="bottom" constant="20" id="LNY-Tb-UOG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HuZ-ag-hPH" secondAttribute="trailing" constant="18" id="OSF-88-cnG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HuZ-ag-hPH" secondAttribute="bottom" constant="18" id="VOs-ap-Ajs"/>
@@ -102,6 +100,7 @@
                     <view key="view" contentMode="scaleToFill" id="Bko-7Z-6vy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="220"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JKN-vP-Rxb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
