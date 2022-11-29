@@ -81,6 +81,7 @@ class PlayerViewController: ViewController {
         // so the video is put into its view hierarchy, and present it.
         viewManager.setController(fullScreenViewController!)
         present(fullScreenViewController!, animated: true) { [weak self] in
+            // Resume playback if the player was playing before entering fullscreen
             if playerStateBeforeFullscreen == .playing {
                 self?.player.play()
             }
