@@ -82,7 +82,9 @@ class ViewController: UIViewController, PlayerCaptionsDelegate {
      */
     func player(_ player: JWPlayer, updatedCaptionList options: [JWMediaSelectionOption]) {
         let enableCaptionRenderingSwitch = options.count > 1
-        captionRenderingSwitch.isEnabled = enableCaptionRenderingSwitch
+        DispatchQueue.main.async { [weak self] in
+            self?.captionRenderingSwitch.isEnabled = enableCaptionRenderingSwitch
+        }
     }
     
     /**
@@ -90,7 +92,10 @@ class ViewController: UIViewController, PlayerCaptionsDelegate {
      */
     func player(_ player: JWPlayer, captionTrackChanged index: Int) {
         let currentTrack = player.captionsTracks[index]
-        captionTrackLabel.text = currentTrack.name
+        DispatchQueue.main.async { [weak self] in
+            self?.captionsTextView.text = nil
+            self?.captionTrackLabel.text = currentTrack.name
+        }
     }
     
     /**
@@ -98,6 +103,8 @@ class ViewController: UIViewController, PlayerCaptionsDelegate {
      */
     func player(_ player: JWPlayer, captionPresented caption: [String], at time: JWTimeData) {
         // MARK: 3. Display captions in a different view.
-        captionsTextView.text = caption.joined(separator: "\n")
+        DispatchQueue.main.async { [weak self] in
+            self?.captionsTextView.text = caption.joined(separator: "\n")
+        }
     }
 }

@@ -25,22 +25,16 @@ class PlayerViewController: JWPlayerViewController {
     
     override func jwplayer(_ player: JWPlayer, updatedCaptionList options: [JWMediaSelectionOption]) {
         super.jwplayer(player, updatedCaptionList: options)
-        DispatchQueue.main.async { [weak self] in
-            self?.captionsDelegate?.player(player, updatedCaptionList: options)
-        }
+        captionsDelegate?.player(player, updatedCaptionList: options)
     }
     
     override func jwplayer(_ player: JWPlayer, captionTrackChanged index: Int) {
         super.jwplayer(player, captionTrackChanged: index)
-        DispatchQueue.main.async { [weak self] in
-            self?.captionsDelegate?.player(player, captionTrackChanged: index)
-        }
+        captionsDelegate?.player(player, captionTrackChanged: index)
     }
     
     override func jwplayer(_ player: JWPlayer, captionPresented caption: [String], at time: JWTimeData) {
         super.jwplayer(player, captionPresented: caption, at: time)
-        DispatchQueue.main.async { [weak self] in
-            self?.captionsDelegate?.player(player, captionPresented: caption, at: time)
-        }
+        captionsDelegate?.player(player, captionPresented: caption, at: time)
     }
 }
