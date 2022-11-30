@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -131,7 +131,7 @@
 				};
 			};
 			buildConfigurationList = D39A39B72706326C0061452C /* Build configuration list for PBXProject "ChromeCast-GCKUICastButton" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
