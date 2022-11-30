@@ -142,7 +142,12 @@ class ViewController: JWPlayerViewController,
         super.jwplayer(player, didPauseWithReason: reason)
         // Set the play/pause button image on the main thread
         DispatchQueue.main.async { [weak self] in
-            self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+            if #available(iOS 13.0, *) {
+                self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+            } else {
+                // Fallback on earlier versions
+                self?.customControls.playPauseButton.setImage(UIImage(named: "play.fill"), for: .normal)
+            }
         }
     }
 
@@ -150,7 +155,12 @@ class ViewController: JWPlayerViewController,
         super.jwplayer(player, isPlayingWithReason: reason)
         // Set the play/pause button image on the main thread
         DispatchQueue.main.async { [weak self] in
-            self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+            if #available(iOS 13.0, *) {
+                self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+            } else {
+                // Fallback on earlier versions
+                self?.customControls.playPauseButton.setImage(UIImage(named: "pause.fill"), for: .normal)
+            }
         }
     }
 
@@ -213,11 +223,21 @@ class ViewController: JWPlayerViewController,
             }
         case .play:
             DispatchQueue.main.async { [weak self] in
-                self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+                if #available(iOS 13.0, *) {
+                    self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+                } else {
+                    // Fallback on earlier versions
+                    self?.customControls.playPauseButton.setImage(UIImage(named: "pause.fill"), for: .normal)
+                }
             }
         case .pause:
             DispatchQueue.main.async { [weak self] in
-                self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+                if #available(iOS 13.0, *) {
+                    self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+                } else {
+                    // Fallback on earlier versions
+                    self?.customControls.playPauseButton.setImage(UIImage(named: "play.fill"), for: .normal)
+                }
             }
         case .skipped:
             DispatchQueue.main.async { [weak self] in
