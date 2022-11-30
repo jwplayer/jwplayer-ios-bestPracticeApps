@@ -227,7 +227,7 @@ class ViewController: JWPlayerViewController,
                     self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
                 } else {
                     // Fallback on earlier versions
-                    self?.customControls.playPauseButton.setImage(UIImage(named: "pause.fill"), for: .normal)
+                    self?.customControls.playPauseButton.setImage(UIImage(named: "pause"), for: .normal)
                 }
             }
         case .pause:
@@ -236,7 +236,7 @@ class ViewController: JWPlayerViewController,
                     self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
                 } else {
                     // Fallback on earlier versions
-                    self?.customControls.playPauseButton.setImage(UIImage(named: "play.fill"), for: .normal)
+                    self?.customControls.playPauseButton.setImage(UIImage(named: "play"), for: .normal)
                 }
             }
         case .skipped:
