@@ -12,13 +12,12 @@ import Foundation
 // MARK: - DRMPlaylist
 // Refer to https://docs.jwplayer.com/players/docs/ios-apply-studio-drm-with-jw-platform#implementation for example Studio DRM implementation for iOS.
 struct DRMPlaylist: Codable {
-    let title, welcomeDescription, kind: String
+    let title, kind: String
     let playlist: [Playlist]
     let feedInstanceID: String
 
     enum CodingKeys: String, CodingKey {
         case title
-        case welcomeDescription = "description"
         case kind, playlist
         case feedInstanceID = "feed_instance_id"
     }
