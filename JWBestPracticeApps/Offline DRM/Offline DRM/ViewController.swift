@@ -26,7 +26,7 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     private let keyDataSource: DRMKeyDataSource = DRMKeyDataSource()
 
     // MARK: - Playlist properties
-    private let playlistURL = "<#T##String#>"
+    private let playlistURL = "{SIGNED_URL}"
 
     /// The playlist signed URL for DRM protected content.
     /// The video file from the signed URL, this gets set after parsing the playlist.
