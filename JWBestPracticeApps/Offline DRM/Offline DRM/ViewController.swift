@@ -15,7 +15,7 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     
     // MARK: - Properties
    
-    /// The key for requesting the data from UserDefaults
+    /// The key for requesting the data from UserDefaults.
     private let savedDataKey = "localVideoFile"
 
     // MARK: - DRM management properties
@@ -33,7 +33,7 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     private var videoFile = ""
     /// The location in memory for the local video, this gets set when downloading the asset. Not directly used.
     private var localVideoFile: URL? = nil
-    /// The local video URL, this gets set from memory if the video is saved and used as the locator for memory videos. Bookmarked data allows us to access the video file in memory since it is stored in a secure location.
+    /// The local video URL, this gets set from memory if the video is saved and used as the locator for on-device videos. Bookmarked data allows us to access the video file in memory since it is stored in a secure location.
     private var localURL: URL? {
         let persistedData = UserDefaults.standard.data(forKey: savedDataKey)
         guard let boomarkData = persistedData else {
@@ -44,7 +44,7 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
                            bookmarkDataIsStale: &dataStaleStatus)
         return dataStaleStatus ? nil : url
     }
-    /// The player interface, this is from the JWPlayerViewController embedded in a container view.a
+    /// The player interface, this is from the JWPlayerViewController embedded in a container view.
     private var player: JWPlayerProtocol? = nil
     
     /// The AVAssetDownloadURLSession to use for managing AVAssetDownloadTasks.
