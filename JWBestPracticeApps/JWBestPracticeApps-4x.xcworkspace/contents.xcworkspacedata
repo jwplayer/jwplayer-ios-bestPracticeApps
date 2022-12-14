@@ -26,9 +26,6 @@
          location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Offline DRM/Offline DRM.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:Google DAI Ads/Google DAI Ads.xcodeproj">
       </FileRef>
       <FileRef
