@@ -35,6 +35,9 @@
          location = "group:Google IMA Ads/Google IMA Ads.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Google IMA Companion Ads/Google IMA Companion Ads.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
       </FileRef>
       <FileRef

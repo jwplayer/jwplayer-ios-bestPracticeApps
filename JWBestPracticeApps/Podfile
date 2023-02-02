@@ -63,6 +63,12 @@ target 'Google IMA Ads' do
   common_Google_IMA
 end
 
+target 'Google IMA Companion Ads' do
+  project 'Google IMA Companion Ads/Google IMA Companion Ads'
+  common_JWPlayer
+  common_Google_IMA
+end
+
 target 'Google DAI Ads' do
   project 'Google DAI Ads/Google DAI Ads'
   common_JWPlayer
