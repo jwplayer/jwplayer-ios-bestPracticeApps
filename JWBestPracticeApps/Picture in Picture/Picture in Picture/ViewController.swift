@@ -14,9 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var pipButton: UIBarButtonItem!
     weak var playerVC: JWPlayerViewController?
 
-    private let videoUrlString = "http://playertest.longtailvideo.com/adaptive/bbbfull/bbbfull.m3u8"
+    private let videoUrlString = "https://playertest.longtailvideo.com/adaptive/bbbfull/bbbfull.m3u8"
     private let posterUrlString = "https://d3el35u4qe4frz.cloudfront.net/bkaovAYt-480.jpg"
     private var pipPossibleObservation: NSKeyValueObservation?
+
+    deinit {
+        pipPossibleObservation = nil
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // If we are loading the PlayerViewController, we create a config and hand it off.
@@ -35,7 +39,7 @@ class ViewController: UIViewController {
 
                 // Second, create a player config with the created JWPlayerItem and JWAdvertisingConfig
                 let config = try JWPlayerConfigurationBuilder()
-                    .playlist([playerItem])
+                    .playlist(items: [playerItem])
                     .autostart(true)
                     .build()
 

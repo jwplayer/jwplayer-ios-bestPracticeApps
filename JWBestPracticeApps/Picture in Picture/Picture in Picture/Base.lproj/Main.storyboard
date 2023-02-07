@@ -35,7 +35,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Picture in Picture" id="CrZ-V7-9G3">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="pip" catalog="system" id="ObE-EU-A9R">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" image="pip" catalog="system" id="ObE-EU-A9R">
                             <connections>
                                 <action selector="pipButtonTapped:" destination="BYZ-38-t0r" id="17j-k0-mkV"/>
                             </connections>
