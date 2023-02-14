@@ -90,17 +90,10 @@ class PlayerViewController: ViewController {
     
     /// When called, the video returns to normal non-full screen size.
     func exitFullScreen() {
-        let playerStateBeforeFullscreen = player.getState()
         // Set this view controller as the new controller, and dismiss the
         // full screen view controller.
         viewManager.setController(self)
-        fullScreenViewController?.dismiss(animated: true) { [weak self] in
-            // Resume playback if the player was playing before entering fullscreen
-            if playerStateBeforeFullscreen == .playing {
-                self?.player.play()
-            }
-        }
-        
+        fullScreenViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
