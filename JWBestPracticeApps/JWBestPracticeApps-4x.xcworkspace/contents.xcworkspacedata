@@ -26,6 +26,9 @@
          location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:FeedTableViewController/FeedTableViewController.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Offline DRM/Offline DRM.xcodeproj">
       </FileRef>
       <FileRef

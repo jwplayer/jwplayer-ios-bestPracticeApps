@@ -44,9 +44,11 @@ Rather, it requires the **dynamic** build of the Google Cast SDK. As Google does
     ```swift 
     JWPlayerKitLicense.setLicenseKey(<#Your License Key#>)
     ```
+    
 Now you can build and run the project.
 
 ---
+
 | :warning: Looking for SDK version 3.x?  | 
 |-|
 | The demo apps in this repository are intended to be used with **version 4.x** of the JWPlayerKit iOS SDK. <br> For information on JWPlayer SDK **version 3.x** BestPracticeApps, go to [this link](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main-v3/). | 

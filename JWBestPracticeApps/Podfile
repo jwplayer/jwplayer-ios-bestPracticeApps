@@ -52,6 +52,11 @@ target 'DRM Fairplay' do
   common_JWPlayer
 end
 
+target 'FeedTableViewController' do
+  project 'FeedTableViewController/FeedTableViewController'
+  common_JWPlayer
+end
+
 target 'JWPlayer Ads' do
     project 'JWPlayer Ads/JWPlayer Ads'
     common_JWPlayer
