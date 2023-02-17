@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Add your JW Player license key.
-        JWPlayerKitLicense.setLicenseKey("")
+        // JWPlayerKitLicense.setLicenseKey(<#key: String#>)
         
         return true
     }
