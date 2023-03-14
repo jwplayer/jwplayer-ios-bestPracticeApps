@@ -55,7 +55,10 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         /// The keys can be pre-loaded by calling load on the content loader.
-        let url = URL(string: playlistURL)!
+        guard let url = URL(string: playlistURL) {
+            print("Cannot initialize player because playlistURL is invalid. URL:'\(playlistURL)'")
+            return
+        }
         contentLoader = JWDRMContentLoader(dataSource: keyDataSource, keyManager: keyManager)
         self.contentLoader?.load(playlist: url)
         
