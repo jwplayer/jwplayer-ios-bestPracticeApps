@@ -7,6 +7,7 @@
 
 import UIKit
 import JWPlayerKit
+import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Add your JW Player license key.
         // JWPlayerKitLicense.setLicenseKey(<#key: String#>)
+        
+        // Adust the audio session so IMA ads can be heard with the
+        // hardware switch for audio turned off.
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(.playback, mode: .moviePlayback, options: [])
+            try audioSession.setActive(true)
+        } catch {
+            print("Error setting the AVAudioSession:", error.localizedDescription)
+        }
 
         return true
     }
