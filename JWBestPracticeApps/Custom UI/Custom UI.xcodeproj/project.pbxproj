@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78170C1529E4532D00AB52C9 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78170C1429E4532D00AB52C9 /* ErrorView.xib */; };
+		78170C1729E4542600AB52C9 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78170C1629E4542600AB52C9 /* ErrorView.swift */; };
 		8076838D27B2C0AE00A24DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076838C27B2C0AE00A24DF8 /* AppDelegate.swift */; };
 		8076838F27B2C0AE00A24DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076838E27B2C0AE00A24DF8 /* SceneDelegate.swift */; };
 		8076839127B2C0AE00A24DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076839027B2C0AE00A24DF8 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		3EAC3A7013E76CBB40649B59 /* Pods_Custom_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Custom_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78170C1429E4532D00AB52C9 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		78170C1629E4542600AB52C9 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		8076838927B2C0AE00A24DF8 /* Custom UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8076838C27B2C0AE00A24DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8076838E27B2C0AE00A24DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				807683A527B2E9FA00A24DF8 /* AdControls.xib */,
+				78170C1429E4532D00AB52C9 /* ErrorView.xib */,
 				807683AF27B2FDBE00A24DF8 /* VideoControls.xib */,
 			);
 			path = xibs;
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				807683A727B2F32300A24DF8 /* AdControlsView.swift */,
+				78170C1629E4542600AB52C9 /* ErrorView.swift */,
 				807683B127B30DC600A24DF8 /* VideoControlsView.swift */,
 				807683AA27B2F49200A24DF8 /* XibView.swift */,
 			);
@@ -227,6 +233,7 @@
 				807683A627B2E9FA00A24DF8 /* AdControls.xib in Resources */,
 				8076839927B2C0B000A24DF8 /* LaunchScreen.storyboard in Resources */,
 				8076839627B2C0B000A24DF8 /* Assets.xcassets in Resources */,
+				78170C1529E4532D00AB52C9 /* ErrorView.xib in Resources */,
 				807683B027B2FDBE00A24DF8 /* VideoControls.xib in Resources */,
 				8076839427B2C0AE00A24DF8 /* Main.storyboard in Resources */,
 			);
@@ -288,6 +295,7 @@
 				807683AE27B2F6DE00A24DF8 /* UIView.swift in Sources */,
 				807683B627B32B6000A24DF8 /* InterfaceButtonListener.swift in Sources */,
 				8076838D27B2C0AE00A24DF8 /* AppDelegate.swift in Sources */,
+				78170C1729E4542600AB52C9 /* ErrorView.swift in Sources */,
 				807683AB27B2F49200A24DF8 /* XibView.swift in Sources */,
 				807683B827B35E6B00A24DF8 /* FullScreenPlayerViewController.swift in Sources */,
 				8076838F27B2C0AE00A24DF8 /* SceneDelegate.swift in Sources */,
