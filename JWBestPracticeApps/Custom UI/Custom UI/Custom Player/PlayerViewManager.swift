@@ -20,25 +20,6 @@ enum PlayerInterface: Equatable {
     /// The video interface represented by `ErrorView` and `ErrorView.xib`
     /// This takes an error code (`UInt`) and a message (`String`)
     case error(UInt, String)
-    
-    /// We need to define the equivalency operator because `.error` takes arguments.
-    static func ==(lhs: PlayerInterface, rhs: PlayerInterface) -> Bool {
-        switch lhs {
-        case .ads:
-            return rhs == .ads
-        case .none:
-            return rhs == .none
-        case .video:
-            return rhs == .video
-        case .error(let code, _):
-            switch rhs {
-            case .error(let rhsCode, _):
-                return rhsCode == code
-            default:
-                return false
-            }
-        }
-    }
 }
 
 /// Constants denoting whether we are in full screen mode or not.

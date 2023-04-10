@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,10 +29,13 @@
                         <constraint firstAttribute="height" constant="31" id="Lle-lu-k5m"/>
                         <constraint firstAttribute="width" constant="38" id="fRU-1P-uMw"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
+                    </state>
                     <buttonConfiguration key="configuration" style="filled">
                         <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
-                        <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="onPlayPauseButtonTapped:" destination="-1" eventType="touchUpInside" id="Acx-We-Mtz"/>
@@ -51,10 +55,13 @@
                         <constraint firstAttribute="width" constant="38" id="BfE-NK-qUG"/>
                         <constraint firstAttribute="height" constant="31" id="RSU-38-EJI"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <imageReference key="image" image="arrow.up.left.and.arrow.down.right" catalog="system" symbolScale="large"/>
+                    </state>
                     <buttonConfiguration key="configuration" style="filled">
                         <imageReference key="image" image="arrow.up.left.and.arrow.down.right" catalog="system" symbolScale="large"/>
-                        <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="onFullScreenTapped:" destination="-1" eventType="touchUpInside" id="wA5-ug-j6v"/>
@@ -80,7 +87,7 @@
     </objects>
     <resources>
         <image name="arrow.up.left.and.arrow.down.right" catalog="system" width="128" height="115"/>
-        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="pause.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

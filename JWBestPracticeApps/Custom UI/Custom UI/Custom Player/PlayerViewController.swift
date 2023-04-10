@@ -115,27 +115,33 @@ extension PlayerViewController: JWPlayerDelegate {
     
     func jwplayer(_ player: JWPlayer, failedWithError code: UInt, message: String) {
         print("JWPlayer Error (\(code)): \(message)")
-        viewManager.interface = .error(code, message)
+        reportError(code: code, message: message)
     }
     
     func jwplayer(_ player: JWPlayer, failedWithSetupError code: UInt, message: String) {
         print("JWPlayer Setup Error (\(code)): \(message)")
-        viewManager.interface = .error(code, message)
+        reportError(code: code, message: message)
     }
     
     func jwplayer(_ player: JWPlayer, encounteredWarning code: UInt, message: String) {
         print("JWPlayer Warning (\(code)): \(message)")
-        viewManager.interface = .error(code, message)
     }
     
     func jwplayer(_ player: JWPlayer, encounteredAdWarning code: UInt, message: String) {
         print("JWPlayer Ad Warning (\(code)): \(message)")
-        viewManager.interface = .error(code, message)
     }
     
     func jwplayer(_ player: JWPlayer, encounteredAdError code: UInt, message: String) {
         print("JWPlayer Ad Error (\(code)): \(message)")
-        viewManager.interface = .error(code, message)
+    }
+    
+    private func reportError(code: UInt, message: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else {
+                return
+            }
+            self.viewManager.interface = .error(code, message)
+        }
     }
 }
 
