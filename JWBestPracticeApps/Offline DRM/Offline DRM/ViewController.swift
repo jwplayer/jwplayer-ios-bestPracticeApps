@@ -51,6 +51,8 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     private var assetDownloadURLSession: AVAssetDownloadURLSession!
     /// The delegate queue for the AVAssetDownloadURLSession
     private let delegateQueue = OperationQueue()
+    /// An observer to track the download progress.
+    var progressObserver: NSKeyValueObservation?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -194,6 +196,7 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask, didCompleteFor mediaSelection: AVMediaSelection) {
+        progressObserver?.invalidate()
         // An error if we failed to save the data bookmark
         var bookmarkError: String? = nil
         do {
@@ -208,10 +211,24 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask, willDownloadTo location: URL) {
+        progressObserver?.invalidate()
+        progressObserver = aggregateAssetDownloadTask.progress.observe(\.fractionCompleted) { progress, change in
+            guard !progress.isCancelled else {
+                DispatchQueue.main.async {
+                    self.stateLabel?.text = "Cancelled"
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                let fractionCompleted: Int = progress.isIndeterminate ? 0 : Int((progress.fractionCompleted * 100.0))
+                self.stateLabel?.text = "Downloading \(fractionCompleted)%"
+            }
+        }
         localVideoFile = location
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        progressObserver?.invalidate()
         if let error = error {
             print("Error while downloading the asset: ", error.localizedDescription)
             DispatchQueue.main.async { [weak self] in
