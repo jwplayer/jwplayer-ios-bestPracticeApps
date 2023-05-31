@@ -253,7 +253,7 @@ extension PlayerViewController: JWPlayerStateDelegate {
 /// We observe ad event callbacks from the JWPlayer object so we know when the player's advertising state or information has changed.
 /// We set this view controller as the JWAdDelegate in `viewDidLoad`
 extension PlayerViewController: JWAdDelegate {
-    func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
+    func jwplayer(_ player: JWPlayer, adEvent event: JWAdEvent) {
         DispatchQueue.main.async { [weak viewManager] in
             switch event.type {
             case .adBreakStart:

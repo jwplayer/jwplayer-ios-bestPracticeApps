@@ -14,7 +14,7 @@ class PlayerViewController: JWPlayerViewController {
     //pragma MARK: - Related advertising methods
 
     // Reports when an ad event is emitted by the player.
-    override func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
+    override func jwplayer(_ player: JWPlayer, adEvent event: JWAdEvent) {
         super.jwplayer(player, adEvent: event)
 
         switch event.type {
