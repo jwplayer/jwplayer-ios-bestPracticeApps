@@ -21,7 +21,7 @@ class ViewController: JWPlayerViewController,
                       JWPlayerViewControllerDelegate,
                       CustomControlsDelegate {
 
-    private let videoUrlString = "https://playertest.longtailvideo.com/adaptive/oceans/oceans.m3u8"
+    private let videoUrlString = "http://content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4"
     private let posterUrlString = "https://d3el35u4qe4frz.cloudfront.net/bkaovAYt-480.jpg"
 
     // Custom controls to overlay on the player
@@ -89,7 +89,7 @@ class ViewController: JWPlayerViewController,
 
         // Third, create a player configuration, supplying the created player item and advertising configuration.
         let configBuilder = JWPlayerConfigurationBuilder()
-            .playlist([playerItem])
+            .playlist(items: [playerItem])
             .advertising(advertisingConfig)
         var config: JWPlayerConfiguration!
         do {
@@ -192,9 +192,6 @@ class ViewController: JWPlayerViewController,
     override func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
         super.jwplayer(player, adEvent: event)
 
-
-        print("Ad Event type: \(event[.type] ?? "unknown")")
-
         switch event.type {
         case .impression, .meta:
             // MARK: 4. Detect whether an upcoming ad is skippable
@@ -247,7 +244,7 @@ class ViewController: JWPlayerViewController,
                 self?.customControls.skipButton.isHidden = true
             }
         default:
-            return
+            break
         }
     }
 
@@ -295,21 +292,27 @@ class ViewController: JWPlayerViewController,
         super.jwplayerIsReady(player)
 
         // Show the custom controls up when the player is fully initialized.
-        customControls.isHidden = false
+        DispatchQueue.main.async { [weak self] in
+            self?.customControls.isHidden = false
+        }
     }
 
     override func jwplayer(_ player: JWPlayer, failedWithSetupError code: UInt, message: String) {
         super.jwplayer(player, failedWithSetupError: code, message: message)
         
         // Hide the custom controls when the player encounters an error during setup and initialization.
-        customControls.isHidden = true
+        DispatchQueue.main.async { [weak self] in
+            self?.customControls.isHidden = true
+        }
     }
 
     override func jwplayer(_ player: JWPlayer, failedWithError code: UInt, message: String) {
         super.jwplayer(player, failedWithError: code, message: message)
 
         // Hide the custom controls when the player encounters an error with playback.
-        customControls.isHidden = true
+        DispatchQueue.main.async { [weak self] in
+            self?.customControls.isHidden = true
+        }
     }
 
     // MARK: - JWPlayerViewControllerDelegate
