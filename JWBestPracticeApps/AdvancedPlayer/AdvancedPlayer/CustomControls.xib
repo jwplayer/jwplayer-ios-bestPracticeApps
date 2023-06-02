@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5zH-nq-NHe">
-                    <rect key="frame" x="18" y="292" width="378" height="6"/>
+                    <rect key="frame" x="18" y="258" width="378" height="6"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.99215686270000003" green="0.0039215686269999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -22,8 +23,8 @@
                     </constraints>
                 </slider>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK1-zU-AA4">
-                    <rect key="frame" x="25" y="222" width="50" height="50"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="25" y="188" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="aOu-mM-f5d"/>
                         <constraint firstAttribute="height" constant="50" id="oRx-VM-UnU"/>
@@ -35,11 +36,10 @@
                     </connections>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGR-Ci-AoB">
-                    <rect key="frame" x="100" y="222" width="100" height="50"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="100" y="188" width="143" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="WU0-DU-GLY"/>
-                        <constraint firstAttribute="width" constant="100" id="d4I-zU-ldm"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
@@ -47,31 +47,31 @@
                         <action selector="skipButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="h1o-4U-ntV"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsW-RB-DF0">
-                    <rect key="frame" x="289" y="222" width="100" height="50"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsW-RB-DF0">
+                    <rect key="frame" x="259" y="188" width="130" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="Km1-NU-ViG"/>
+                        <constraint firstAttribute="width" constant="130" id="Km1-NU-ViG"/>
                         <constraint firstAttribute="height" constant="50" id="x7M-yL-TVR"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Fullscreen">
-                        <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="fullscreenButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="r50-Uj-1pZ"/>
                     </connections>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-t9-3L1">
-                    <rect key="frame" x="289" y="160" width="100" height="50"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="259" y="126" width="130" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5lZ-Ii-rNF"/>
-                        <constraint firstAttribute="width" constant="100" id="BbZ-g7-aOz"/>
+                        <constraint firstAttribute="width" constant="130" id="BbZ-g7-aOz"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Learn more">
-                        <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="learnMoreButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="ddx-Xc-poW"/>
@@ -82,15 +82,16 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="OsW-RB-DF0" firstAttribute="top" secondItem="nAm-t9-3L1" secondAttribute="bottom" constant="12" id="8No-7c-ExL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5zH-nq-NHe" secondAttribute="trailing" constant="20" id="9fz-Ia-qxF"/>
+                <constraint firstItem="5zH-nq-NHe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-20" id="9fz-Ia-qxF"/>
                 <constraint firstItem="5zH-nq-NHe" firstAttribute="top" secondItem="oGR-Ci-AoB" secondAttribute="bottom" constant="20" id="L9m-ib-2gI"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5zH-nq-NHe" secondAttribute="bottom" constant="20" id="PHP-KI-21h"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OsW-RB-DF0" secondAttribute="trailing" constant="25" id="Usu-KK-w1I"/>
+                <constraint firstItem="5zH-nq-NHe" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-20" id="PHP-KI-21h"/>
+                <constraint firstItem="OsW-RB-DF0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-25" id="Usu-KK-w1I"/>
                 <constraint firstItem="5zH-nq-NHe" firstAttribute="top" secondItem="hK1-zU-AA4" secondAttribute="bottom" constant="20" id="WiC-xv-5Yq"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nAm-t9-3L1" secondAttribute="trailing" constant="25" id="aEh-6i-cTr"/>
+                <constraint firstItem="nAm-t9-3L1" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-25" id="aEh-6i-cTr"/>
                 <constraint firstItem="5zH-nq-NHe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="eB1-aZ-9R9"/>
                 <constraint firstItem="oGR-Ci-AoB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="100" id="fjw-2c-zua"/>
                 <constraint firstItem="hK1-zU-AA4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="hD6-lR-ydR"/>
+                <constraint firstItem="oGR-Ci-AoB" firstAttribute="trailing" secondItem="OsW-RB-DF0" secondAttribute="leading" constant="-16" id="lIf-K1-A3s"/>
                 <constraint firstItem="5zH-nq-NHe" firstAttribute="top" secondItem="OsW-RB-DF0" secondAttribute="bottom" constant="20" id="lsr-Mw-4LO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -105,6 +106,6 @@
         </view>
     </objects>
     <resources>
-        <image name="play" catalog="system" width="120" height="128"/>
+        <image name="play" catalog="system" width="117" height="128"/>
     </resources>
 </document>

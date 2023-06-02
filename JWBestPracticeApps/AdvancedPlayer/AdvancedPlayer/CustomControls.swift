@@ -33,7 +33,31 @@ class CustomControls: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialize properties of the play button
         playPauseButton.setTitle("", for: .normal)
+        playPauseButton.layer.borderColor = playPauseButton.tintColor.cgColor
+        playPauseButton.layer.borderWidth = 1
+        playPauseButton.layer.cornerRadius = 5
+        playPauseButton.clipsToBounds = true
+        
+        // Initialize properties of the skip button
+        skipButton.layer.borderColor = skipButton.tintColor.cgColor
+        skipButton.layer.borderWidth = 1
+        skipButton.layer.cornerRadius = 5
+        skipButton.clipsToBounds = true
+        
+        // Initialize properties of the full screen button
+        fullscreenButton.layer.borderColor = fullscreenButton.tintColor.cgColor
+        fullscreenButton.layer.borderWidth = 1
+        fullscreenButton.layer.cornerRadius = 5
+        fullscreenButton.clipsToBounds = true
+        
+        // Initialize properties of the learn more button
+        learnMoreButton.layer.borderColor = learnMoreButton.tintColor.cgColor
+        learnMoreButton.layer.borderWidth = 1
+        learnMoreButton.layer.cornerRadius = 5
+        learnMoreButton.clipsToBounds = true
+        
         // Add targets to the progress bar to listen for touchDown and touchUpInside events
         progressBar.addTarget(self, action: #selector(progressBarTouchDown(_:)), for: .touchDown)
         progressBar.addTarget(self, action: #selector(progressBarTouchUp(_:)), for: .touchUpInside)
