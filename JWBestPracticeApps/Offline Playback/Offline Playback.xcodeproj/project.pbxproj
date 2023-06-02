@@ -10,10 +10,20 @@
 		0C270E14E0FCF7A25B4D1B21 /* Pods_Offline_Playback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D315DA586FD1F9BD365FD302 /* Pods_Offline_Playback.framework */; };
 		780DC7EE2A2A34E10066AB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC7ED2A2A34E10066AB93 /* AppDelegate.swift */; };
 		780DC7F02A2A34E10066AB93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC7EF2A2A34E10066AB93 /* SceneDelegate.swift */; };
-		780DC7F22A2A34E10066AB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC7F12A2A34E10066AB93 /* ViewController.swift */; };
-		780DC7F52A2A34E10066AB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780DC7F32A2A34E10066AB93 /* Main.storyboard */; };
 		780DC7F72A2A34E20066AB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780DC7F62A2A34E20066AB93 /* Assets.xcassets */; };
 		780DC7FA2A2A34E20066AB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780DC7F82A2A34E20066AB93 /* LaunchScreen.storyboard */; };
+		780DC8042A2A382C0066AB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780DC8032A2A382C0066AB93 /* Main.storyboard */; };
+		780DC80B2A2A39E70066AB93 /* OfflinePlayTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8082A2A39E70066AB93 /* OfflinePlayTableCell.swift */; };
+		780DC80C2A2A39E70066AB93 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8092A2A39E70066AB93 /* ProgressView.swift */; };
+		780DC80D2A2A39E70066AB93 /* OfflinePlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC80A2A2A39E70066AB93 /* OfflinePlayTableViewController.swift */; };
+		780DC8112A2A3A010066AB93 /* OfflineDemoPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC80E2A2A3A010066AB93 /* OfflineDemoPlaylist.swift */; };
+		780DC8122A2A3A010066AB93 /* OfflinePlayLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC80F2A2A3A010066AB93 /* OfflinePlayLoaderViewController.swift */; };
+		780DC8132A2A3A010066AB93 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8102A2A3A010066AB93 /* ImageLoader.swift */; };
+		780DC8152A2A3A170066AB93 /* PlayerItemDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8142A2A3A170066AB93 /* PlayerItemDownloadManager.swift */; };
+		780DC81A2A2A3A2F0066AB93 /* DownloadFileOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8162A2A3A2F0066AB93 /* DownloadFileOperation.swift */; };
+		780DC81B2A2A3A2F0066AB93 /* DownloadAVAssetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8172A2A3A2F0066AB93 /* DownloadAVAssetOperation.swift */; };
+		780DC81C2A2A3A2F0066AB93 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8182A2A3A2F0066AB93 /* AsyncOperation.swift */; };
+		780DC81D2A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8192A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +31,21 @@
 		780DC7EA2A2A34E10066AB93 /* Offline Playback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Offline Playback.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		780DC7ED2A2A34E10066AB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		780DC7EF2A2A34E10066AB93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		780DC7F12A2A34E10066AB93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		780DC7F42A2A34E10066AB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		780DC7F62A2A34E20066AB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780DC7F92A2A34E20066AB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		780DC7FB2A2A34E20066AB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		780DC8032A2A382C0066AB93 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		780DC8082A2A39E70066AB93 /* OfflinePlayTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflinePlayTableCell.swift; sourceTree = "<group>"; };
+		780DC8092A2A39E70066AB93 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		780DC80A2A2A39E70066AB93 /* OfflinePlayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflinePlayTableViewController.swift; sourceTree = "<group>"; };
+		780DC80E2A2A3A010066AB93 /* OfflineDemoPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineDemoPlaylist.swift; sourceTree = "<group>"; };
+		780DC80F2A2A3A010066AB93 /* OfflinePlayLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflinePlayLoaderViewController.swift; sourceTree = "<group>"; };
+		780DC8102A2A3A010066AB93 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		780DC8142A2A3A170066AB93 /* PlayerItemDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerItemDownloadManager.swift; sourceTree = "<group>"; };
+		780DC8162A2A3A2F0066AB93 /* DownloadFileOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadFileOperation.swift; sourceTree = "<group>"; };
+		780DC8172A2A3A2F0066AB93 /* DownloadAVAssetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadAVAssetOperation.swift; sourceTree = "<group>"; };
+		780DC8182A2A3A2F0066AB93 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		780DC8192A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadPlayerItemOperation.swift; sourceTree = "<group>"; };
 		D315DA586FD1F9BD365FD302 /* Pods_Offline_Playback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_Playback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39F7312376BB31C9B61E22F /* Pods-Offline Playback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline Playback.debug.xcconfig"; path = "Target Support Files/Pods-Offline Playback/Pods-Offline Playback.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,15 +91,57 @@
 		780DC7EC2A2A34E10066AB93 /* Offline Playback */ = {
 			isa = PBXGroup;
 			children = (
+				780DC8212A2A3AE70066AB93 /* Utilities */,
+				780DC8202A2A3AA90066AB93 /* UX */,
+				780DC81E2A2A3A840066AB93 /* Download Manager */,
 				780DC7ED2A2A34E10066AB93 /* AppDelegate.swift */,
 				780DC7EF2A2A34E10066AB93 /* SceneDelegate.swift */,
-				780DC7F12A2A34E10066AB93 /* ViewController.swift */,
-				780DC7F32A2A34E10066AB93 /* Main.storyboard */,
+				780DC8032A2A382C0066AB93 /* Main.storyboard */,
 				780DC7F62A2A34E20066AB93 /* Assets.xcassets */,
 				780DC7F82A2A34E20066AB93 /* LaunchScreen.storyboard */,
 				780DC7FB2A2A34E20066AB93 /* Info.plist */,
 			);
 			path = "Offline Playback";
+			sourceTree = "<group>";
+		};
+		780DC81E2A2A3A840066AB93 /* Download Manager */ = {
+			isa = PBXGroup;
+			children = (
+				780DC81F2A2A3A970066AB93 /* Operations */,
+				780DC8142A2A3A170066AB93 /* PlayerItemDownloadManager.swift */,
+			);
+			path = "Download Manager";
+			sourceTree = "<group>";
+		};
+		780DC81F2A2A3A970066AB93 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				780DC8182A2A3A2F0066AB93 /* AsyncOperation.swift */,
+				780DC8172A2A3A2F0066AB93 /* DownloadAVAssetOperation.swift */,
+				780DC8162A2A3A2F0066AB93 /* DownloadFileOperation.swift */,
+				780DC8192A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		780DC8202A2A3AA90066AB93 /* UX */ = {
+			isa = PBXGroup;
+			children = (
+				780DC8092A2A39E70066AB93 /* ProgressView.swift */,
+				780DC80F2A2A3A010066AB93 /* OfflinePlayLoaderViewController.swift */,
+				780DC8082A2A39E70066AB93 /* OfflinePlayTableCell.swift */,
+				780DC80A2A2A39E70066AB93 /* OfflinePlayTableViewController.swift */,
+			);
+			path = UX;
+			sourceTree = "<group>";
+		};
+		780DC8212A2A3AE70066AB93 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				780DC8102A2A3A010066AB93 /* ImageLoader.swift */,
+				780DC80E2A2A3A010066AB93 /* OfflineDemoPlaylist.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		D839B738D67B4CD553DD4B78 /* Pods */ = {
@@ -153,8 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				780DC7FA2A2A34E20066AB93 /* LaunchScreen.storyboard in Resources */,
+				780DC8042A2A382C0066AB93 /* Main.storyboard in Resources */,
 				780DC7F72A2A34E20066AB93 /* Assets.xcassets in Resources */,
-				780DC7F52A2A34E10066AB93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,23 +269,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				780DC7F22A2A34E10066AB93 /* ViewController.swift in Sources */,
+				780DC81C2A2A3A2F0066AB93 /* AsyncOperation.swift in Sources */,
 				780DC7EE2A2A34E10066AB93 /* AppDelegate.swift in Sources */,
+				780DC81A2A2A3A2F0066AB93 /* DownloadFileOperation.swift in Sources */,
+				780DC8112A2A3A010066AB93 /* OfflineDemoPlaylist.swift in Sources */,
+				780DC81D2A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift in Sources */,
+				780DC80C2A2A39E70066AB93 /* ProgressView.swift in Sources */,
+				780DC80B2A2A39E70066AB93 /* OfflinePlayTableCell.swift in Sources */,
+				780DC8132A2A3A010066AB93 /* ImageLoader.swift in Sources */,
 				780DC7F02A2A34E10066AB93 /* SceneDelegate.swift in Sources */,
+				780DC80D2A2A39E70066AB93 /* OfflinePlayTableViewController.swift in Sources */,
+				780DC81B2A2A3A2F0066AB93 /* DownloadAVAssetOperation.swift in Sources */,
+				780DC8122A2A3A010066AB93 /* OfflinePlayLoaderViewController.swift in Sources */,
+				780DC8152A2A3A170066AB93 /* PlayerItemDownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		780DC7F32A2A34E10066AB93 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				780DC7F42A2A34E10066AB93 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		780DC7F82A2A34E20066AB93 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
