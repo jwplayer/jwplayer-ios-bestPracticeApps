@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C270E14E0FCF7A25B4D1B21 /* Pods_Offline_Playback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D315DA586FD1F9BD365FD302 /* Pods_Offline_Playback.framework */; };
 		780DC7EE2A2A34E10066AB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC7ED2A2A34E10066AB93 /* AppDelegate.swift */; };
 		780DC7F02A2A34E10066AB93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC7EF2A2A34E10066AB93 /* SceneDelegate.swift */; };
 		780DC7F22A2A34E10066AB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC7F12A2A34E10066AB93 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14759D716746B77177FCC8EF /* Pods-Offline Playback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline Playback.release.xcconfig"; path = "Target Support Files/Pods-Offline Playback/Pods-Offline Playback.release.xcconfig"; sourceTree = "<group>"; };
 		780DC7EA2A2A34E10066AB93 /* Offline Playback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Offline Playback.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		780DC7ED2A2A34E10066AB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		780DC7EF2A2A34E10066AB93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		780DC7F62A2A34E20066AB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780DC7F92A2A34E20066AB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		780DC7FB2A2A34E20066AB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D315DA586FD1F9BD365FD302 /* Pods_Offline_Playback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_Playback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F39F7312376BB31C9B61E22F /* Pods-Offline Playback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline Playback.debug.xcconfig"; path = "Target Support Files/Pods-Offline Playback/Pods-Offline Playback.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C270E14E0FCF7A25B4D1B21 /* Pods_Offline_Playback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1258A251C0A041D2BC90EF08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D315DA586FD1F9BD365FD302 /* Pods_Offline_Playback.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		780DC7E12A2A34E10066AB93 = {
 			isa = PBXGroup;
 			children = (
 				780DC7EC2A2A34E10066AB93 /* Offline Playback */,
 				780DC7EB2A2A34E10066AB93 /* Products */,
+				D839B738D67B4CD553DD4B78 /* Pods */,
+				1258A251C0A041D2BC90EF08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = "Offline Playback";
 			sourceTree = "<group>";
 		};
+		D839B738D67B4CD553DD4B78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F39F7312376BB31C9B61E22F /* Pods-Offline Playback.debug.xcconfig */,
+				14759D716746B77177FCC8EF /* Pods-Offline Playback.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 780DC7FE2A2A34E20066AB93 /* Build configuration list for PBXNativeTarget "Offline Playback" */;
 			buildPhases = (
+				16E44AE2FD5EFAFAC5307401 /* [CP] Check Pods Manifest.lock */,
 				780DC7E62A2A34E10066AB93 /* Sources */,
 				780DC7E72A2A34E10066AB93 /* Frameworks */,
 				780DC7E82A2A34E10066AB93 /* Resources */,
+				CA14AE73F9DE5F921161063E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16E44AE2FD5EFAFAC5307401 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Offline Playback-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA14AE73F9DE5F921161063E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Offline Playback/Pods-Offline Playback-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Offline Playback/Pods-Offline Playback-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Offline Playback/Pods-Offline Playback-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		780DC7E62A2A34E10066AB93 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		780DC7FF2A2A34E20066AB93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F39F7312376BB31C9B61E22F /* Pods-Offline Playback.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		780DC8002A2A34E20066AB93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14759D716746B77177FCC8EF /* Pods-Offline Playback.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

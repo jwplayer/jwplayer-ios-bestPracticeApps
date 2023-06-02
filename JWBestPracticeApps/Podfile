@@ -105,6 +105,11 @@ target 'Offline DRM' do
   common_JWPlayer
 end
 
+target 'Offline Playback' do
+  project 'Offline Playback/Offline Playback'
+  common_JWPlayer
+end
+
 ####################################
 #### JWPlayerTVKit tvOS targets ####
 ####################################

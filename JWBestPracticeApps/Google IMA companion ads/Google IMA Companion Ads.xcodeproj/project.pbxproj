@@ -15,6 +15,7 @@
 		79101CAE298B382800FA78F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79101CAC298B382800FA78F6 /* LaunchScreen.storyboard */; };
 		79117013298C6FDD00566481 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79117012298C6FDD00566481 /* PlayerViewController.swift */; };
 		79117015298C742200566481 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 79117014298C742200566481 /* README.md */; };
+		904D4A373FE4E96955DF49F5 /* Pods_Google_IMA_Companion_Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DA28E97C07BAC31CACAD73 /* Pods_Google_IMA_Companion_Ads.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		34480B5E4C129A86F7D3A5D3 /* Pods-Google IMA Companion Ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Companion Ads.debug.xcconfig"; path = "Target Support Files/Pods-Google IMA Companion Ads/Pods-Google IMA Companion Ads.debug.xcconfig"; sourceTree = "<group>"; };
+		65FE4BA4E4014F3A7D873DB7 /* Pods-Google IMA Companion Ads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Companion Ads.release.xcconfig"; path = "Target Support Files/Pods-Google IMA Companion Ads/Pods-Google IMA Companion Ads.release.xcconfig"; sourceTree = "<group>"; };
+		70DA28E97C07BAC31CACAD73 /* Pods_Google_IMA_Companion_Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_IMA_Companion_Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79101C9E298B382700FA78F6 /* Google IMA Companion Ads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google IMA Companion Ads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79101CA1298B382700FA78F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79101CA3298B382700FA78F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,12 +53,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904D4A373FE4E96955DF49F5 /* Pods_Google_IMA_Companion_Ads.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43C68CB753E40B1BB03A1244 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34480B5E4C129A86F7D3A5D3 /* Pods-Google IMA Companion Ads.debug.xcconfig */,
+				65FE4BA4E4014F3A7D873DB7 /* Pods-Google IMA Companion Ads.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		79101C95298B382700FA78F6 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +77,7 @@
 				79101CA0298B382700FA78F6 /* Google IMA Companion Ads */,
 				79101C9F298B382700FA78F6 /* Products */,
 				7911700E298C677B00566481 /* Frameworks */,
+				43C68CB753E40B1BB03A1244 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				79117016298C749300566481 /* GoogleInteractiveMediaAds.framework */,
+				70DA28E97C07BAC31CACAD73 /* Pods_Google_IMA_Companion_Ads.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,10 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79101CB2298B382800FA78F6 /* Build configuration list for PBXNativeTarget "Google IMA Companion Ads" */;
 			buildPhases = (
+				C0FAA3DAE853CEECF6184CD7 /* [CP] Check Pods Manifest.lock */,
 				79101C9A298B382700FA78F6 /* Sources */,
 				79101C9B298B382700FA78F6 /* Frameworks */,
 				79101C9C298B382700FA78F6 /* Resources */,
 				79117011298C677B00566481 /* Embed Frameworks */,
+				11A130A0A2FD7E40A23D466E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +182,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11A130A0A2FD7E40A23D466E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google IMA Companion Ads/Pods-Google IMA Companion Ads-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google IMA Companion Ads/Pods-Google IMA Companion Ads-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google IMA Companion Ads/Pods-Google IMA Companion Ads-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0FAA3DAE853CEECF6184CD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google IMA Companion Ads-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79101C9A298B382700FA78F6 /* Sources */ = {
@@ -314,6 +375,7 @@
 		};
 		79101CB3298B382800FA78F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34480B5E4C129A86F7D3A5D3 /* Pods-Google IMA Companion Ads.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -345,6 +407,7 @@
 		};
 		79101CB4298B382800FA78F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FE4BA4E4014F3A7D873DB7 /* Pods-Google IMA Companion Ads.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

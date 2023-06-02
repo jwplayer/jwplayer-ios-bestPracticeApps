@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31048A91B909897A48583CEC /* Pods_BasicTVPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5998A312B3DE9FBCC36490 /* Pods_BasicTVPlayer.framework */; };
 		79CA74342852957300BB16B5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 79CA74332852957300BB16B5 /* README.md */; };
 		79EBB5BF285153A500EC5182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBB5BE285153A500EC5182 /* AppDelegate.swift */; };
 		79EBB5C1285153A500EC5182 /* BasicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBB5C0285153A500EC5182 /* BasicPlayerViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A5998A312B3DE9FBCC36490 /* Pods_BasicTVPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTVPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79CA74332852957300BB16B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79EBB5BB285153A500EC5182 /* BasicTVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EBB5BE285153A500EC5182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -23,6 +25,8 @@
 		79EBB5C3285153A500EC5182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79EBB5C5285153A700EC5182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79EBB5C8285153A700EC5182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8710F7C64B4B0506DE8FC50E /* Pods-BasicTVPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTVPlayer.release.xcconfig"; path = "Target Support Files/Pods-BasicTVPlayer/Pods-BasicTVPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		E5C39069F6562626ECDFF9F7 /* Pods-BasicTVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTVPlayer.debug.xcconfig"; path = "Target Support Files/Pods-BasicTVPlayer/Pods-BasicTVPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31048A91B909897A48583CEC /* Pods_BasicTVPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,7 @@
 				79EBB5BD285153A500EC5182 /* BasicTVPlayer */,
 				79EBB5BC285153A500EC5182 /* Products */,
 				79EBB5F72851540E00EC5182 /* Frameworks */,
+				930DBA6CECF9CB47AA84A673 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +75,19 @@
 		79EBB5F72851540E00EC5182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A5998A312B3DE9FBCC36490 /* Pods_BasicTVPlayer.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		930DBA6CECF9CB47AA84A673 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5C39069F6562626ECDFF9F7 /* Pods-BasicTVPlayer.debug.xcconfig */,
+				8710F7C64B4B0506DE8FC50E /* Pods-BasicTVPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +97,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79EBB5CC285153A700EC5182 /* Build configuration list for PBXNativeTarget "BasicTVPlayer" */;
 			buildPhases = (
+				08D60E1E17971443ABA644AF /* [CP] Check Pods Manifest.lock */,
 				79EBB5B7285153A500EC5182 /* Sources */,
 				79EBB5B8285153A500EC5182 /* Frameworks */,
 				79EBB5B9285153A500EC5182 /* Resources */,
+				062F5FB7E506C3C90139F279 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		062F5FB7E506C3C90139F279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicTVPlayer/Pods-BasicTVPlayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicTVPlayer/Pods-BasicTVPlayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicTVPlayer/Pods-BasicTVPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		08D60E1E17971443ABA644AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasicTVPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79EBB5B7285153A500EC5182 /* Sources */ = {
@@ -288,6 +349,7 @@
 		};
 		79EBB5CD285153A700EC5182 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5C39069F6562626ECDFF9F7 /* Pods-BasicTVPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +375,7 @@
 		};
 		79EBB5CE285153A700EC5182 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8710F7C64B4B0506DE8FC50E /* Pods-BasicTVPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
