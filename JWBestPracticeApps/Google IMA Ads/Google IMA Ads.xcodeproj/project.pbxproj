@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4EF0C0F5EEFD492AEDBECDC9 /* Pods_Google_IMA_Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2889FFC176A7905C22F13443 /* Pods_Google_IMA_Ads.framework */; };
+		798722D62A311B550052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722D52A311B550052B204 /* SharedAssets.xcassets */; };
 		799E469F26C1D5B400BBBB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E469E26C1D5B400BBBB98 /* AppDelegate.swift */; };
 		799E46A126C1D5B400BBBB98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E46A026C1D5B400BBBB98 /* SceneDelegate.swift */; };
 		799E46A326C1D5B400BBBB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E46A226C1D5B400BBBB98 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		2889FFC176A7905C22F13443 /* Pods_Google_IMA_Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_IMA_Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7ED557EC1DFE198C169905 /* Pods-Google IMA Ads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Ads.release.xcconfig"; path = "Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads.release.xcconfig"; sourceTree = "<group>"; };
+		798722D52A311B550052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		799E469B26C1D5B400BBBB98 /* Google IMA Ads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google IMA Ads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		799E469E26C1D5B400BBBB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		799E46A026C1D5B400BBBB98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				799E46A226C1D5B400BBBB98 /* ViewController.swift */,
 				799E46A426C1D5B400BBBB98 /* Main.storyboard */,
 				799E46A726C1D5B500BBBB98 /* Assets.xcassets */,
+				798722D52A311B550052B204 /* SharedAssets.xcassets */,
 				799E46A926C1D5B500BBBB98 /* LaunchScreen.storyboard */,
 				799E46AC26C1D5B500BBBB98 /* Info.plist */,
 			);
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798722D62A311B550052B204 /* SharedAssets.xcassets in Resources */,
 				799E46AB26C1D5B500BBBB98 /* LaunchScreen.storyboard in Resources */,
 				799E46A826C1D5B500BBBB98 /* Assets.xcassets in Resources */,
 				799E472026C2FE4A00BBBB98 /* README.md in Resources */,

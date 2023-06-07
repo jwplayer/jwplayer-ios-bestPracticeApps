@@ -16,6 +16,7 @@
 		3B6C727827A0AAB200C14436 /* CustomControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C727727A0AAB200C14436 /* CustomControls.xib */; };
 		3B6C727A27A0AABF00C14436 /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C727927A0AABF00C14436 /* CustomControls.swift */; };
 		7095920410C0519114A032B6 /* Pods_AdvancedPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114AE66E7C9A71337FB2D1BB /* Pods_AdvancedPlayer.framework */; };
+		798722C62A311AD70052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722C52A311AD70052B204 /* SharedAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		3B6C727727A0AAB200C14436 /* CustomControls.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomControls.xib; sourceTree = "<group>"; };
 		3B6C727927A0AABF00C14436 /* CustomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
 		4F4351773899DF0B39FAC41A /* Pods-AdvancedPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedPlayer.debug.xcconfig"; path = "Target Support Files/Pods-AdvancedPlayer/Pods-AdvancedPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		798722C52A311AD70052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				3B6C727727A0AAB200C14436 /* CustomControls.xib */,
 				3B6C727927A0AABF00C14436 /* CustomControls.swift */,
 				3B6C72442799CC6A00C14436 /* Assets.xcassets */,
+				798722C52A311AD70052B204 /* SharedAssets.xcassets */,
 				3B6C72462799CC6A00C14436 /* LaunchScreen.storyboard */,
 				3B6C72492799CC6A00C14436 /* Info.plist */,
 			);
@@ -160,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798722C62A311AD70052B204 /* SharedAssets.xcassets in Resources */,
 				3B6C72482799CC6A00C14436 /* LaunchScreen.storyboard in Resources */,
 				3B6C72452799CC6A00C14436 /* Assets.xcassets in Resources */,
 				3B6C727827A0AAB200C14436 /* CustomControls.xib in Resources */,

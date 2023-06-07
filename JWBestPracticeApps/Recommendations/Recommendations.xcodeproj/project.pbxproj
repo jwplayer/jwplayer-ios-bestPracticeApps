@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		798722DC2A311B670052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722DB2A311B670052B204 /* SharedAssets.xcassets */; };
 		808A3E8626C2E8EC003F9CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808A3E8526C2E8EC003F9CEF /* AppDelegate.swift */; };
 		808A3E8826C2E8EC003F9CEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808A3E8726C2E8EC003F9CEF /* SceneDelegate.swift */; };
 		808A3E8A26C2E8EC003F9CEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808A3E8926C2E8EC003F9CEF /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		3453491E4FEC372B26E57D20 /* Pods_Recommendations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recommendations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B6CDF70BA108C73ACE3607 /* Pods-Recommendations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recommendations.release.xcconfig"; path = "Target Support Files/Pods-Recommendations/Pods-Recommendations.release.xcconfig"; sourceTree = "<group>"; };
+		798722DB2A311B670052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		808A3E8226C2E8EC003F9CEF /* Recommendations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recommendations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		808A3E8526C2E8EC003F9CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		808A3E8726C2E8EC003F9CEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				808A3E8926C2E8EC003F9CEF /* ViewController.swift */,
 				808A3E8B26C2E8EC003F9CEF /* Main.storyboard */,
 				808A3E8E26C2E8EE003F9CEF /* Assets.xcassets */,
+				798722DB2A311B670052B204 /* SharedAssets.xcassets */,
 				808A3E9026C2E8EE003F9CEF /* LaunchScreen.storyboard */,
 				808A3E9326C2E8EE003F9CEF /* Info.plist */,
 			);
@@ -154,6 +157,7 @@
 				808A3E9226C2E8EE003F9CEF /* LaunchScreen.storyboard in Resources */,
 				808A3E8F26C2E8EE003F9CEF /* Assets.xcassets in Resources */,
 				808A3E8D26C2E8EC003F9CEF /* Main.storyboard in Resources */,
+				798722DC2A311B670052B204 /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

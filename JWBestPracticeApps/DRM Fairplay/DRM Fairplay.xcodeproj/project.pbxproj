@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		798722CE2A311B2E0052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722CD2A311B2E0052B204 /* SharedAssets.xcassets */; };
 		79AF09FA26BDBEAF002E638C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF09F926BDBEAF002E638C /* AppDelegate.swift */; };
 		79AF09FC26BDBEAF002E638C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF09FB26BDBEAF002E638C /* SceneDelegate.swift */; };
 		79AF09FE26BDBEAF002E638C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF09FD26BDBEAF002E638C /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		393B1EBB1E37B6AB45D5930F /* Pods-DRM Fairplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRM Fairplay.debug.xcconfig"; path = "Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay.debug.xcconfig"; sourceTree = "<group>"; };
+		798722CD2A311B2E0052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		79AF09F626BDBEAF002E638C /* DRM Fairplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DRM Fairplay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF09F926BDBEAF002E638C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79AF09FB26BDBEAF002E638C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				79AF09FD26BDBEAF002E638C /* ViewController.swift */,
 				79AF09FF26BDBEAF002E638C /* Main.storyboard */,
 				79AF0A0226BDBEB1002E638C /* Assets.xcassets */,
+				798722CD2A311B2E0052B204 /* SharedAssets.xcassets */,
 				79AF0A0426BDBEB1002E638C /* LaunchScreen.storyboard */,
 				79AF0A0726BDBEB1002E638C /* Info.plist */,
 				D3CA99E929313E5200F7E26E /* DRMPlaylist.swift */,
@@ -159,6 +162,7 @@
 				79AF0A0626BDBEB1002E638C /* LaunchScreen.storyboard in Resources */,
 				79AF0A0326BDBEB1002E638C /* Assets.xcassets in Resources */,
 				79AF0A0126BDBEAF002E638C /* Main.storyboard in Resources */,
+				798722CE2A311B2E0052B204 /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

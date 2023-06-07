@@ -8,9 +8,6 @@
       location = "container:"
       name = "JWPlayerKit">
       <FileRef
-         location = "group:SharedAssets.xcassets">
-      </FileRef>
-      <FileRef
          location = "group:BasicPlayer/BasicPlayer.xcodeproj">
       </FileRef>
       <FileRef
@@ -55,6 +52,9 @@
       <FileRef
          location = "group:Captions/Captions.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:SharedAssets.xcassets">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
@@ -65,5 +65,8 @@
    </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ChromeCast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
    </FileRef>
 </Workspace>

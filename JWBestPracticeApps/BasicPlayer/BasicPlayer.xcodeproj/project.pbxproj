@@ -22,6 +22,8 @@
 		3B73974C26B9B3E500671DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B73974A26B9B3E500671DEC /* LaunchScreen.storyboard */; };
 		3B73974F26B9B3E500671DEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73974E26B9B3E500671DEC /* main.m */; };
 		3B73975826B9C2EE00671DEC /* Pods_BasicPlayer_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEC0F0004DAF4BEDBF090C6 /* Pods_BasicPlayer_Swift.framework */; };
+		798722C22A31154E0052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722C12A31154E0052B204 /* SharedAssets.xcassets */; };
+		798722C32A31154E0052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722C12A31154E0052B204 /* SharedAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,7 @@
 		48FA2B5B2E2EAF356E1CD577 /* Pods-BasicPlayer-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer-Swift.release.xcconfig"; path = "Target Support Files/Pods-BasicPlayer-Swift/Pods-BasicPlayer-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		4983387473663092286E81AF /* Pods-BasicPlayer-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer-Swift.debug.xcconfig"; path = "Target Support Files/Pods-BasicPlayer-Swift/Pods-BasicPlayer-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		4FEC0F0004DAF4BEDBF090C6 /* Pods_BasicPlayer_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicPlayer_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		798722C12A31154E0052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		7D8DBBD70EA66CE15802E313 /* Pods-BasicPlayer-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-BasicPlayer-ObjC/Pods-BasicPlayer-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		F16713D798A47959E27F3B1C /* Pods_BasicPlayer_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicPlayer_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +133,7 @@
 				3B73974326B9B3E500671DEC /* ViewController.m */,
 				3B73974526B9B3E500671DEC /* Main.storyboard */,
 				3B73974826B9B3E500671DEC /* Assets.xcassets */,
+				798722C12A31154E0052B204 /* SharedAssets.xcassets */,
 				3B73974A26B9B3E500671DEC /* LaunchScreen.storyboard */,
 				3B73974D26B9B3E500671DEC /* Info.plist */,
 				3B73974E26B9B3E500671DEC /* main.m */,
@@ -231,6 +235,7 @@
 				3B73973126B8A12B00671DEC /* LaunchScreen.storyboard in Resources */,
 				3B73972E26B8A12B00671DEC /* Assets.xcassets in Resources */,
 				3B73972C26B8A12A00671DEC /* Main.storyboard in Resources */,
+				798722C22A31154E0052B204 /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +246,7 @@
 				3B73974C26B9B3E500671DEC /* LaunchScreen.storyboard in Resources */,
 				3B73974926B9B3E500671DEC /* Assets.xcassets in Resources */,
 				3B73974726B9B3E500671DEC /* Main.storyboard in Resources */,
+				798722C32A31154E0052B204 /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

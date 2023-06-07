@@ -19,11 +19,11 @@
 		11BEC5592822FFFC00BBB637 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5582822FFFC00BBB637 /* README.md */; };
 		11BEC5642823054900BBB637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5602823054900BBB637 /* Main.storyboard */; };
 		11BEC5652823054900BBB637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5622823054900BBB637 /* LaunchScreen.storyboard */; };
+		798722D02A311B380052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722CF2A311B380052B204 /* SharedAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		111A06EC28693A46005F5C21 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
-		113D0B3928A20ACC00A6A9B5 /* 3sOfBlack.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3sOfBlack.mp4; sourceTree = "<group>"; };
 		1185068D28205ACD00E16048 /* FeedTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1185069028205ACD00E16048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1185069228205ACD00E16048 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +37,7 @@
 		11BEC5612823054900BBB637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11BEC5632823054900BBB637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B7C64362DF0AE57F91E4BB2 /* Pods-FeedTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.release.xcconfig"; sourceTree = "<group>"; };
+		798722CF2A311B380052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		D51C535B55FAC82CADBE0A23 /* Pods_FeedTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC9F5FE8269E16A52814303 /* Pods-FeedTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.debug.xcconfig"; path = "Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +90,7 @@
 				11AE08EE286506C200C8CAE0 /* Feed */,
 				11AE08EF286506CC00C8CAE0 /* FeedItem */,
 				118506B628205C8A00E16048 /* Assets.xcassets */,
+				798722CF2A311B380052B204 /* SharedAssets.xcassets */,
 				11BEC5602823054900BBB637 /* Main.storyboard */,
 				11BEC5622823054900BBB637 /* LaunchScreen.storyboard */,
 				1185069E28205ACF00E16048 /* Info.plist */,
@@ -188,6 +190,7 @@
 				11BEC5592822FFFC00BBB637 /* README.md in Resources */,
 				11BEC5642823054900BBB637 /* Main.storyboard in Resources */,
 				11BEC5652823054900BBB637 /* LaunchScreen.storyboard in Resources */,
+				798722D02A311B380052B204 /* SharedAssets.xcassets in Resources */,
 				11BEC5542822FF8300BBB637 /* PlayerItemCell.xib in Resources */,
 				118506B728205C8A00E16048 /* Assets.xcassets in Resources */,
 			);
