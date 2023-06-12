@@ -24,6 +24,7 @@
 		780DC81B2A2A3A2F0066AB93 /* DownloadAVAssetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8172A2A3A2F0066AB93 /* DownloadAVAssetOperation.swift */; };
 		780DC81C2A2A3A2F0066AB93 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8182A2A3A2F0066AB93 /* AsyncOperation.swift */; };
 		780DC81D2A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8192A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift */; };
+		78691DAF2A37BBB5006E230F /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78691DAE2A37BBB5006E230F /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		780DC8172A2A3A2F0066AB93 /* DownloadAVAssetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadAVAssetOperation.swift; sourceTree = "<group>"; };
 		780DC8182A2A3A2F0066AB93 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		780DC8192A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadPlayerItemOperation.swift; sourceTree = "<group>"; };
+		78691DAE2A37BBB5006E230F /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		D315DA586FD1F9BD365FD302 /* Pods_Offline_Playback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_Playback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39F7312376BB31C9B61E22F /* Pods-Offline Playback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline Playback.debug.xcconfig"; path = "Target Support Files/Pods-Offline Playback/Pods-Offline Playback.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				780DC80F2A2A3A010066AB93 /* OfflinePlayLoaderViewController.swift */,
 				780DC8082A2A39E70066AB93 /* OfflinePlayTableCell.swift */,
 				780DC80A2A2A39E70066AB93 /* OfflinePlayTableViewController.swift */,
+				78691DAE2A37BBB5006E230F /* PlayerViewController.swift */,
 			);
 			path = UX;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				780DC81C2A2A3A2F0066AB93 /* AsyncOperation.swift in Sources */,
 				780DC7EE2A2A34E10066AB93 /* AppDelegate.swift in Sources */,
 				780DC81A2A2A3A2F0066AB93 /* DownloadFileOperation.swift in Sources */,
+				78691DAF2A37BBB5006E230F /* PlayerViewController.swift in Sources */,
 				780DC8112A2A3A010066AB93 /* OfflineDemoPlaylist.swift in Sources */,
 				780DC81D2A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift in Sources */,
 				780DC80C2A2A39E70066AB93 /* ProgressView.swift in Sources */,

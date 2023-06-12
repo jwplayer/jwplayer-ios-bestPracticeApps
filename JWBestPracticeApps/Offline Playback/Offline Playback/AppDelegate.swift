@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JWPlayerKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

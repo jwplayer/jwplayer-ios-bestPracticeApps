@@ -12,7 +12,7 @@
         <!--Offline Play Table View Controller-->
         <scene sceneID="3Uq-Zf-Xic">
             <objects>
-                <tableViewController id="qxy-vZ-P78" customClass="OfflinePlayTableViewController" sceneMemberID="viewController">
+                <tableViewController id="qxy-vZ-P78" customClass="OfflinePlayTableViewController" customModule="Offline_Playback" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5aB-NP-M9v">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +218,7 @@
         <!--Offline Play Loader View Controller-->
         <scene sceneID="5KK-jk-zqQ">
             <objects>
-                <viewController id="cB5-L7-psV" customClass="OfflinePlayLoaderViewController" sceneMemberID="viewController">
+                <viewController id="cB5-L7-psV" customClass="OfflinePlayLoaderViewController" customModule="Offline_Playback" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWK-cx-yFw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +250,7 @@
         <!--Player View Controller-->
         <scene sceneID="8U5-21-QA5">
             <objects>
-                <viewController id="ewy-Rm-20q" customClass="JWPlayerViewController" sceneMemberID="viewController">
+                <viewController id="ewy-Rm-20q" customClass="PlayerViewController" customModule="Offline_Playback" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NKC-R7-mTQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="221"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
