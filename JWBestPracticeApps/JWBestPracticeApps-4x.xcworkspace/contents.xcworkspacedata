@@ -44,6 +44,9 @@
          location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Offline Playback/Offline Playback.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Recommendations/Recommendations.xcodeproj">
       </FileRef>
       <FileRef

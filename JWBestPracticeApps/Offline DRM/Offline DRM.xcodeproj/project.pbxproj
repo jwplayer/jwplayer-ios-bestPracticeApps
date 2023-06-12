@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56B31E6F58EE31498DC06019 /* Pods_Offline_DRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECBF76EE531CA699DD8B737 /* Pods_Offline_DRM.framework */; };
-		798722D22A311B410052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722D12A311B410052B204 /* SharedAssets.xcassets */; };
+		2A78F9150301321C79C5FB87 /* Pods_Offline_DRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996711C74F4CF7A45F1CFCBE /* Pods_Offline_DRM.framework */; };
 		D3B9B5F2293A76A600FC4078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B5F1293A76A600FC4078 /* AppDelegate.swift */; };
 		D3B9B5F6293A76A600FC4078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B5F5293A76A600FC4078 /* ViewController.swift */; };
 		D3B9B5F9293A76A600FC4078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B9B5F7293A76A600FC4078 /* Main.storyboard */; };
@@ -34,10 +33,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		30AD45855B0A240ABE070280 /* Pods-Offline DRM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline DRM.debug.xcconfig"; path = "Target Support Files/Pods-Offline DRM/Pods-Offline DRM.debug.xcconfig"; sourceTree = "<group>"; };
-		4ECBF76EE531CA699DD8B737 /* Pods_Offline_DRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_DRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		798722D12A311B410052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
-		C2599CB058310F81278149D7 /* Pods-Offline DRM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline DRM.release.xcconfig"; path = "Target Support Files/Pods-Offline DRM/Pods-Offline DRM.release.xcconfig"; sourceTree = "<group>"; };
+		14A5BA29D168AB02DF7924EB /* Pods-Offline DRM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline DRM.debug.xcconfig"; path = "Target Support Files/Pods-Offline DRM/Pods-Offline DRM.debug.xcconfig"; sourceTree = "<group>"; };
+		950528FB084E767267C3FD27 /* Pods-Offline DRM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline DRM.release.xcconfig"; path = "Target Support Files/Pods-Offline DRM/Pods-Offline DRM.release.xcconfig"; sourceTree = "<group>"; };
+		996711C74F4CF7A45F1CFCBE /* Pods_Offline_DRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_DRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B9B5EE293A76A600FC4078 /* Offline DRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Offline DRM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B9B5F1293A76A600FC4078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3B9B5F5293A76A600FC4078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		D3B9B60B293A7EBE00FC4078 /* DRMKeyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRMKeyDataSource.swift; sourceTree = "<group>"; };
 		D3F2BA47293E8037004DC540 /* StudioDRMPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioDRMPlaylist.swift; sourceTree = "<group>"; };
 		D3F2BA49293EDE3D004DC540 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E6EFAF3A42F201DF9F09E9A4 /* Pods_Offline_DRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_DRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F134BF9FA5B0C29E94B127 /* Pods-Offline DRM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline DRM.debug.xcconfig"; path = "Target Support Files/Pods-Offline DRM/Pods-Offline DRM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B31E6F58EE31498DC06019 /* Pods_Offline_DRM.framework in Frameworks */,
+				2A78F9150301321C79C5FB87 /* Pods_Offline_DRM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 		25A5761554641BE881BE7456 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4ECBF76EE531CA699DD8B737 /* Pods_Offline_DRM.framework */,
+				996711C74F4CF7A45F1CFCBE /* Pods_Offline_DRM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,7 +100,6 @@
 				D3F2BA47293E8037004DC540 /* StudioDRMPlaylist.swift */,
 				D3B9B5F7293A76A600FC4078 /* Main.storyboard */,
 				D3B9B5FA293A76A800FC4078 /* Assets.xcassets */,
-				798722D12A311B410052B204 /* SharedAssets.xcassets */,
 				D3B9B5FC293A76A800FC4078 /* LaunchScreen.storyboard */,
 				D3B9B5FF293A76A800FC4078 /* Info.plist */,
 			);
@@ -110,8 +109,8 @@
 		E14A1D5DEC2B2A26E1690349 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				30AD45855B0A240ABE070280 /* Pods-Offline DRM.debug.xcconfig */,
-				C2599CB058310F81278149D7 /* Pods-Offline DRM.release.xcconfig */,
+				14A5BA29D168AB02DF7924EB /* Pods-Offline DRM.debug.xcconfig */,
+				950528FB084E767267C3FD27 /* Pods-Offline DRM.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -129,7 +128,7 @@
 				D3B9B5EB293A76A600FC4078 /* Frameworks */,
 				D3B9B5EC293A76A600FC4078 /* Resources */,
 				D3B9B60A293A78BB00FC4078 /* Embed Frameworks */,
-				00FE05B108E586DD61694B25 /* [CP] Embed Pods Frameworks */,
+				15687F8F715D9EF427D6FFA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,7 +177,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				798722D22A311B410052B204 /* SharedAssets.xcassets in Resources */,
 				D3B9B5FE293A76A800FC4078 /* LaunchScreen.storyboard in Resources */,
 				D3B9B5FB293A76A800FC4078 /* Assets.xcassets in Resources */,
 				D3F2BA4A293EDE3D004DC540 /* README.md in Resources */,
@@ -189,7 +187,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00FE05B108E586DD61694B25 /* [CP] Embed Pods Frameworks */ = {
+		15687F8F715D9EF427D6FFA6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,6 +224,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3B7245A58F010209BE396C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Offline DRM/Pods-Offline DRM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Offline DRM/Pods-Offline DRM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Offline DRM/Pods-Offline DRM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,7 +396,7 @@
 		};
 		D3B9B603293A76A800FC4078 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30AD45855B0A240ABE070280 /* Pods-Offline DRM.debug.xcconfig */;
+			baseConfigurationReference = 14A5BA29D168AB02DF7924EB /* Pods-Offline DRM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -410,7 +425,7 @@
 		};
 		D3B9B604293A76A800FC4078 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2599CB058310F81278149D7 /* Pods-Offline DRM.release.xcconfig */;
+			baseConfigurationReference = 950528FB084E767267C3FD27 /* Pods-Offline DRM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

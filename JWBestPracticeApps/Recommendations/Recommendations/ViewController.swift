@@ -63,7 +63,7 @@ class ViewController: JWPlayerViewController {
 
             // Second, create a player config with the created JWPlayerItem. Add the related config.
             let config = try JWPlayerConfigurationBuilder()
-                .playlist([playerItem])
+                .playlist(items: [playerItem])
                 .autostart(true)
                 .related(relatedConfig)
                 .build()

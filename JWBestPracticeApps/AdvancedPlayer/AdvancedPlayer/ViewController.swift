@@ -189,7 +189,7 @@ class ViewController: JWPlayerViewController,
 
     // MARK: - Observer ad events
 
-    override func jwplayer(_ player: AnyObject, adEvent event: JWAdEvent) {
+    override func jwplayer(_ player: JWPlayer, adEvent event: JWAdEvent) {
         super.jwplayer(player, adEvent: event)
 
         switch event.type {
@@ -361,7 +361,7 @@ class ViewController: JWPlayerViewController,
 
     }
 
-    func playerViewController(_ controller: JWPlayerViewController, relatedItemBeganPlaying item: JWPlayerItem, atIndex index: Int, withMethod method: JWRelatedInteraction) {
+    func playerViewController(_ controller: JWPlayerViewController, relatedItemBeganPlaying item: JWPlayerItem, atIndex index: Int, withMethod method: JWRelatedMethod) {
         
     }
 }
