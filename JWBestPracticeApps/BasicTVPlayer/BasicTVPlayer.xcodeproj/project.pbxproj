@@ -41,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55008FD257451422EB175E2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A7BFDA48CF284094C79E38D /* Pods-BasicTVPlayer.debug.xcconfig */,
+				3BF8B8E138EBC5B97A29C83E /* Pods-BasicTVPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		79EBB5B2285153A500EC5182 = {
 			isa = PBXGroup;
 			children = (
