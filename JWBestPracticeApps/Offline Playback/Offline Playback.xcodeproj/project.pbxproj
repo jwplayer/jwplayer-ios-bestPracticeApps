@@ -25,6 +25,7 @@
 		780DC81C2A2A3A2F0066AB93 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8182A2A3A2F0066AB93 /* AsyncOperation.swift */; };
 		780DC81D2A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DC8192A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift */; };
 		78691DAF2A37BBB5006E230F /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78691DAE2A37BBB5006E230F /* PlayerViewController.swift */; };
+		79CB3B822A40C73C00F74707 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79CB3B812A40C73C00F74707 /* SharedAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		780DC8182A2A3A2F0066AB93 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		780DC8192A2A3A2F0066AB93 /* DownloadPlayerItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadPlayerItemOperation.swift; sourceTree = "<group>"; };
 		78691DAE2A37BBB5006E230F /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		79CB3B812A40C73C00F74707 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		D315DA586FD1F9BD365FD302 /* Pods_Offline_Playback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_Playback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39F7312376BB31C9B61E22F /* Pods-Offline Playback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline Playback.debug.xcconfig"; path = "Target Support Files/Pods-Offline Playback/Pods-Offline Playback.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 				780DC7EF2A2A34E10066AB93 /* SceneDelegate.swift */,
 				780DC8032A2A382C0066AB93 /* Main.storyboard */,
 				780DC7F62A2A34E20066AB93 /* Assets.xcassets */,
+				79CB3B812A40C73C00F74707 /* SharedAssets.xcassets */,
 				780DC7F82A2A34E20066AB93 /* LaunchScreen.storyboard */,
 				780DC7FB2A2A34E20066AB93 /* Info.plist */,
 			);
@@ -220,6 +223,7 @@
 				780DC7FA2A2A34E20066AB93 /* LaunchScreen.storyboard in Resources */,
 				780DC8042A2A382C0066AB93 /* Main.storyboard in Resources */,
 				780DC7F72A2A34E20066AB93 /* Assets.xcassets in Resources */,
+				79CB3B822A40C73C00F74707 /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

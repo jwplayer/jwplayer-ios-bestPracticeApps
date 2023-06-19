@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		058B66E7DBE1BD78E44F3A10 /* Pods_Google_IMA_Companion_Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5C78B236F9C9211334C58A /* Pods_Google_IMA_Companion_Ads.framework */; };
 		79101CA2298B382700FA78F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79101CA1298B382700FA78F6 /* AppDelegate.swift */; };
 		79101CA4298B382700FA78F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79101CA3298B382700FA78F6 /* SceneDelegate.swift */; };
 		79101CA6298B382700FA78F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79101CA5298B382700FA78F6 /* ViewController.swift */; };
@@ -16,6 +15,7 @@
 		79101CAE298B382800FA78F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79101CAC298B382800FA78F6 /* LaunchScreen.storyboard */; };
 		79117013298C6FDD00566481 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79117012298C6FDD00566481 /* PlayerViewController.swift */; };
 		79117015298C742200566481 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 79117014298C742200566481 /* README.md */; };
+		79CB3B7E2A40C72700F74707 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79CB3B7D2A40C72700F74707 /* SharedAssets.xcassets */; };
 		904D4A373FE4E96955DF49F5 /* Pods_Google_IMA_Companion_Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DA28E97C07BAC31CACAD73 /* Pods_Google_IMA_Companion_Ads.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +47,7 @@
 		79117012298C6FDD00566481 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		79117014298C742200566481 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79117016298C749300566481 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInteractiveMediaAds.framework; path = "../Pods/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework"; sourceTree = "<group>"; };
-		8A5C78B236F9C9211334C58A /* Pods_Google_IMA_Companion_Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_IMA_Companion_Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D289FABFF744E70D3AC1D19D /* Pods-Google IMA Companion Ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Companion Ads.debug.xcconfig"; path = "Target Support Files/Pods-Google IMA Companion Ads/Pods-Google IMA Companion Ads.debug.xcconfig"; sourceTree = "<group>"; };
+		79CB3B7D2A40C72700F74707 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +100,7 @@
 				79117012298C6FDD00566481 /* PlayerViewController.swift */,
 				79101CA7298B382700FA78F6 /* Main.storyboard */,
 				79101CAA298B382800FA78F6 /* Assets.xcassets */,
+				79CB3B7D2A40C72700F74707 /* SharedAssets.xcassets */,
 				79101CAC298B382800FA78F6 /* LaunchScreen.storyboard */,
 				79101CAF298B382800FA78F6 /* Info.plist */,
 			);
@@ -177,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CB3B7E2A40C72700F74707 /* SharedAssets.xcassets in Resources */,
 				79101CAE298B382800FA78F6 /* LaunchScreen.storyboard in Resources */,
 				79101CAB298B382800FA78F6 /* Assets.xcassets in Resources */,
 				79117015298C742200566481 /* README.md in Resources */,

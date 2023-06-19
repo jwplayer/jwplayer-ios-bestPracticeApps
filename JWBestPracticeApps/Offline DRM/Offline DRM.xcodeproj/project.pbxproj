@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A78F9150301321C79C5FB87 /* Pods_Offline_DRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996711C74F4CF7A45F1CFCBE /* Pods_Offline_DRM.framework */; };
+		79CB3B842A40C74C00F74707 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79CB3B832A40C74C00F74707 /* SharedAssets.xcassets */; };
 		D3B9B5F2293A76A600FC4078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B5F1293A76A600FC4078 /* AppDelegate.swift */; };
 		D3B9B5F6293A76A600FC4078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B5F5293A76A600FC4078 /* ViewController.swift */; };
 		D3B9B5F9293A76A600FC4078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B9B5F7293A76A600FC4078 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		14A5BA29D168AB02DF7924EB /* Pods-Offline DRM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline DRM.debug.xcconfig"; path = "Target Support Files/Pods-Offline DRM/Pods-Offline DRM.debug.xcconfig"; sourceTree = "<group>"; };
+		79CB3B832A40C74C00F74707 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		950528FB084E767267C3FD27 /* Pods-Offline DRM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline DRM.release.xcconfig"; path = "Target Support Files/Pods-Offline DRM/Pods-Offline DRM.release.xcconfig"; sourceTree = "<group>"; };
 		996711C74F4CF7A45F1CFCBE /* Pods_Offline_DRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_DRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B9B5EE293A76A600FC4078 /* Offline DRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Offline DRM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,8 +49,6 @@
 		D3B9B60B293A7EBE00FC4078 /* DRMKeyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRMKeyDataSource.swift; sourceTree = "<group>"; };
 		D3F2BA47293E8037004DC540 /* StudioDRMPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioDRMPlaylist.swift; sourceTree = "<group>"; };
 		D3F2BA49293EDE3D004DC540 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E6EFAF3A42F201DF9F09E9A4 /* Pods_Offline_DRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offline_DRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1F134BF9FA5B0C29E94B127 /* Pods-Offline DRM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offline DRM.debug.xcconfig"; path = "Target Support Files/Pods-Offline DRM/Pods-Offline DRM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +100,7 @@
 				D3F2BA47293E8037004DC540 /* StudioDRMPlaylist.swift */,
 				D3B9B5F7293A76A600FC4078 /* Main.storyboard */,
 				D3B9B5FA293A76A800FC4078 /* Assets.xcassets */,
+				79CB3B832A40C74C00F74707 /* SharedAssets.xcassets */,
 				D3B9B5FC293A76A800FC4078 /* LaunchScreen.storyboard */,
 				D3B9B5FF293A76A800FC4078 /* Info.plist */,
 			);
@@ -177,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CB3B842A40C74C00F74707 /* SharedAssets.xcassets in Resources */,
 				D3B9B5FE293A76A800FC4078 /* LaunchScreen.storyboard in Resources */,
 				D3B9B5FB293A76A800FC4078 /* Assets.xcassets in Resources */,
 				D3F2BA4A293EDE3D004DC540 /* README.md in Resources */,
@@ -224,23 +226,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A3B7245A58F010209BE396C9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Offline DRM/Pods-Offline DRM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Offline DRM/Pods-Offline DRM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Offline DRM/Pods-Offline DRM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
