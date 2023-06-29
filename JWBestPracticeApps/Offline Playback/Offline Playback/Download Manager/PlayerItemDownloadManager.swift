@@ -145,8 +145,13 @@ class PlayerItemDownloadManager {
                 return nil
             }
             
+            // Normalize the paths within the JSON dictionary to match what is on the device.
+            // This is necessary since local URLs need to be stored as relative paths, since app
+            // directories can change on the device for security reasons.
+            let normalizedJSON = json.normalizePaths(rootDirectory: mediaDirectory.absoluteString, designator: DownloadPlayerItemOperation.baseDirectoryToken)
+            
             // Initialize the player item using the JSONObject.
-            let item = JWPlayerItem.from(json: json)
+            let item = JWPlayerItem.from(json: normalizedJSON)
             let jwPlayerItem = item as? JWPlayerItem
             return jwPlayerItem
         } catch {
@@ -193,5 +198,77 @@ fileprivate extension FileManager {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let directoryURL = documentsDirectory.appendingPathComponent("item-\(id)")
         return directoryURL
+    }
+}
+
+// MARK: - JSONObject and JSONArray
+
+fileprivate extension JSONObject {
+    /**
+     This method looks for relative paths stored in the `JSONObject`, and replaces instances of `designator` with the root directory, making these paths into absolute paths.
+     - parameter rootDirectory: The root directory to replace `designator` with.
+     - parameter designator: The string used to represent the root directory in the relative paths.
+     - returns: A new instance of this `JSONObject` with all paths converted to absolute paths.
+     */
+    func normalizePaths(rootDirectory: String, designator: String) -> JSONObject {
+        var object: JSONObject = [:]
+        
+        for (key, value) in self {
+            switch value {
+            case let value as String:
+                if value.contains(designator) {
+                    let absolutePath = value.replacingOccurrences(of: designator, with: rootDirectory)
+                    object[key] = absolutePath
+                }
+                else {
+                    object[key] = value
+                }
+            case let item as JSONObject:
+                let obj = item.normalizePaths(rootDirectory: rootDirectory, designator: designator)
+                object[key] = obj
+            case let array as JSONArray:
+                let array = array.normalizePaths(rootDirectory: rootDirectory, designator: designator)
+                object[key] = array
+            default:
+                object[key] = value
+            }
+        }
+        
+        return object
+    }
+}
+
+fileprivate extension JSONArray {
+    /**
+     This method looks for relative paths stored in the `JSONArray`, and replaces instances of `designator` with the root directory, making these paths into absolute paths.
+     - parameter rootDirectory: The root directory to replace `designator` with.
+     - parameter designator: The string used to represent the root directory in the relative paths.
+     - returns: A new instance of this `JSONArray` with all paths converted to absolute paths.
+     */
+    func normalizePaths(rootDirectory: String, designator: String) -> JSONArray {
+        var array: JSONArray = []
+        
+        for item in self {
+            switch item {
+            case let item as String:
+                if item.contains(designator) {
+                    let absolutePath = item.replacingOccurrences(of: designator, with: rootDirectory)
+                    array.append(absolutePath)
+                }
+                else {
+                    array.append(item)
+                }
+            case let item as JSONObject:
+                let object = item.normalizePaths(rootDirectory: rootDirectory, designator: designator)
+                array.append(object)
+            case let arr as JSONArray:
+                let arr = arr.normalizePaths(rootDirectory: rootDirectory, designator: designator)
+                array.append(arr)
+            default:
+                array.append(item)
+            }
+        }
+        
+        return array
     }
 }

@@ -165,7 +165,10 @@ class DownloadPlayerItemOperation: AsyncOperation {
                     return
                 }
                 self.error = (self.error == nil) ? op.error : self.error
-                self.remappedURLs[sourceURL] = op.destinationURL
+                
+                if self.error == nil {
+                    self.remappedURLs[sourceURL] = op.destinationURL
+                }
                 downloadComplete()
             }
             return op
@@ -179,7 +182,11 @@ class DownloadPlayerItemOperation: AsyncOperation {
                     return
                 }
                 self.error = (self.error == nil) ? op.error : self.error
-                self.remappedURLs[sourceURL] = op.destinationURL
+                
+                if self.error == nil {
+                    self.remappedURLs[sourceURL] = op.destinationURL
+                }
+                
                 downloadComplete()
             }
             return op
@@ -278,7 +285,7 @@ class DownloadPlayerItemOperation: AsyncOperation {
         if let path = source["file"] as? String,
             let url = URL(string: path),
             let mappedURL = remappedURLs[url] {
-            source["file"] = mappedURL.absoluteString
+            source["file"] = mappedURL.pathRelativeToItemDirectory
         }
         else {
             error = DownloadPlayerItemOperationError.cannotCreatePlayerJSON
@@ -291,7 +298,7 @@ class DownloadPlayerItemOperation: AsyncOperation {
         if let path = json["image"] as? String,
             let url = URL(string: path),
             let mappedURL = remappedURLs[url] {
-            json["image"] = mappedURL.absoluteString
+            json["image"] = mappedURL.pathRelativeToItemDirectory
         }
         
         // Write the media tracks
@@ -307,7 +314,7 @@ class DownloadPlayerItemOperation: AsyncOperation {
                 }
                 
                 var finalTrack = track
-                finalTrack["file"] = localURL.absoluteString
+                finalTrack["file"] = localURL.pathRelativeToItemDirectory
                 localTracks.append(finalTrack)
             }
             
@@ -323,5 +330,16 @@ class DownloadPlayerItemOperation: AsyncOperation {
         catch let error {
             self.error = error
         }
+    }
+    
+    /// This token is used to replace the path to the folder containing the player item's assets.
+    static let baseDirectoryToken = "{BASE-DIR}"
+}
+
+fileprivate extension URL {
+    /// Returns a relative path based on the item's base directory.
+    var pathRelativeToItemDirectory: String {
+        let path = "\(DownloadPlayerItemOperation.baseDirectoryToken)\(lastPathComponent)"
+        return path
     }
 }
