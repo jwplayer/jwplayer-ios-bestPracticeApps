@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Add your JW Player license key.
+        #warning("Add your JW Player license key.")
         // JWPlayerKitLicense.setLicenseKey(<#key: String#>)
 
         return true

@@ -24,23 +24,12 @@ class AdControlsView: XibView {
             switch playerState {
                 // If we are currently playing, we display the pause icon.
             case .playing:
-                let image: UIImage?
-                if #available(iOS 13.0, *) {
-                    image = UIImage(systemName: "pause.fill")
-                } else {
-                    // Fallback on earlier versions
-                    image = UIImage(named: "pause.fill")
-                }
+                let image = UIImage(systemName: "pause.fill")
                 playPauseButton?.setImage(image, for: .normal)
+                
                 // For all other states we display the play icon.
             default:
-                let image: UIImage?
-                if #available(iOS 13.0, *) {
-                    image = UIImage(systemName: "play.fill")
-                } else {
-                    // Fallback on earlier versions
-                    image = UIImage(named: "play.fill")
-                }
+                let image = UIImage(systemName: "play.fill")
                 playPauseButton?.setImage(image, for: .normal)
             }
         }

@@ -41,16 +41,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55008FD257451422EB175E2F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3A7BFDA48CF284094C79E38D /* Pods-BasicTVPlayer.debug.xcconfig */,
-				3BF8B8E138EBC5B97A29C83E /* Pods-BasicTVPlayer.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 		79EBB5B2285153A500EC5182 = {
 			isa = PBXGroup;
 			children = (
@@ -299,7 +289,7 @@
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TVOS_DEPLOYMENT_TARGET = 15.4;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Debug;
 		};
@@ -352,7 +342,7 @@
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TVOS_DEPLOYMENT_TARGET = 15.4;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

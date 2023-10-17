@@ -17,8 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    // Add your JW Player license key.
-    //[JWPlayerKitLicense setLicenseKey: ];
+    #warning("Add your JW Player license key.")
+    //[JWPlayerKitLicense setLicenseKey:<#(NSString * _Nonnull)#>];
+
     return YES;
 }
 

@@ -46,23 +46,12 @@ class VideoControlsView: XibView {
             switch playerState {
                 // If we are currently playing, we display the pause icon.
             case .playing:
-                let image: UIImage?
-                if #available(iOS 13.0, *) {
-                    image = UIImage(systemName: "pause.fill")
-                } else {
-                    // Fallback on earlier versions
-                    image = UIImage(named: "pause.fill")
-                }
+                let image = UIImage(systemName: "pause.fill")
                 playPauseButton?.setImage(image, for: .normal)
+                
                 // For all other states we display the play icon.
             default:
-                let image: UIImage?
-                if #available(iOS 13.0, *) {
-                    image = UIImage(systemName: "play.fill")
-                } else {
-                    // Fallback on earlier versions
-                    image = UIImage(named: "play.fill")
-                }
+                let image = UIImage(systemName: "play.fill")
                 playPauseButton?.setImage(image, for: .normal)
             }
         }
@@ -75,24 +64,13 @@ class VideoControlsView: XibView {
                 // When we are a smaller window, we display an arrow icon denoting
                 // the option to enter full screen.
             case .normal:
-                let image: UIImage?
-                if #available(iOS 13.0, *) {
-                    image = UIImage(systemName: "arrow.up.left.and.arrow.down.right")
-                }  else {
-                    // Fallback on earlier versions
-                    image = UIImage(named: "arrow.up.left.and.arrow.down.right")
-                }
+                let image = UIImage(systemName: "arrow.up.left.and.arrow.down.right")
                 fullScreenButton?.setImage(image, for: .normal)
+                
                 // When we are a full screen window, we display an arrow icon denoting
                 // the option to dismiss full screen.
             default:
-                let image: UIImage?
-                if #available(iOS 13.0, *) {
-                    image = UIImage(systemName: "arrow.down.right.and.arrow.up.left")
-                }  else {
-                    // Fallback on earlier versions
-                    image = UIImage(named: "arrow.down.right.and.arrow.up.left")
-                }
+                let image = UIImage(systemName: "arrow.down.right.and.arrow.up.left")
                 fullScreenButton?.setImage(image, for: .normal)
             }
         }
