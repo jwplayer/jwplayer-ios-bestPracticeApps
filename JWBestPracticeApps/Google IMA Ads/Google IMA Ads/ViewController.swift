@@ -44,7 +44,7 @@ class ViewController: JWPlayerViewController {
 
             // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig.
             let config = try JWPlayerConfigurationBuilder()
-                .playlist([playerItem])
+                .playlist(items: [playerItem])
                 .advertising(adConfig)
                 .autostart(true)
                 .build()

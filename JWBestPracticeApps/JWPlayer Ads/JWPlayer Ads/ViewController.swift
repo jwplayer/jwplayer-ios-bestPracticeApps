@@ -9,7 +9,7 @@ import UIKit
 import JWPlayerKit
 
 class ViewController: JWPlayerViewController {
-    private let adUrlString = "https://playertest.longtailvideo.com/pre-60s.xml"
+    private let adUrlString = "https://playertest.longtailvideo.com/pre.xml"
     private let videoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
     private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
 
@@ -44,7 +44,7 @@ class ViewController: JWPlayerViewController {
 
             // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig
             let config = try JWPlayerConfigurationBuilder()
-                .playlist([playerItem])
+                .playlist(items: [playerItem])
                 .advertising(adConfig)
                 .autostart(true)
                 .build()
@@ -65,7 +65,7 @@ class ViewController: JWPlayerViewController {
 
         switch event.type {
         case .adBreakStart:
-            print("Ad break has begun")
+            print("The ad break has begun")
         case .schedule:
             print("The ad(s) has been scheduled")
         case .request:
