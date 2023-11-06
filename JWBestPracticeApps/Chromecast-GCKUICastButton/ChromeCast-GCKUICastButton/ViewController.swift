@@ -65,6 +65,7 @@ class ViewController: JWPlayerViewController {
         // We initialize the GCKUICastButton and add to the view, for the user to interact with.
         let castButton = GCKUICastButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
         castButton.tintColor = .white
+        castButton.delegate = self
         // Since this is embedded in a container view, we update the parent's navigation item.
         parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: castButton)
     }
@@ -91,7 +92,7 @@ class ViewController: JWPlayerViewController {
     override func castController(_ controller: JWCastController, disconnectedWithError error: Error?) {
         super.castController(controller, disconnectedWithError: error)
         
-        if let error = error {
+        if let error {
             print("[JWCastDelegate]: Casting disconnected from device with error: \"\(error.localizedDescription)\"")
         }
         else {
@@ -135,7 +136,7 @@ class ViewController: JWPlayerViewController {
     override func castController(_ controller: JWCastController, castingEndedWithError error: Error?) {
         super.castController(controller, castingEndedWithError: error)
         
-        if let error = error {
+        if let error {
             print("[JWCastDelegate]: Casting ended with error: \"\(error.localizedDescription)\"")
         }
         else {
@@ -146,3 +147,25 @@ class ViewController: JWPlayerViewController {
 }
 
 
+// MARK: GCKUICastButtonDelegate
+
+extension ViewController: GCKUICastButtonDelegate {
+    func castButtonDidTap(_ castButton: GCKUICastButton, toPresentDialogFor castState: GCKCastState) {
+        print(#function, "for state: ** \(castState.description) **")
+    }
+
+    func castButtonDidTap(toPresentLocalNetworkAccessPermissionDialog castButton: GCKUICastButton) {
+        print(#function)
+    }
+}
+
+extension GCKCastState: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .noDevicesAvailable: return "noDevicesAvailable"
+        case .notConnected: return "notConnected"
+        case .connecting: return "connecting"
+        case .connected: return "connected"
+        }
+    }
+}
