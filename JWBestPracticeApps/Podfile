@@ -7,11 +7,11 @@ def common_JWPlayer
   workspace 'JWBestPracticeApps-4x'
   use_frameworks!
   
-  pod 'JWPlayerKit', '~> 4'
+  pod 'JWPlayerKit', '>= 4.17.1'
 end
 
 def common_Cast
-  pod 'google-cast-sdk', '~> 4.8.0'
+  pod 'google-cast-sdk', '4.8.0'
 end
 
 def common_Google_IMA
