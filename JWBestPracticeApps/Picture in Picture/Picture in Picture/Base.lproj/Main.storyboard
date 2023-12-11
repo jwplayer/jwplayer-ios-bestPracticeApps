@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ya1-KD-Jod">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ya1-KD-Jod">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,10 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-bu-fBE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Ph4-xr-g3n"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <connections>
                                     <segue destination="Ofe-R3-YvD" kind="embed" id="yrU-Zi-svn"/>
                                 </connections>
@@ -29,9 +27,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="B8a-bu-fBE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4e9-xb-5KG"/>
-                            <constraint firstItem="B8a-bu-fBE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CQ0-ZB-dJm"/>
-                            <constraint firstItem="B8a-bu-fBE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b8N-qG-ddg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B8a-bu-fBE" secondAttribute="bottom" id="3vw-OL-ObP"/>
+                            <constraint firstItem="B8a-bu-fBE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zq3-W5-FqW"/>
+                            <constraint firstItem="B8a-bu-fBE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cAq-vL-Mgr"/>
+                            <constraint firstItem="B8a-bu-fBE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dbC-xQ-nmI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Picture in Picture" id="CrZ-V7-9G3">
@@ -55,7 +54,7 @@
             <objects>
                 <navigationController id="ya1-KD-Jod" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Iy-lp-mZH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -69,7 +68,6 @@
         <!--Player View Controller-->
         <scene sceneID="313-Qe-xoY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oEw-UH-0y4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Ofe-R3-YvD" customClass="PlayerViewController" customModule="Picture_in_Picture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DGy-IF-CnN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
@@ -78,12 +76,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEw-UH-0y4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1494" y="-136"/>
         </scene>
     </scenes>
     <resources>
-        <image name="pip" catalog="system" width="128" height="96"/>
+        <image name="pip" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
