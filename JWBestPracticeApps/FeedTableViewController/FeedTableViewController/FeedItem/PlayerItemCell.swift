@@ -25,11 +25,6 @@ class PlayerItemCell: UITableViewCell {
         willSet { loadCellPlayer(with: newValue) }
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        playerView.player.stop()
-    }
-    
     /// Loads the cell's player using the relatively inexpensive `loadPlaylist` API.
     private func loadCellPlayer(with item: JWPlayerItem?) {
         guard let item,
