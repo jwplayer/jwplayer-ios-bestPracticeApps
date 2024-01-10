@@ -73,7 +73,6 @@ class FeedTableViewController: UITableViewController {
     func calculateCurrentPage() {
         let pageHeight = tableView.frame.height
         page = Int((tableView.contentOffset.y + pageHeight / 2) / pageHeight)
-        print("Current Page: \(page)")
     }
     
 }
