@@ -11,6 +11,22 @@ class FeedTableViewController: UITableViewController {
     /// Instantiated with our mock/hard-coded playlist.
     private var viewModel = FeedViewModel(withItems: Playlist.bpaManual)
 
+    private var page: Int = 0 {
+        didSet {
+            guard page != oldValue else {
+                return
+            }
+            let previousIndexPath = IndexPath(row: oldValue, section: 0)
+            let indexPath = IndexPath(row: page, section: 0)
+            if let cell = tableView.cellForRow(at: previousIndexPath) as? PlayerItemCell {
+                cell.playerView.player.pause()
+            }
+            if let cell = tableView.cellForRow(at: indexPath) as? PlayerItemCell {
+                cell.playerView.player.play()
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
@@ -43,38 +59,23 @@ class FeedTableViewController: UITableViewController {
         
         return cell
     }
-    
-    
-    // MARK: UITableViewDelegate implementation
-    
-    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = cell as? PlayerItemCell else {
-            return
-        }
-        
-        // Pause a cell as it goes offscreen
-        cell.playerView.player.pause()
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = cell as? PlayerItemCell else {
-            return
-        }
-        
-        // Play a cell as it becomes visible
-        cell.playerView.player.play()
 
-        // Add more rows to the data source when we hit the end.
-        Task {
-            if indexPath.row == viewModel.count - 1 {
-                viewModel.appendItems(fromPlaylist: Playlist.bpaManual)
-            }
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        calculateCurrentPage()
+    }
+
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            calculateCurrentPage()
         }
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
+
+    func calculateCurrentPage() {
+        let pageHeight = tableView.frame.height
+        page = Int((tableView.contentOffset.y + pageHeight / 2) / pageHeight)
+        print("Current Page: \(page)")
     }
+    
 }
 
 extension FeedTableViewController: FeedViewModelDelegate {
