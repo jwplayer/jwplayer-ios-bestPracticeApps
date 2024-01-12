@@ -25,6 +25,9 @@ class PlayerItemCell: UITableViewCell {
         willSet { loadCellPlayer(with: newValue) }
     }
     
+    /// Determines if the player item should autostart.
+    var autostart: Bool = false
+
     /// Loads the cell's player using the relatively inexpensive `loadPlaylist` API.
     private func loadCellPlayer(with item: JWPlayerItem?) {
         guard let item,
@@ -58,7 +61,8 @@ class PlayerItemCell: UITableViewCell {
 
         return try? JWPlayerConfigurationBuilder()
             .playlist(items: [item])
-            .autostart(true)
+            .autostart(autostart)
+            .preload(.auto)
             .repeatContent(true)
             .build()
     }

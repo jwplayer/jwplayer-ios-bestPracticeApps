@@ -38,6 +38,8 @@ class FeedTableViewController: UITableViewController {
         }
     }
 
+    var autostartFirstTime: Bool = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
@@ -66,6 +68,10 @@ class FeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath)
         if let cell = cell as? PlayerItemCell {
+            if autostartFirstTime {
+                autostartFirstTime = false
+                cell.autostart = true
+            }
             cell.item = viewModel.itemForVideoMetadata(at: indexPath.row)
             cell.descriptionLabel.text = "video #\(indexPath.row + 1)"
         }
