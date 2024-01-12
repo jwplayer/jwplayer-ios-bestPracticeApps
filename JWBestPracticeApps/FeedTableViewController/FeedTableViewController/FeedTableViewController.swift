@@ -11,18 +11,29 @@ class FeedTableViewController: UITableViewController {
     /// Instantiated with our mock/hard-coded playlist.
     private var viewModel = FeedViewModel(withItems: Playlist.bpaManual)
 
+    /// Helps to handle media playback when navigating through the feed.
     private var page: Int = 0 {
         didSet {
             guard page != oldValue else {
                 return
             }
+
             let previousIndexPath = IndexPath(row: oldValue, section: 0)
             let indexPath = IndexPath(row: page, section: 0)
+
             if let cell = tableView.cellForRow(at: previousIndexPath) as? PlayerItemCell {
                 cell.playerView.player.pause()
             }
+
             if let cell = tableView.cellForRow(at: indexPath) as? PlayerItemCell {
                 cell.playerView.player.play()
+            }
+
+            // Add more rows to the data source when we hit the end.
+            Task {
+                if page == viewModel.count - 1 {
+                    viewModel.appendItems(fromPlaylist: Playlist.bpaManual)
+                }
             }
         }
     }
@@ -36,7 +47,9 @@ class FeedTableViewController: UITableViewController {
         tableView.register(feedNib, forCellReuseIdentifier: viewModel.cellReuseIdentifier)
         
         // Various stylistic options.
+        tableView.scrollsToTop = false
         tableView.isPagingEnabled = true
+        tableView.contentInsetAdjustmentBehavior = .never
         tableView.rowHeight = view.bounds.inset(by: view.safeAreaInsets).height
         
         // Must be called once to populate the table view.
