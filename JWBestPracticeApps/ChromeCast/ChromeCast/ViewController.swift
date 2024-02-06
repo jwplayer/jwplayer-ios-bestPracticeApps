@@ -74,7 +74,7 @@ class ViewController: JWPlayerViewController {
     override func castController(_ controller: JWCastController, disconnectedWithError error: Error?) {
         super.castController(controller, disconnectedWithError: error)
         
-        if let error = error {
+        if let error {
             print("[JWCastDelegate]: Casting disconnected from device with error: \"\(error.localizedDescription)\"")
         }
         else {
@@ -118,7 +118,7 @@ class ViewController: JWPlayerViewController {
     override func castController(_ controller: JWCastController, castingEndedWithError error: Error?) {
         super.castController(controller, castingEndedWithError: error)
         
-        if let error = error {
+        if let error {
             print("[JWCastDelegate]: Casting ended with error: \"\(error.localizedDescription)\"")
         }
         else {

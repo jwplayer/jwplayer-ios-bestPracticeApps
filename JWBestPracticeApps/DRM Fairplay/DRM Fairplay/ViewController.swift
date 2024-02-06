@@ -109,12 +109,12 @@ class ViewController: JWPlayerViewController,
      - note: The Application Certificate must be encoded with the X.509 standard with distinguished encoding rules (DER). It is obtained when registering an FPS playback app with Apple, by supplying an X.509 Certificate Signing Request linked to your private key.
      */
     func appIdentifierForURL(_ url: URL, completionHandler handler: @escaping (Data?) -> Void) {
-        guard let certificateURLStr = certificateURLStr, let certificateURL = URL(string: certificateURLStr) else {
+        guard let certificateURLStr, let certificateURL = URL(string: certificateURLStr) else {
             return
         }
         let request = URLRequest(url: certificateURL)
         let task = URLSession.shared.dataTask(with: request) { (data, response, err) in
-            if let err = err {
+            if let err {
                 print(err.localizedDescription)
             }
             handler(data)
@@ -130,7 +130,7 @@ class ViewController: JWPlayerViewController,
      - note: For resources that may expire, specify a renewal date and the content-type in the completion block.
      */
     func contentKeyWithSPCData(_ spcData: Data, completionHandler handler: @escaping (Data?, Date?, String?) -> Void) {
-        guard let processSPCURLStr = processSPCURLStr, let processSPCURL = URL(string: processSPCURLStr) else {
+        guard let processSPCURLStr, let processSPCURL = URL(string: processSPCURLStr) else {
             return
         }
         var request = URLRequest(url: processSPCURL)
@@ -139,7 +139,7 @@ class ViewController: JWPlayerViewController,
         request.httpBody = spcData
 
         let task = URLSession.shared.dataTask(with: request) { (data, response, err) in
-            if let err = err {
+            if let err {
                 print(err.localizedDescription)
             }
             handler(data, nil, "application/octet-stream")
