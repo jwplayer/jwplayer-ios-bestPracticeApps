@@ -10,15 +10,13 @@ import JWPlayerKit
 
 /// A structure that provides a hard-coded 'feed' of `JWPlayerItem`s.
 struct Playlist {
-    /// A hard-coded playlist on the
-    /// * The "BPA Manual, landscape" playlist, id: [d7sk9orq](https://cdn.jwplayer.com/v2/playlists/d7sk9orq)
-    /// * The "BPA Manual, portrait" playlist, id: [V44RvNO4](https://cdn.jwplayer.com/v2/playlists/V44RvNO4)
+    /// A hard-coded playlist on the of assets in portrait resolution, with `playlistId`: [V44RvNO4](https://cdn.jwplayer.com/v2/playlists/V44RvNO4)
     static var bpaManual: [JWPlayerItem] = {
         titledSources
             .compactMap {
                 try? JWPlayerItemBuilder()
                     .title($0)
-                    .file( URL(string: $1)! )
+                    .file(URL(string: $1)!)
                     .build()
             }
     }()
