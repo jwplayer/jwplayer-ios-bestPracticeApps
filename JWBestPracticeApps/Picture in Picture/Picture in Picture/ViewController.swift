@@ -18,6 +18,15 @@ class ViewController: UIViewController {
     private let posterUrlString = "https://d3el35u4qe4frz.cloudfront.net/bkaovAYt-480.jpg"
     private var pipPossibleObservation: NSKeyValueObservation?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Once view is loaded, create an observer to monitor whether or not Picture in Picture is currently available.
+        pipPossibleObservation = playerVC?.playerView.pictureInPictureController?.observe(\AVPictureInPictureController.isPictureInPicturePossible, options: [.initial, .new]) { [weak self] _, change in
+            // Make changes depending on whether Picture in Picture is possible or not, such as enabling a button to toggle Picture in Picture mode.
+            self?.pipButton.isEnabled = change.newValue ?? false
+        }
+    }
+    
     deinit {
         pipPossibleObservation = nil
     }
@@ -44,13 +53,7 @@ class ViewController: UIViewController {
                     .build()
 
                 // Third, use the created JWPlayerConfiguration to set up the player.
-                vc.player.configurePlayer(with: config)
-
-                // Fourth, create an observer to monitor whether or not Picture in Picture is currently available.
-                pipPossibleObservation = vc.playerView.pictureInPictureController?.observe(\AVPictureInPictureController.isPictureInPicturePossible, options: [.initial, .new]) { [weak self] _, change in
-                    // Make changes depending on whether Picture in Picture is possible or not, such as enabling a button to toggle Picture in Picture mode.
-                    self?.pipButton.isEnabled = change.newValue ?? false
-                }
+                vc.config = config
 
                 // Lastly, store the current player view controller
                 playerVC = vc

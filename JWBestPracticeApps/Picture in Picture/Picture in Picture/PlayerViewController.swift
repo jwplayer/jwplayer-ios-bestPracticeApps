@@ -11,6 +11,18 @@ import JWPlayerKit
 
 class PlayerViewController: JWPlayerViewController {
 
+    var config: JWPlayerConfiguration!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        guard let config else {
+            fatalError("A player config should be specified.")
+        }
+        
+        player.configurePlayer(with: config)
+    }
+
     // Reports when Picture in Picture is about to start.
     override func pictureInPictureControllerWillStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
         super.pictureInPictureControllerWillStartPictureInPicture(pictureInPictureController)
