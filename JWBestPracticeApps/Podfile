@@ -7,7 +7,7 @@ def common_JWPlayer
   workspace 'JWBestPracticeApps-4x'
   use_frameworks!
   
-  pod 'JWPlayerKit', '>= 4.17.1'
+  pod 'JWPlayerKit', '>= 4.19.0'
 end
 
 def common_Cast
@@ -15,7 +15,7 @@ def common_Cast
 end
 
 def common_Google_IMA
-  pod 'GoogleAds-IMA-iOS-SDK', '3.19.1'
+  pod 'GoogleAds-IMA-iOS-SDK', '3.22.0'
 end
 
 target 'AdvancedPlayer' do
