@@ -56,18 +56,26 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        Task { await preloadContent(from: playlistURL) }
+    }
+    
+    func preloadContent(from urlString: String) async {
         // The keys can be pre-loaded by calling load on the content loader.
-        guard let url = URL(string: playlistURL) else {
-            print("Cannot initialize player because playlistURL is invalid. URL:'\(playlistURL)'")
+        guard let url = URL(string: urlString) else {
+            print("Cannot initialize player because playlistURL is invalid. URL:'\(urlString)'")
             return
         }
         contentLoader = JWDRMContentLoader(dataSource: keyDataSource, keyManager: keyManager)
-        self.contentLoader?.load(playlist: url)
-        
+        await self.contentLoader?.load(playlist: url)
+        configurePlayer(with: url)
+    }
+    
+    private func configurePlayer(with url: URL) {
         // We construct a playlist either from the remote asset or a local asset if it is saved.
         var config: JWPlayerConfiguration!
         
-        if let localURL = localURL {
+        if let localURL {
             config = self.getPlaylist(local: localURL)
             // Updates the UI to reflect that the asset is already downloaded.
             stateLabel?.text = "Saved"
@@ -93,6 +101,7 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
             return
         }
         // Set this controller's player reference to the embedded JWPlayerViewController's.
+        playerViewController.loadViewIfNeeded()
         self.player = playerViewController.player
     }
     
