@@ -24,25 +24,30 @@ class PlayerItemCell: UITableViewCell {
     var item: JWPlayerItem? {
         willSet { loadCellPlayer(with: newValue) }
     }
-    
-    /// Determines if the player item should autostart.
-    var autostart: Bool = false
 
-    /// Loads the cell's player using the relatively inexpensive `loadPlaylist` API.
-    private func loadCellPlayer(with item: JWPlayerItem?) {
+    /// Starts player's playback by configuring or loading the item.
+    public func startPlayback() {
         guard let item,
               let config = getPlayerConfig(for: item) else {
             return
         }
 
-        titleLabel.text = item.title
-        playerView.videoGravity = .resizeAspectFill
-    
         if playerNeedsToBeConfigured() {
             playerView.player.configurePlayer(with: config)
         } else {
             playerView.player.loadPlaylist(items: [item])
         }
+    }
+
+    /// Pauses player's playback
+    public func pausePlayback() {
+        playerView.player.pause()
+    }
+
+    /// Loads the cell's player using the relatively inexpensive `loadPlaylist` API.
+    private func loadCellPlayer(with item: JWPlayerItem?) {
+        titleLabel.text = item?.title
+        playerView.videoGravity = .resizeAspectFill
     }
     
     /// If the player has not been initialized yet, or is stuck in an unrecoverable error state,
@@ -61,9 +66,14 @@ class PlayerItemCell: UITableViewCell {
 
         return try? JWPlayerConfigurationBuilder()
             .playlist(items: [item])
-            .autostart(autostart)
+            .autostart(true)
             .preload(.auto)
             .repeatContent(true)
             .build()
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        playerView?.player.stop()
     }
 }

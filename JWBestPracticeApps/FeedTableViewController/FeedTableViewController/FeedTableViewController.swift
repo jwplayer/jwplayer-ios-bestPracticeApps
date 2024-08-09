@@ -12,7 +12,7 @@ class FeedTableViewController: UITableViewController {
     private var viewModel = FeedViewModel(withItems: Playlist.bpaManual)
 
     /// Helps to handle media playback when navigating through the feed.
-    private var page: Int = 0 {
+    private var page: Int = -1 {
         didSet {
             guard page != oldValue else {
                 return
@@ -22,11 +22,11 @@ class FeedTableViewController: UITableViewController {
             let indexPath = IndexPath(row: page, section: 0)
 
             if let cell = tableView.cellForRow(at: previousIndexPath) as? PlayerItemCell {
-                cell.playerView.player.pause()
+                cell.pausePlayback()
             }
 
             if let cell = tableView.cellForRow(at: indexPath) as? PlayerItemCell {
-                cell.playerView.player.play()
+                cell.startPlayback()
             }
 
             // Add more rows to the data source when we hit the end.
@@ -56,6 +56,10 @@ class FeedTableViewController: UITableViewController {
         
         // Must be called once to populate the table view.
         viewModel.appendItems(fromPlaylist: Playlist.bpaManual)
+
+        Task { @MainActor in
+            calculateCurrentPage()
+        }
     }
 
     
@@ -68,10 +72,6 @@ class FeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath)
         if let cell = cell as? PlayerItemCell {
-            if autostartFirstTime {
-                autostartFirstTime = false
-                cell.autostart = true
-            }
             cell.item = viewModel.itemForVideoMetadata(at: indexPath.row)
             cell.descriptionLabel.text = "video #\(indexPath.row + 1)"
         }
