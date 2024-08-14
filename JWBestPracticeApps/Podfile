@@ -16,7 +16,7 @@ def common_Cast
 end
 
 def common_Google_IMA
-  pod 'GoogleAds-IMA-iOS-SDK', '3.22.0'
+  pod 'GoogleAds-IMA-iOS-SDK', '3.22.1'
 end
 
 target 'AdvancedPlayer' do
