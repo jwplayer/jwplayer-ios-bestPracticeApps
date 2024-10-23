@@ -54,39 +54,20 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     /// An observer to track the download progress.
     var progressObserver: NSKeyValueObservation?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Create the configuration for the AVAssetDownloadURLSession.
-        let backgroundConfiguration = URLSessionConfiguration.background(withIdentifier: "AAPL-Identifier")
-        assetDownloadURLSession = AVAssetDownloadURLSession(configuration: backgroundConfiguration,
-                                                            assetDownloadDelegate: self, delegateQueue: delegateQueue)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    
-        // It's safe to sping this off in an unstructured Task because all work prior to this (in viewDidLoad) is synchronous.
-        Task(priority: .userInitiated) {
-            // NOTE: This app demonstrates best practices with regards to Offline DRM implementation, NOT with
-            // implementing Swift Concurrency integration, which would require bridging Apple's `AVContentKeySessionDelegate`
-            // methods as a starting point.
-            await setupPlayer()
-        }
-    }
-    
-    private func setupPlayer() async {
         // The keys can be pre-loaded by calling load on the content loader.
         guard let url = URL(string: playlistURL) else {
             print("Cannot initialize player because playlistURL is invalid. URL:'\(playlistURL)'")
             return
         }
         contentLoader = JWDRMContentLoader(dataSource: keyDataSource, keyManager: keyManager)
-        await self.contentLoader?.load(playlist: url)
+        self.contentLoader?.load(playlist: url)
         
         // We construct a playlist either from the remote asset or a local asset if it is saved.
         var config: JWPlayerConfiguration!
         
-        if let localURL {
+        if let localURL = localURL {
             config = self.getPlaylist(local: localURL)
             // Updates the UI to reflect that the asset is already downloaded.
             stateLabel?.text = "Saved"
@@ -97,6 +78,14 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
         self.player?.contentLoader = self.contentLoader
         // We configure the player.
         self.player?.configurePlayer(with: config)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Create the configuration for the AVAssetDownloadURLSession.
+        let backgroundConfiguration = URLSessionConfiguration.background(withIdentifier: "AAPL-Identifier")
+        assetDownloadURLSession = AVAssetDownloadURLSession(configuration: backgroundConfiguration,
+                                                            assetDownloadDelegate: self, delegateQueue: delegateQueue)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
