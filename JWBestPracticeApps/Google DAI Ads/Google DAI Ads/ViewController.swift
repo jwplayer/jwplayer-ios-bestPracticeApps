@@ -10,7 +10,7 @@ import JWPlayerKit
 
 class ViewController: JWPlayerViewController {
     private let videoID = "tears-of-steel"
-    private let cmsID = "2528370"
+    private let cmsID = "2548831"
     private let assetKey = "sN_IYUG8STe1ZzhIIE_ksA"
     private let fallbackVideoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
     private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
