@@ -18,7 +18,9 @@ import AVFoundation
 // 6. Time observation for ads
 
 class ViewController: JWPlayerViewController,
-                      JWPlayerViewControllerDelegate,
+					  JWPlayerViewControllerFullScreenDelegate,
+					  JWPlayerViewControllerUIDelegate,
+					  JWPlayerViewControllerRelatedDelegate,
                       CustomControlsDelegate {
 
     private let videoUrlString = "http://content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4"
@@ -36,7 +38,9 @@ class ViewController: JWPlayerViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        delegate = self
+		fullScreenDelegate = self
+		uiDelegate = self
+		relatedDelegate = self
 
         // Set the view's background color to black for better contrast.
         view.backgroundColor = .black
@@ -295,7 +299,7 @@ class ViewController: JWPlayerViewController,
         }
     }
 
-    // MARK: - JWPlayerViewControllerDelegate
+	// MARK: - JWPlayerViewControllerFullScreenDelegate
 
     func playerViewControllerWillGoFullScreen(_ controller: JWPlayerViewController) -> JWFullScreenViewController? {
         // Create and retain a JWFullScreenViewController that we can use to add custom controls to
@@ -321,6 +325,8 @@ class ViewController: JWPlayerViewController,
         addCustomControls(toView: view)
     }
 
+	// MARK: JWPlayerViewControllerUIDelegate
+	
     func playerViewController(_ controller: JWPlayerViewController, controlBarVisibilityChanged isVisible: Bool, frame: CGRect) {
 
     }
@@ -332,6 +338,8 @@ class ViewController: JWPlayerViewController,
     func playerViewController(_ controller: JWPlayerViewController, screenTappedAt position: CGPoint) {
 
     }
+	
+	// MARK: JWPlayerViewControllerRelatedDelegate
 
     func playerViewController(_ controller: JWPlayerViewController, relatedMenuOpenedWithItems items: [JWPlayerItem], withMethod method: JWRelatedInteraction) {
 

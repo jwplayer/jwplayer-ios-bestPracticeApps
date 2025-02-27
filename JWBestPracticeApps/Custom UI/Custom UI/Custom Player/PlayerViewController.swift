@@ -157,10 +157,6 @@ extension PlayerViewController: JWPlayerStateDelegate {
         // Unimplemented in this example.
     }
     
-    func jwplayerContentIsBuffering(_ player: JWPlayer) {
-        // Unimplemented in this example.
-    }
-    
     func jwplayer(_ player: JWPlayer, updatedBuffer percent: Double, position time: JWTimeData) {
         // Unimplemented in this example.
     }

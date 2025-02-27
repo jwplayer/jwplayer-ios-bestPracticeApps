@@ -38,7 +38,7 @@ class BasicPlayerViewController: JWCinematicViewController {
 
             // Second, build a player configuration using the player item
             let config = try JWPlayerConfigurationBuilder()
-                .playlist([item])
+				.playlist(items: [item])
                 .build()
             
             // Last, configure the player

@@ -47,7 +47,7 @@
     // Second, create a player config with the created JWPlayerItem.
     JWError *configError;
     JWPlayerConfigurationBuilder *configBuilder = [[JWPlayerConfigurationBuilder alloc] init];
-    [configBuilder playlist:@[playerItem]];
+	[configBuilder playlistWithItems:@[playerItem]];
     JWPlayerConfiguration *config = [configBuilder buildAndReturnError:&configError];
     if (configError != nil) {
         // Handle error
