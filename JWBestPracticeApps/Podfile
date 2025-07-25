@@ -3,11 +3,11 @@
 ####################################
 
 def common_JWPlayer
-  platform :ios, '14.0'
+  platform :ios, '15.0'
   workspace 'JWBestPracticeApps-4x'
   use_frameworks!
   
-  pod 'JWPlayerKit', '4.22.0'
+  pod 'JWPlayerKit', '4.23.0'
 end
 
 def common_Cast
@@ -116,7 +116,7 @@ end
 ####################################
 
 def common_JWPlayerTVKit
-  platform :tvos, '14.0'
+  platform :tvos, '15.0'
   use_frameworks!
   
   pod 'JWPlayerTVKit', '~> 1'
@@ -136,11 +136,11 @@ post_install do |installer|
     end
   end
 
-  puts 'Setting IPHONEOS_DEPLOYMENT_TARGET = 14.0 for all Pods in Project'
+  puts 'Setting IPHONEOS_DEPLOYMENT_TARGET = 15.0 for all Pods in Project'
   installer.generated_projects.each do |project|
     project.targets.each do |target|
       target.build_configurations.each do |config|
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.0'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
       end
     end
   end
