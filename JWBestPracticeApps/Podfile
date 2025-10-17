@@ -7,7 +7,7 @@ def common_JWPlayer
   workspace 'JWBestPracticeApps-4x'
   use_frameworks!
   
-  pod 'JWPlayerKit', '4.23.1'
+  pod 'JWPlayerKit', '4.23.2'
 end
 
 def common_Cast
