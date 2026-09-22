@@ -11,8 +11,8 @@ enum AdScheduling {
     /// An explicit schedule: a pre-roll, a mid-roll at 30 seconds, and a post-roll. The ad server
     /// auctions each break; no VAST tags are needed.
     case manual
-    /// You list which positions may have a break (pre, mid, post) and give timing rules; the SDK's ad
-    /// scheduler places the mid-rolls by those rules, and the ad server auctions each break.
+    /// A pre-roll, then mid-rolls placed by the SDK's ad scheduler from the timing rules below, and a
+    /// post-roll. The ad server auctions each break.
     case dynamic
 }
 
@@ -25,7 +25,7 @@ enum AdScheduling {
 enum CNXPlayerConfiguration {
     private static let contentURL = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8")!
 
-    /// Content seconds before the first dynamic mid-roll, and between later ones.
+    /// No dynamic mid-roll before this much content, and at least this much content between breaks.
     static let dynamicFirstMidrollAfter: TimeInterval = 30
     static let dynamicSecondsBetweenMidrolls: TimeInterval = 60
 
@@ -35,20 +35,19 @@ enum CNXPlayerConfiguration {
        out of view, and resumes when it comes back.
      */
     static func make(scheduling: AdScheduling,
-                     autoPauseAdsOnViewability: Bool = false,
-                     autostart: Bool = true) throws -> JWPlayerConfiguration {
+                     autoPauseAdsOnViewability: Bool = false) throws -> JWPlayerConfiguration {
         let item = try JWPlayerItemBuilder()
             .file(contentURL)
             .title("CNX Ad Server")
             .build()
 
         let settings = JWCNXSettingsBuilder()
-            // "strict" (the default) holds new auctions while the player is out of view. It never
-            // pauses an ad that is already playing — that is what autoPauseAdsOnViewability does.
+            // "strict" is the default, set here only to make it visible. It never pauses an ad that
+            // is already playing — that is what autoPauseAdsOnViewability does.
             .viewabilityPolicy("strict")
             .autoPauseAdsOnViewability(autoPauseAdsOnViewability)
-            // Turns on the Google IMA SDK's own debug logging for IMA-rendered ads, and marks ad
-            // requests as debug requests. Remove before shipping.
+            // Turns on the Google IMA SDK's own debug logging for IMA-rendered ads, and ad-error
+            // logging in the ad service. Remove before shipping.
             .debugMode(true)
 
         // The App Store ID your app is registered under for ad serving. It is the app identity the ad
@@ -69,12 +68,13 @@ enum CNXPlayerConfiguration {
             ])
         case .dynamic:
             let rules = JWCNXDynamicAdRulesBuilder()
+                // The dynamic pre-roll is controlled by forcePreroll alone.
                 .forcePreroll(true)
                 .secondsOfContentBeforeFirstAd(dynamicFirstMidrollAfter)
                 .secondsOfContentBetweenAds(dynamicSecondsBetweenMidrolls)
                 .build()
-            // Only the positions listed here can ever play; the rules above only decide WHEN. A break
-            // with no tag or VAST XML is auctioned by the ad server.
+            // Mid- and post-rolls play only at the positions added here; the rules above decide when.
+            // A break with no tag or VAST XML is auctioned by the ad server.
             let auctionedBreak = JWCNXDynamicAdBreakBuilder().build()
             settings.dynamicAds(JWCNXDynamicAdsConfigBuilder()
                 .rules(rules)
@@ -91,7 +91,7 @@ enum CNXPlayerConfiguration {
             // Your App Player's ID, which scopes ad requests to this placement.
             .playerId(CNXConfig.dashboardPlayerId)
             .advertising(try advertising.build())
-            .autostart(autostart)
+            .autostart(true)
             .build()
     }
 }

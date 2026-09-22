@@ -40,7 +40,8 @@ class AdEventLogViewController: JWPlayerViewController {
         onMain { [weak self] in self?.onSetupFinished?() }
     }
 
-    // The configuration was rejected and no player was set up.
+    // This configuration failed to set up. If it was rejected because a previous one was still loading,
+    // that previous one carries on.
     override func jwplayer(_ player: JWPlayer, failedWithSetupError code: UInt, message: String) {
         super.jwplayer(player, failedWithSetupError: code, message: message)
         log("setupError \(code): \(message)")
@@ -80,7 +81,7 @@ class AdEventLogViewController: JWPlayerViewController {
 
     // Ad errors end the ad or break, but content playback continues. The code says why — for
     // example 10064 is usually a no-fill, and 40100 means the ad service failed to set up, so no ad
-    // breaks play for the rest of the session.
+    // breaks play until the player is set up again.
     override func jwplayer(_ player: JWPlayer, encounteredAdError code: UInt, message: String) {
         super.jwplayer(player, encounteredAdError: code, message: message)
         log("adError \(code): \(message)")

@@ -22,7 +22,7 @@ Ads only play when your account is set up for them. None of the following can be
    | --- | --- | --- | --- |
    | `licenseKey` | **Yes** | Your JW Player license key | JW dashboard → [your property] → API Credentials → JW Player License Keys |
    | `dashboardPlayerId` | **Yes** | The ID of your App Player, from the **same** property (8 letters and digits) | JW dashboard → [your property] → Players → In-app tab → [your App Player] |
-   | `appStoreId` | **Yes** | The numeric App Store ID your app is registered under for ad serving. It is the app identity the ad service checks, so it decides whether ads play. Only if your app is registered by bundle identifier instead: set it to `""`, and the SDK sends the build's bundle identifier, which must then be exactly the registered one | App Store Connect → [your app] → App Information → Apple ID |
+   | `appStoreId` | **Yes** | The numeric App Store ID your app is registered under for ad serving. It is the app identity the ad service checks, so it decides whether ads play. Only if your app is registered by bundle identifier instead: set it to `""`, and the SDK sends the build's bundle identifier, which must then be exactly the registered one (target → Signing & Capabilities; this sample ships as `com.example.CNXAdServer`). SKAdNetwork attribution is then unavailable | Your ad-serving registration (step 5). Normally your app's Apple ID: App Store Connect → [your app] → App Information → Apple ID |
 
    The three required values are Xcode placeholders, so **the app does not compile until you replace them**.
 
@@ -33,19 +33,18 @@ If a value is present but malformed — for example a player ID that isn't 8 let
 ### What this app shows
 
 - **Setup and event listening** (`ViewController`, the launch screen): the simplest Ad Server setup, with a live log of every ad event, error and warning underneath the player. The player is configured in one place, `CNXPlayerConfiguration`.
-- **Manual and dynamic scheduling** (the segmented control on the launch screen): **Manual** is an explicit pre-roll, mid-roll at 30 seconds and post-roll, with each break auctioned by the ad server — no VAST tags. **Dynamic** lists which positions may have a break (pre, mid, post) and gives timing rules; the SDK's ad scheduler places the mid-rolls by those rules — the first after 30 seconds of content, then at most one every 60 seconds — and the ad server auctions each break. Only positions listed in `adBreaks` ever play.
+- **Manual and dynamic scheduling** (the segmented control on the launch screen): **Manual** is an explicit pre-roll, mid-roll at 30 seconds and post-roll, with each break auctioned by the ad server — no VAST tags. **Dynamic** lists which positions may have a break (pre, mid, post) and gives timing rules; the SDK's ad scheduler places the mid-rolls by those rules — none before 30 seconds of content, and at least 60 seconds of content between breaks — and the ad server auctions each break. Mid- and post-rolls play only at the positions added with `adBreak(_:_:)`; the pre-roll is controlled by `forcePreroll`.
 - **Pause on scroll / viewability** (`FeedViewController`, the **Feed** button): a player inside an article, set up with `autoPauseAdsOnViewability(true)`. Scroll the player out of view during an ad and the ad pauses; scroll it back and the ad resumes.
 
 ### Reading the event log
 
 A no-fill is not a failure of the app. When an auction returns no ad you will see `adRequest` followed by `adError 10064: No ad available`, and content continues. Other codes point at specific problems. `40100` means the ad service failed to set up — check first that `appStoreId` is the identity your app is registered under. Most other account-side misconfigurations (a player ID from a different property than the license key, line items in another property) are not reported as errors: the ad server simply returns no ad, so they look like a `10064` no-fill. If you only ever see `10064`, work through *Before you start*. The log also shows player warnings, which is where an advertising setup problem such as a license key without ads appears. For all error codes, see the [iOS SDK errors reference](https://docs.jwplayer.com/players/docs/ios-sdk-errors-reference).
 
-`debugMode(true)` is turned on in `CNXPlayerConfiguration` for more detailed ad logging in the Xcode console. Remove it before shipping.
 
 ### For production
 
 This app shows the minimum needed for ads to play. Before you ship your own app, also:
 
-- Add your demand partners' SKAdNetwork IDs to your Info.plist (`SKAdNetworkItems`). The SDK sends them with ad requests for install attribution.
+- Add your demand partners' SKAdNetwork IDs to your Info.plist (`SKAdNetworkItems`). The SDK sends them with ad requests for install attribution, but only when `appStoreId` is set.
 - Add `NSUserTrackingUsageDescription` to your Info.plist and request App Tracking Transparency authorization before the first player loads. Without it, ad requests carry no advertising identifier.
 - Remove `debugMode(true)` from your settings.

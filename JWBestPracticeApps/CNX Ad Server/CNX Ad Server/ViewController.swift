@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         layOutPlayerAndLog()
 
         playerViewController.onLog = { [weak self] line in self?.append(line) }
-        playerViewController.onSetupFinished = { [weak self] in self?.schedulingControl.isEnabled = true }
+        playerViewController.onSetupFinished = { [weak self] in self?.setControlsEnabled(true) }
         CNXConfig.warnings().forEach { append("Warning: \($0)") }
         setUpPlayer()
     }
@@ -44,19 +44,19 @@ class ViewController: UIViewController {
     private func setUpPlayer() {
         append(scheduling == .manual
                ? "MANUAL scheduling: pre-roll, mid-roll at 30s, post-roll."
-               : "DYNAMIC scheduling: pre-roll, then mid-rolls placed by the ad scheduler — the first after "
-                 + "\(Int(CNXPlayerConfiguration.dynamicFirstMidrollAfter))s of content, then at most one every "
-                 + "\(Int(CNXPlayerConfiguration.dynamicSecondsBetweenMidrolls))s — and a post-roll.")
-        // A configuration supplied while the previous one is still loading is rejected, so the control
-        // stays disabled until this setup finishes.
-        schedulingControl.isEnabled = false
+               : "DYNAMIC scheduling: pre-roll, then mid-rolls placed by the ad scheduler — none before "
+                 + "\(Int(CNXPlayerConfiguration.dynamicFirstMidrollAfter))s of content and at least "
+                 + "\(Int(CNXPlayerConfiguration.dynamicSecondsBetweenMidrolls))s apart — and a post-roll.")
+        // A configuration supplied while the previous one is still loading is rejected, and a pause sent
+        // before setup finishes is dropped, so both controls stay disabled until this setup finishes.
+        setControlsEnabled(false)
         do {
             let config = try CNXPlayerConfiguration.make(scheduling: scheduling)
             playerViewController.player.configurePlayer(with: config)
         } catch {
             // A builder throws only for a programming error in the configuration above.
             append("Player setup failed: \(error.localizedDescription)")
-            schedulingControl.isEnabled = true
+            setControlsEnabled(true)
         }
     }
 
@@ -66,6 +66,11 @@ class ViewController: UIViewController {
         scheduling = schedulingControl.selectedSegmentIndex == 0 ? .manual : .dynamic
         // Configuring the same player again replaces its current setup, so no restart is needed.
         setUpPlayer()
+    }
+
+    private func setControlsEnabled(_ enabled: Bool) {
+        schedulingControl.isEnabled = enabled
+        navigationItem.rightBarButtonItem?.isEnabled = enabled
     }
 
     @objc private func openFeed() {
@@ -92,8 +97,9 @@ class ViewController: UIViewController {
         eventLog.accessibilityIdentifier = "adEventLog"
         view.addSubview(eventLog)
 
-        // 16:9 where it fits; in landscape the height cap wins so the player never runs off screen and the
-        // log keeps some room.
+        // 16:9 where it fits. Rotating to landscape normally takes the player fullscreen; if it is shown
+        // inline in landscape, the height cap wins so the player never runs off screen and the log keeps
+        // some room.
         let aspectRatio = playerView.heightAnchor.constraint(equalTo: playerView.widthAnchor, multiplier: 9.0 / 16.0)
         aspectRatio.priority = .defaultHigh
 

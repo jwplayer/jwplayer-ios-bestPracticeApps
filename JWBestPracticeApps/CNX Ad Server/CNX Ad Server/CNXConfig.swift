@@ -65,7 +65,9 @@ enum CNXConfig {
     ///
     /// Only if your app is registered by its bundle identifier instead (for example, it has no App
     /// Store ID yet): set this to "". The SDK then sends this build's bundle identifier, so the
-    /// target's Bundle Identifier (Signing & Capabilities) must be exactly the registered one.
+    /// target's Bundle Identifier (Signing & Capabilities) must be exactly the registered one. This
+    /// sample ships as com.example.CNXAdServer. SKAdNetwork attribution is then unavailable, because it
+    /// needs the numeric App Store ID.
     static let appStoreId: String = <#"YOUR_APP_STORE_ID"#>
 
     /// `appStoreId` with surrounding whitespace removed, or `nil` when it is empty. This is what is

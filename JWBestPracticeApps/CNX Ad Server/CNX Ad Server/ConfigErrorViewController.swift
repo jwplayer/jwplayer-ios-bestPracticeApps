@@ -8,8 +8,8 @@ import UIKit
 /**
  Shown instead of any player when `CNXConfig` is incomplete.
 
- Lists every problem by field name, so a developer knows exactly what to fix without contacting
- support. The same text is printed to the console.
+ Lists every problem by field name, so a developer knows exactly which value to fix. The same text
+ is printed to the console.
  */
 class ConfigErrorViewController: UIViewController {
     private let problems: [CNXConfig.Problem]

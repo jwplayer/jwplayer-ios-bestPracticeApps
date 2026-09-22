@@ -25,6 +25,9 @@ class FeedViewController: UIViewController {
 
         layOutArticle()
 
+        // Keep the player inline on rotation, so a player scrolled out of view stays out of view.
+        playerViewController.forceFullScreenOnLandscape = false
+
         playerViewController.onLog = { [weak self] line in
             self?.statusLabel.text = "Last ad event: \(line)"
         }
@@ -54,6 +57,8 @@ class FeedViewController: UIViewController {
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
         statusLabel.font = .monospacedSystemFont(ofSize: 12, weight: .medium)
         statusLabel.textAlignment = .center
+        statusLabel.numberOfLines = 2
+        statusLabel.adjustsFontSizeToFitWidth = true
         statusLabel.backgroundColor = .secondarySystemBackground
         statusLabel.text = "Last ad event: none yet"
         statusLabel.accessibilityIdentifier = "adStatus"
@@ -83,19 +88,20 @@ class FeedViewController: UIViewController {
         let safeArea = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
             statusLabel.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            statusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            statusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            statusLabel.heightAnchor.constraint(equalToConstant: 32),
+            statusLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 8),
+            statusLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -8),
+            statusLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 32),
 
             scrollView.topAnchor.constraint(equalTo: statusLabel.bottomAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
             stack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 16),
             stack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -16),
-            stack.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
+            stack.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
+            stack.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
+            stack.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
 
             playerView.heightAnchor.constraint(equalTo: playerView.widthAnchor, multiplier: 9.0 / 16.0)
         ])
