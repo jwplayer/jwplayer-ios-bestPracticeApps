@@ -7,7 +7,7 @@ def common_JWPlayer
   workspace 'JWBestPracticeApps-4x'
   use_frameworks!
   
-  pod 'JWPlayerKit', '4.28.0'
+  pod 'JWPlayerKit', '4.30.0'
 end
 
 def common_Cast
@@ -66,6 +66,13 @@ end
 target 'Google IMA Ads' do
   project 'Google IMA Ads/Google IMA Ads'
   common_JWPlayer
+  common_Google_IMA
+end
+
+target 'CNX Ad Server' do
+  project 'CNX Ad Server/CNX Ad Server'
+  common_JWPlayer
+  # CNX Ad Server auctions can be won by an IMA-rendered ad, which needs the Google IMA SDK.
   common_Google_IMA
 end
 

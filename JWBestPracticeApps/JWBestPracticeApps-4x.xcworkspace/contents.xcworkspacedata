@@ -20,6 +20,9 @@
          location = "group:Chromecast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:CNX Ad Server/CNX Ad Server.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Custom UI/Custom UI.xcodeproj">
       </FileRef>
       <FileRef

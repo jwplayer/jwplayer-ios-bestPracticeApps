@@ -13,6 +13,7 @@ The BestPracticeApps [workspace](https://developer.apple.com/documentation/xcode
 |`tvOS`|[BasicTVPlayer](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/BasicTVPlayer) | Simple implementation of JWPlayerTVKit SDK with a single player item. |
 |`iOS`|[ChromeCast](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/ChromeCast) | Simple implementation including the ability to cast to ChromeCast devices.[^chromecastDisclaimer]  |
 |`iOS`|[ChromeCast-GCKUICastButton](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/Chromecast-GCKUICastButton) | Simple implementation using the cast button provided by the ChromeCast framework to cast to ChromeCast devices.[^chromecastDisclaimer] |
+|`iOS`|[CNX Ad Server](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/CNX%20Ad%20Server#cnx-ad-server---best-practices-app) | Implementation of JWPlayerKit SDK with JW Player's Ad Server (CNX): setup, event listening, manual and dynamic ad scheduling, and pausing ads when the player scrolls out of view. Requires JWPlayerKit 4.30.0+. |
 |`iOS`|[Custom UI](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/Custom%20UI) | Demonstrates how to create a basic user interface from scratch, using only JWPlayerView. |
 |`iOS`|[DRM Fairplay](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/DRM%20Fairplay#drm-fairplay---best-practices-app)  | Simple implementation of JWPlayerKit SDK that plays protected video content through FairPlay (DRM). |
 |`iOS`|[FeedTableViewController](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/FeedTableViewController)  | Simple implementation of JWPlayerKit SDK that plays videos embedded in a UITableView, with a naive 'infinite scroll' implementation. |
@@ -46,6 +47,7 @@ Rather, it requires the **dynamic** build of the Google Cast SDK. As Google does
     ```swift 
     JWPlayerKitLicense.setLicenseKey(<#Your License Key#>)
     ```
+    The CNX Ad Server app is the exception: set its license key, and its other required values, in `CNXConfig.swift` (see its README).
     
 Now you can build and run the project.
 
