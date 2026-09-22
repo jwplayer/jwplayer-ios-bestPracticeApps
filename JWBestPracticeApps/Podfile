@@ -69,6 +69,13 @@ target 'Google IMA Ads' do
   common_Google_IMA
 end
 
+target 'CNX Ad Server' do
+  project 'CNX Ad Server/CNX Ad Server'
+  common_JWPlayer
+  # CNX Ad Server auctions can be won by an IMA-rendered ad, which needs the Google IMA SDK.
+  common_Google_IMA
+end
+
 target 'Google IMA Companion Ads' do
   project 'Google IMA Companion Ads/Google IMA Companion Ads'
   common_JWPlayer

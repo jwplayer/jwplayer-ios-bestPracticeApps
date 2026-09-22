@@ -72,4 +72,7 @@
    <FileRef
       location = "group:ChromeCast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:CNX Ad Server/CNX Ad Server.xcodeproj">
+   </FileRef>
 </Workspace>
