@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EF0C0F5EEFD492AEDBECDC9 /* Pods_Google_IMA_Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2889FFC176A7905C22F13443 /* Pods_Google_IMA_Ads.framework */; };
+		006E179F1B82DAB03A5B37D6 /* JWPlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 457EC7466044F604348AB5A0 /* JWPlayerKit */; };
 		798722D62A311B550052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722D52A311B550052B204 /* SharedAssets.xcassets */; };
 		799E469F26C1D5B400BBBB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E469E26C1D5B400BBBB98 /* AppDelegate.swift */; };
 		799E46A126C1D5B400BBBB98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E46A026C1D5B400BBBB98 /* SceneDelegate.swift */; };
@@ -16,11 +16,10 @@
 		799E46A826C1D5B500BBBB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E46A726C1D5B500BBBB98 /* Assets.xcassets */; };
 		799E46AB26C1D5B500BBBB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46A926C1D5B500BBBB98 /* LaunchScreen.storyboard */; };
 		799E472026C2FE4A00BBBB98 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 799E471F26C2FE4A00BBBB98 /* README.md */; };
+		BEC7EFA5F61B9FBFEC924ABD /* GoogleInteractiveMediaAds in Frameworks */ = {isa = PBXBuildFile; productRef = C00CAF8FD8213CAC6FD5ED54 /* GoogleInteractiveMediaAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2889FFC176A7905C22F13443 /* Pods_Google_IMA_Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_IMA_Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D7ED557EC1DFE198C169905 /* Pods-Google IMA Ads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Ads.release.xcconfig"; path = "Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads.release.xcconfig"; sourceTree = "<group>"; };
 		798722D52A311B550052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		799E469B26C1D5B400BBBB98 /* Google IMA Ads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google IMA Ads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		799E469E26C1D5B400BBBB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +30,6 @@
 		799E46AA26C1D5B500BBBB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799E46AC26C1D5B500BBBB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		799E471F26C2FE4A00BBBB98 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E27128AA72241C53EEA279DB /* Pods-Google IMA Ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Ads.debug.xcconfig"; path = "Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF0C0F5EEFD492AEDBECDC9 /* Pods_Google_IMA_Ads.framework in Frameworks */,
+				006E179F1B82DAB03A5B37D6 /* JWPlayerKit in Frameworks */,
+				BEC7EFA5F61B9FBFEC924ABD /* GoogleInteractiveMediaAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +51,6 @@
 				799E471F26C2FE4A00BBBB98 /* README.md */,
 				799E469D26C1D5B400BBBB98 /* Google IMA Ads */,
 				799E469C26C1D5B400BBBB98 /* Products */,
-				C4F2AFF2A9AAE3BCC13E9862 /* Pods */,
-				C90D4AFDBACEBD4338E28E09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,24 +77,6 @@
 			path = "Google IMA Ads";
 			sourceTree = "<group>";
 		};
-		C4F2AFF2A9AAE3BCC13E9862 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E27128AA72241C53EEA279DB /* Pods-Google IMA Ads.debug.xcconfig */,
-				5D7ED557EC1DFE198C169905 /* Pods-Google IMA Ads.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
-		C90D4AFDBACEBD4338E28E09 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2889FFC176A7905C22F13443 /* Pods_Google_IMA_Ads.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,17 +84,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 799E46AF26C1D5B500BBBB98 /* Build configuration list for PBXNativeTarget "Google IMA Ads" */;
 			buildPhases = (
-				00611C630A0466FBF36EB355 /* [CP] Check Pods Manifest.lock */,
 				799E469726C1D5B400BBBB98 /* Sources */,
 				799E469826C1D5B400BBBB98 /* Frameworks */,
 				799E469926C1D5B400BBBB98 /* Resources */,
-				002AA27B686C6B8CB20CE980 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Google IMA Ads";
+			packageProductDependencies = (
+				457EC7466044F604348AB5A0 /* JWPlayerKit */,
+				C00CAF8FD8213CAC6FD5ED54 /* GoogleInteractiveMediaAds */,
+			);
 			productName = "Google IMA Ads";
 			productReference = 799E469B26C1D5B400BBBB98 /* Google IMA Ads.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +124,10 @@
 				Base,
 			);
 			mainGroup = 799E469226C1D5B400BBBB98;
+			packageReferences = (
+				4FF6E2BBBD631616F74A995C /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */,
+				7C9981138EBFED37883ABDC1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */,
+			);
 			productRefGroup = 799E469C26C1D5B400BBBB98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,48 +151,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		002AA27B686C6B8CB20CE980 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		00611C630A0466FBF36EB355 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Google IMA Ads-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		799E469726C1D5B400BBBB98 /* Sources */ = {
@@ -360,7 +303,6 @@
 		};
 		799E46B026C1D5B500BBBB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E27128AA72241C53EEA279DB /* Pods-Google IMA Ads.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -381,7 +323,6 @@
 		};
 		799E46B126C1D5B500BBBB98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D7ED557EC1DFE198C169905 /* Pods-Google IMA Ads.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,6 +363,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4FF6E2BBBD631616F74A995C /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jwplayer/JWPlayerKit-package";
+			requirement = {
+				kind = exactVersion;
+				version = 4.28.2;
+			};
+		};
+		7C9981138EBFED37883ABDC1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 3.32.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		457EC7466044F604348AB5A0 /* JWPlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FF6E2BBBD631616F74A995C /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */;
+			productName = JWPlayerKit;
+		};
+		C00CAF8FD8213CAC6FD5ED54 /* GoogleInteractiveMediaAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C9981138EBFED37883ABDC1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */;
+			productName = GoogleInteractiveMediaAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 799E469326C1D5B400BBBB98 /* Project object */;
 }

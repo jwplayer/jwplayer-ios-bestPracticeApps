@@ -15,11 +15,10 @@
 		79AF0A0326BDBEB1002E638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AF0A0226BDBEB1002E638C /* Assets.xcassets */; };
 		79AF0A0626BDBEB1002E638C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF0A0426BDBEB1002E638C /* LaunchScreen.storyboard */; };
 		D3CA99EA29313E5200F7E26E /* DRMPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA99E929313E5200F7E26E /* DRMPlaylist.swift */; };
-		E1D2B13A8BDF1DF90622C615 /* Pods_DRM_Fairplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */; };
+		EC36A5DAD1FC3D6F427C0056 /* JWPlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 82D5F5CF8EA13D8C5DA9BE34 /* JWPlayerKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		393B1EBB1E37B6AB45D5930F /* Pods-DRM Fairplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRM Fairplay.debug.xcconfig"; path = "Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay.debug.xcconfig"; sourceTree = "<group>"; };
 		798722CD2A311B2E0052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		79AF09F626BDBEAF002E638C /* DRM Fairplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DRM Fairplay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF09F926BDBEAF002E638C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,9 +29,7 @@
 		79AF0A0526BDBEB1002E638C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79AF0A0726BDBEB1002E638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79AF0A5A26BDC40A002E638C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DRM_Fairplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CA99E929313E5200F7E26E /* DRMPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRMPlaylist.swift; sourceTree = "<group>"; };
-		D97A606DBCAD713DA82BCC94 /* Pods-DRM Fairplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRM Fairplay.release.xcconfig"; path = "Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,39 +37,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D2B13A8BDF1DF90622C615 /* Pods_DRM_Fairplay.framework in Frameworks */,
+				EC36A5DAD1FC3D6F427C0056 /* JWPlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		148CF2EC265DF142175F40E6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				393B1EBB1E37B6AB45D5930F /* Pods-DRM Fairplay.debug.xcconfig */,
-				D97A606DBCAD713DA82BCC94 /* Pods-DRM Fairplay.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
-		2888DA91EABFDF861C94E745 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		79AF09ED26BDBEAF002E638C = {
 			isa = PBXGroup;
 			children = (
 				79AF0A5A26BDC40A002E638C /* README.md */,
 				79AF09F826BDBEAF002E638C /* DRM Fairplay */,
 				79AF09F726BDBEAF002E638C /* Products */,
-				148CF2EC265DF142175F40E6 /* Pods */,
-				2888DA91EABFDF861C94E745 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,17 +84,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79AF0A0A26BDBEB1002E638C /* Build configuration list for PBXNativeTarget "DRM Fairplay" */;
 			buildPhases = (
-				2C6A284A889B018D10EF5324 /* [CP] Check Pods Manifest.lock */,
 				79AF09F226BDBEAF002E638C /* Sources */,
 				79AF09F326BDBEAF002E638C /* Frameworks */,
 				79AF09F426BDBEAF002E638C /* Resources */,
-				386A272D77B3C89E20A637C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "DRM Fairplay";
+			packageProductDependencies = (
+				82D5F5CF8EA13D8C5DA9BE34 /* JWPlayerKit */,
+			);
 			productName = DRMPlayer;
 			productReference = 79AF09F626BDBEAF002E638C /* DRM Fairplay.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +123,9 @@
 				Base,
 			);
 			mainGroup = 79AF09ED26BDBEAF002E638C;
+			packageReferences = (
+				4079CD5BBB4FEFDDF02AADEB /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */,
+			);
 			productRefGroup = 79AF09F726BDBEAF002E638C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,48 +148,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2C6A284A889B018D10EF5324 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DRM Fairplay-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		386A272D77B3C89E20A637C2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79AF09F226BDBEAF002E638C /* Sources */ = {
@@ -362,7 +301,6 @@
 		};
 		79AF0A0B26BDBEB1002E638C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393B1EBB1E37B6AB45D5930F /* Pods-DRM Fairplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -385,7 +323,6 @@
 		};
 		79AF0A0C26BDBEB1002E638C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D97A606DBCAD713DA82BCC94 /* Pods-DRM Fairplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,6 +365,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4079CD5BBB4FEFDDF02AADEB /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jwplayer/JWPlayerKit-package";
+			requirement = {
+				kind = exactVersion;
+				version = 4.28.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		82D5F5CF8EA13D8C5DA9BE34 /* JWPlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4079CD5BBB4FEFDDF02AADEB /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */;
+			productName = JWPlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79AF09EE26BDBEAF002E638C /* Project object */;
 }
