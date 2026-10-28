@@ -14,12 +14,10 @@
 		808A3E8D26C2E8EC003F9CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808A3E8B26C2E8EC003F9CEF /* Main.storyboard */; };
 		808A3E8F26C2E8EE003F9CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 808A3E8E26C2E8EE003F9CEF /* Assets.xcassets */; };
 		808A3E9226C2E8EE003F9CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808A3E9026C2E8EE003F9CEF /* LaunchScreen.storyboard */; };
-		BCB0FF5F6E91B1401690E07D /* Pods_Recommendations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3453491E4FEC372B26E57D20 /* Pods_Recommendations.framework */; };
+		D3AC09B01D4EE3BF273965FC /* JWPlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75BEA7990D28381611218D3C /* JWPlayerKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3453491E4FEC372B26E57D20 /* Pods_Recommendations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recommendations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73B6CDF70BA108C73ACE3607 /* Pods-Recommendations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recommendations.release.xcconfig"; path = "Target Support Files/Pods-Recommendations/Pods-Recommendations.release.xcconfig"; sourceTree = "<group>"; };
 		798722DB2A311B670052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
 		808A3E8226C2E8EC003F9CEF /* Recommendations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recommendations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		808A3E8526C2E8EC003F9CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +27,6 @@
 		808A3E8E26C2E8EE003F9CEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		808A3E9126C2E8EE003F9CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		808A3E9326C2E8EE003F9CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7B700C74C606FFEE92282DB /* Pods-Recommendations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recommendations.debug.xcconfig"; path = "Target Support Files/Pods-Recommendations/Pods-Recommendations.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,28 +34,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCB0FF5F6E91B1401690E07D /* Pods_Recommendations.framework in Frameworks */,
+				D3AC09B01D4EE3BF273965FC /* JWPlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B465CB2889CD56E312E35E4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3453491E4FEC372B26E57D20 /* Pods_Recommendations.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		808A3E7926C2E8EC003F9CEF = {
 			isa = PBXGroup;
 			children = (
 				808A3E8426C2E8EC003F9CEF /* Recommendations */,
 				808A3E8326C2E8EC003F9CEF /* Products */,
-				8F9E711C2F4AC95910C8C967 /* Pods */,
-				1B465CB2889CD56E312E35E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,16 +72,6 @@
 			path = Recommendations;
 			sourceTree = "<group>";
 		};
-		8F9E711C2F4AC95910C8C967 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E7B700C74C606FFEE92282DB /* Pods-Recommendations.debug.xcconfig */,
-				73B6CDF70BA108C73ACE3607 /* Pods-Recommendations.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,17 +79,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 808A3E9626C2E8EE003F9CEF /* Build configuration list for PBXNativeTarget "Recommendations" */;
 			buildPhases = (
-				502F59506FD11DA2F5D115F2 /* [CP] Check Pods Manifest.lock */,
 				808A3E7E26C2E8EC003F9CEF /* Sources */,
 				808A3E7F26C2E8EC003F9CEF /* Frameworks */,
 				808A3E8026C2E8EC003F9CEF /* Resources */,
-				2808F64CED85E83C25D7D004 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Recommendations;
+			packageProductDependencies = (
+				75BEA7990D28381611218D3C /* JWPlayerKit */,
+			);
 			productName = Recommendations;
 			productReference = 808A3E8226C2E8EC003F9CEF /* Recommendations.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 808A3E7926C2E8EC003F9CEF;
+			packageReferences = (
+				44649D95DA6C6E2F86AD80B3 /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */,
+			);
 			productRefGroup = 808A3E8326C2E8EC003F9CEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,48 +143,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2808F64CED85E83C25D7D004 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Recommendations/Pods-Recommendations-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Recommendations/Pods-Recommendations-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Recommendations/Pods-Recommendations-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		502F59506FD11DA2F5D115F2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Recommendations-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		808A3E7E26C2E8EC003F9CEF /* Sources */ = {
@@ -356,7 +295,6 @@
 		};
 		808A3E9726C2E8EE003F9CEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7B700C74C606FFEE92282DB /* Pods-Recommendations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -376,7 +314,6 @@
 		};
 		808A3E9826C2E8EE003F9CEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73B6CDF70BA108C73ACE3607 /* Pods-Recommendations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -416,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44649D95DA6C6E2F86AD80B3 /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jwplayer/JWPlayerKit-package";
+			requirement = {
+				kind = exactVersion;
+				version = 4.28.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75BEA7990D28381611218D3C /* JWPlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44649D95DA6C6E2F86AD80B3 /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */;
+			productName = JWPlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 808A3E7A26C2E8EC003F9CEF /* Project object */;
 }

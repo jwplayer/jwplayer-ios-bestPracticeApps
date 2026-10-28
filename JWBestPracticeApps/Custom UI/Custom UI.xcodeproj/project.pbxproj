@@ -26,11 +26,10 @@
 		807683B427B3159C00A24DF8 /* PlayerViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683B327B3159C00A24DF8 /* PlayerViewManager.swift */; };
 		807683B627B32B6000A24DF8 /* InterfaceButtonListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683B527B32B6000A24DF8 /* InterfaceButtonListener.swift */; };
 		807683B827B35E6B00A24DF8 /* FullScreenPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807683B727B35E6B00A24DF8 /* FullScreenPlayerViewController.swift */; };
-		E6D299EEEC104C9E2A162B57 /* Pods_Custom_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAC3A7013E76CBB40649B59 /* Pods_Custom_UI.framework */; };
+		C4998FFE725265D63F24361D /* JWPlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = B167C6CB5AF0497983BF88D2 /* JWPlayerKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3EAC3A7013E76CBB40649B59 /* Pods_Custom_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Custom_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78170C1429E4532D00AB52C9 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		78170C1629E4542600AB52C9 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		798722CB2A311B280052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
@@ -53,8 +52,6 @@
 		807683B527B32B6000A24DF8 /* InterfaceButtonListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceButtonListener.swift; sourceTree = "<group>"; };
 		807683B727B35E6B00A24DF8 /* FullScreenPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPlayerViewController.swift; sourceTree = "<group>"; };
 		807683B927B3FD1500A24DF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A554020BC0A926C37404D366 /* Pods-Custom UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.debug.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.debug.xcconfig"; sourceTree = "<group>"; };
-		AC2D516550EDD22D5AC0C888 /* Pods-Custom UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom UI.release.xcconfig"; path = "Target Support Files/Pods-Custom UI/Pods-Custom UI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,29 +59,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6D299EEEC104C9E2A162B57 /* Pods_Custom_UI.framework in Frameworks */,
+				C4998FFE725265D63F24361D /* JWPlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F871CBC39D48FF0C39AEED1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3EAC3A7013E76CBB40649B59 /* Pods_Custom_UI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8076838027B2C0AE00A24DF8 = {
 			isa = PBXGroup;
 			children = (
 				807683B927B3FD1500A24DF8 /* README.md */,
 				8076838B27B2C0AE00A24DF8 /* Custom UI */,
 				8076838A27B2C0AE00A24DF8 /* Products */,
-				9717EC764E6ABD682F2B97F2 /* Pods */,
-				3F871CBC39D48FF0C39AEED1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,16 +150,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9717EC764E6ABD682F2B97F2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A554020BC0A926C37404D366 /* Pods-Custom UI.debug.xcconfig */,
-				AC2D516550EDD22D5AC0C888 /* Pods-Custom UI.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,17 +157,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8076839D27B2C0B000A24DF8 /* Build configuration list for PBXNativeTarget "Custom UI" */;
 			buildPhases = (
-				8A56DBEB8A6D1C1C571B5D8E /* [CP] Check Pods Manifest.lock */,
 				8076838527B2C0AE00A24DF8 /* Sources */,
 				8076838627B2C0AE00A24DF8 /* Frameworks */,
 				8076838727B2C0AE00A24DF8 /* Resources */,
-				651F3DABD233878776433E05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Custom UI";
+			packageProductDependencies = (
+				B167C6CB5AF0497983BF88D2 /* JWPlayerKit */,
+			);
 			productName = "Custom UI";
 			productReference = 8076838927B2C0AE00A24DF8 /* Custom UI.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 8076838027B2C0AE00A24DF8;
+			packageReferences = (
+				6E06E2F503F65D861AE66FB4 /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */,
+			);
 			productRefGroup = 8076838A27B2C0AE00A24DF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,48 +225,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		651F3DABD233878776433E05 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Custom UI/Pods-Custom UI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Custom UI/Pods-Custom UI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Custom UI/Pods-Custom UI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8A56DBEB8A6D1C1C571B5D8E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Custom UI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8076838527B2C0AE00A24DF8 /* Sources */ = {
@@ -447,7 +386,6 @@
 		};
 		8076839E27B2C0B000A24DF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A554020BC0A926C37404D366 /* Pods-Custom UI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,7 +415,6 @@
 		};
 		8076839F27B2C0B000A24DF8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC2D516550EDD22D5AC0C888 /* Pods-Custom UI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -527,6 +464,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E06E2F503F65D861AE66FB4 /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jwplayer/JWPlayerKit-package";
+			requirement = {
+				kind = exactVersion;
+				version = 4.28.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B167C6CB5AF0497983BF88D2 /* JWPlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E06E2F503F65D861AE66FB4 /* XCRemoteSwiftPackageReference "JWPlayerKit-package" */;
+			productName = JWPlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8076838127B2C0AE00A24DF8 /* Project object */;
 }

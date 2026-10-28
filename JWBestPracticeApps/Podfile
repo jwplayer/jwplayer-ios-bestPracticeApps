@@ -1,119 +1,11 @@
-####################################
-####   JWPlayerKit iOS targets  ####
-####################################
-
-def common_JWPlayer
-  platform :ios, '15.0'
-  workspace 'JWBestPracticeApps-4x'
-  use_frameworks!
-  
-  pod 'JWPlayerKit', '4.28.1'
-end
-
-def common_Cast
-  pod 'google-cast-sdk', '>= 4.8.1'
-  pod 'Protobuf', '>= 3.13'
-end
-
-def common_Google_IMA
-  pod 'GoogleAds-IMA-iOS-SDK', '3.32.0'
-end
-
-target 'AdvancedPlayer' do
-  project 'AdvancedPlayer/AdvancedPlayer'
-  common_JWPlayer
-end
-
-target 'BasicPlayer-ObjC' do
-  project 'BasicPlayer/BasicPlayer'
-  common_Google_IMA
-  common_JWPlayer
-end
-
-target 'BasicPlayer-Swift' do
-  project 'BasicPlayer/BasicPlayer'
-  common_Google_IMA
-  common_JWPlayer
-end
-
-target 'ChromeCast' do
-  project 'ChromeCast/ChromeCast'
-  common_Cast
-  common_JWPlayer
-end
-
-target 'ChromeCast-GCKUICastButton' do
-  project 'ChromeCast-GCKUICastButton/ChromeCast-GCKUICastButton'
-  common_Cast
-  common_JWPlayer
-end
-
-target 'DRM Fairplay' do
-  project 'DRM Fairplay/DRM Fairplay'
-  common_JWPlayer
-end
-
-target 'FeedTableViewController' do
-  project 'FeedTableViewController/FeedTableViewController'
-  common_JWPlayer
-end
-
-target 'JWPlayer Ads' do
-    project 'JWPlayer Ads/JWPlayer Ads'
-    common_JWPlayer
-end
-
-target 'Google IMA Ads' do
-  project 'Google IMA Ads/Google IMA Ads'
-  common_JWPlayer
-  common_Google_IMA
-end
-
-target 'Google IMA Companion Ads' do
-  project 'Google IMA Companion Ads/Google IMA Companion Ads'
-  common_JWPlayer
-  common_Google_IMA
-end
-
-target 'Google DAI Ads' do
-  project 'Google DAI Ads/Google DAI Ads'
-  common_JWPlayer
-  common_Google_IMA
-end
-
-target 'Recommendations' do
-  project 'Recommendations/Recommendations'
-  common_JWPlayer
-end
-
-target 'Custom UI' do
-  project 'Custom UI/Custom UI'
-  common_JWPlayer
-end
-
-target 'Picture in Picture' do
-  project 'Picture in Picture/Picture in Picture'
-  common_JWPlayer
-end
-
-target 'Captions' do
-  project 'Captions/Captions'
-  common_JWPlayer
-end
-
-target 'Offline DRM' do
-  project 'Offline DRM/Offline DRM'
-  common_JWPlayer
-end
-
-target 'Offline Playback' do
-  project 'Offline Playback/Offline Playback'
-  common_JWPlayer
-end
+# The iOS apps use Swift Package Manager. Only the tvOS app still uses CocoaPods,
+# because JWPlayerTVKit is not available as a Swift package.
 
 ####################################
 #### JWPlayerTVKit tvOS targets ####
 ####################################
+
+workspace 'JWBestPracticeApps-4x'
 
 def common_JWPlayerTVKit
   platform :tvos, '15.0'
@@ -128,20 +20,9 @@ target 'BasicTVPlayer' do
 end
 
 post_install do |installer|
-  puts 'Setting ONLY_ACTIVE_ARCH = NO for all Pods in Project'
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      # The ONLY_ACTIVE_ARCH setting can be removed from here when Google frameworks get upgraded.
-      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
-    end
-  end
-
-  puts 'Setting IPHONEOS_DEPLOYMENT_TARGET = 15.0 for all Pods in Project'
-  installer.generated_projects.each do |project|
-    project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
-      end
+      config.build_settings['TVOS_DEPLOYMENT_TARGET'] = '15.0'
     end
   end
 end
