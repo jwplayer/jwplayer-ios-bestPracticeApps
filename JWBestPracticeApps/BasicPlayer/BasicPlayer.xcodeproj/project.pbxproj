@@ -535,7 +535,7 @@
 			repositoryURL = "https://github.com/jwplayer/JWPlayerKit-package";
 			requirement = {
 				kind = exactVersion;
-				version = 4.28.2;
+				version = 4.28.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
